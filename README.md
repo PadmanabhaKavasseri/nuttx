@@ -1,4 +1,4 @@
-lding Nuttx
+Buiding Nuttx
 
 ## Build Nuttx OS image
 
