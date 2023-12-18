@@ -1,0 +1,29 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config EXAMPLES_SANDBOX
+	tristate "PWM::Sandbox to test pieces of code."
+	default n
+	---help---
+		Enable Unlimited PWM
+
+if EXAMPLES_SANDBOX
+
+config EXAMPLES_SANDBOX_PROGNAME
+	string "Program name"
+	default "sandbox"
+	---help---
+		This is the name of the program that will be used when the NSH ELF
+		program is installed.
+
+config EXAMPLES_SANDBOX_PRIORITY
+	int "Sandbox task priority"
+	default 100
+
+config EXAMPLES_SANDBOX_STACKSIZE
+	int "Sandbox stack size"
+	default DEFAULT_TASK_STACKSIZE
+
+endif

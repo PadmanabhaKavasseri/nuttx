@@ -1,0 +1,28 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config SPECIFIC_DRIVERS
+	bool "Board Specific drivers"
+	default n
+
+source "drivers/can/Kconfig"
+source "drivers/clk/Kconfig"
+source "drivers/i2c/Kconfig"
+source "drivers/spi/Kconfig"
+source "drivers/timers/Kconfig"
+source "drivers/analog/Kconfig"
+source "drivers/bch/Kconfig"
+source "drivers/input/Kconfig"
+source "drivers/leds/Kconfig"
+source "drivers/misc/Kconfig"
+source "drivers/mtd/Kconfig"
+source "drivers/sensors/Kconfig"
+source "drivers/serial/Kconfig"
+source "drivers/syslog/Kconfig"
+source "drivers/platform/Kconfig"
+source "drivers/rc/Kconfig"
+source "drivers/motor/Kconfig"
+source "drivers/math/Kconfig"
+source "drivers/ioexpander/Kconfig"

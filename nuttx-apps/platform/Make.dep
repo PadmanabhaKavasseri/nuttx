@@ -1,0 +1,3 @@
+dummy.c.home.nuttx_qcomamr.nuttx-apps.platform.o: board/dummy.c
+# No files specified for dependency generation
+# No files specified for dependency generation
