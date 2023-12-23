@@ -1,5 +1,4 @@
-#!/bin/sh
-make savedefconfig && cp defconfig boards/arm/stm32/qcomf427/configs/nsh/defconfig
+avedefconfig && cp defconfig boards/arm/stm32/qcomf427/configs/nsh/defconfig
 printf "\n Saved Changes! \n"
 
 ./tools/configure.sh -l qcomf427:nsh
