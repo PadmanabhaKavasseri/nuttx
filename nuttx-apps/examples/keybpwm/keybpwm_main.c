@@ -108,6 +108,14 @@ struct pwm_state_s
 	int       duration;
 };
 
+
+struct stlitMSG {
+	int on_off;
+	int motor;
+	int freq;
+	int duty;
+};
+
 /****************************************************************************
  * Private Function Prototypes
  ****************************************************************************/
@@ -429,29 +437,27 @@ static void parse_args(FAR struct pwm_state_s *pwm, int argc,
 /****************************************************************************
  * Name: pwm_main
  ****************************************************************************/
-void decodeBmsg(char* binaryMsg) {
+void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
 	char binMsgStr[33];
 	char msg_start[4], motor[5], on_off[2], freq[8], duty[15], msg_stop[4];
 	int idx = 0;
-	int freq_int, duty_int;
-	printf("Printing Binary MSG in decodebmsg:: ");
+	// printf("Printing Binary MSG in decodebmsg:: ");
+	//loop through binary message and convert to string
 	for (ssize_t i = 0; i < 4; ++i) {
-			// Print each byte as a binary string
-			for (int j = 7; j >= 0; --j) {
-				int bit = (binaryMsg[i] >> j) & 1;
-				printf("%d", bit);
-				idx = (8*i) + (7-j);
-				binMsgStr[idx] = bit + '0';  // Add '0' to convert the integer to a character
-			}
-			printf(" ");
+		for (int j = 7; j >= 0; --j) {
+			int bit = (binaryMsg[i] >> j) & 1; //get most significant bit & 1 to convert to binary string
+			// printf("%d", bit);
+			idx = (8*i) + (7-j);
+			binMsgStr[idx] = bit + '0';  // Add '0' to convert the integer to a character
+		}
+			// printf(" ");
 	}
 	printf("\n");
 	binMsgStr[32] = '\0';  // Null-terminate the string
-	printf("Bin Msg Str: ");
-	printf("%s\n", binMsgStr);
 	// printf("Bin Msg Str: ");
-	// printf(binMsgStr);
-	// printf(binaryMsg);
+	printf("%s\n", binMsgStr);
+	
+
 	// Extract the binary strings
 	strncpy(msg_start, binMsgStr, 3); msg_start[3] = '\0';
 	strncpy(motor, binMsgStr + 3, 4); motor[4] = '\0';
@@ -461,24 +467,67 @@ void decodeBmsg(char* binaryMsg) {
 	strncpy(msg_stop, binMsgStr + 29, 3); msg_stop[3] = '\0';
 
 	// Convert frequency from binary to integer
-    freq_int = strtol(freq, NULL, 2);
-	duty_int = strtol(duty, NULL, 2);
+    int freq_int = strtol(freq, NULL, 2);
+	int duty_int = strtol(duty, NULL, 2);
+	int on_off_int = strtol(on_off, NULL, 2);
+	int motor_int = strtol(motor, NULL, 2);
 
-	printf("Decoded Message:\n");
-    printf("Start: %s\n", msg_start);
-    printf("Motor: %s\n", motor);
-    printf("On/Off: %s\n", on_off);
-    printf("Frequency: %d (binary: %s)\n", freq_int, freq);
-    printf("Duty: %d (binary: %s)\n", duty_int, duty);
-    printf("Stop: %s\n", msg_stop);
+	// printf("Decoded Message:\n");
+    // printf("Start: %s\n", msg_start);
+    // printf("Motor: %d (binary: %s)\n", motor_int, motor);
+	// printf("On/Off: %d (binary: %s)\n", on_off_int, on_off);
+    // printf("Frequency: %d (binary: %s)\n", freq_int, freq);
+    // printf("Duty: %d (binary: %s)\n", duty_int, duty);
+    // printf("Stop: %s\n", msg_stop);
 
+	
+	msg->duty = duty_int;
+	msg->freq = freq_int;
+	msg->on_off = on_off_int;
+	msg->motor = motor_int; 
 
+}
 
+//assuming pwm is started
+void setPWM(FAR struct pwm_info_s* pwm, int fd, int duty, int freq){
+	pwm->duty = b16divi(uitoub16(duty), 100000);
+	pwm->frequency = freq;
+	int ret = ioctl(fd, PWMIOC_SETCHARACTERISTICS, (unsigned long)((uintptr_t)pwm));
+	if (ret < 0){
+		printf("pwm_main: ioctl(PWMIOC_SETCHARACTERISTICS) failed: %d\n",
+						errno);
+		close(fd);
+	}
+	ret = ioctl(fd, PWMIOC_START, 0);
+	if (ret < 0){
+		printf("pwm_main: ioctl(PWMIOC_START) failed: %d\n", errno);
+		close(fd);
+	}
+}
+
+void stopPWM(FAR struct pwm_info_s* pwm, int fd){
+	
+	int ret = ioctl(fd, PWMIOC_STOP, 0);
+	if(ret < 0){
+		printf("pwm_main: ioctl(PWMIOC_STOP) failed: %d\n", errno);
+		close(fd);
+	}
+	printf("STOP\n");
+}
+
+void startPWM(FAR struct pwm_info_s* pwm, int fd){
+	int ret = ioctl(fd, PWMIOC_START, 0);
+	if (ret < 0){
+		printf("pwm_main: ioctl(PWMIOC_START) failed: %d\n", errno);
+		close(fd);
+	}
+	printf("START\n");
 }
 
 int main(int argc, FAR char *argv[])
 {
 	struct pwm_info_s info;
+	struct stlitMSG msg;
 	int fd, ser_fd;
 	int ret;
 	char buf[4];//4 bytes
@@ -495,12 +544,12 @@ int main(int argc, FAR char *argv[])
 	/* Initialize the state data */
 
 	if (!g_pwmstate.initialized)
-		{
-			g_pwmstate.duty        = CONFIG_EXAMPLES_PWM_DUTYPCT;
-			g_pwmstate.freq        = CONFIG_EXAMPLES_PWM_FREQUENCY;
-			g_pwmstate.duration    = CONFIG_EXAMPLES_PWM_DURATION;
-			g_pwmstate.initialized = true;
-		}
+	{
+		g_pwmstate.duty        = CONFIG_EXAMPLES_PWM_DUTYPCT;
+		g_pwmstate.freq        = CONFIG_EXAMPLES_PWM_FREQUENCY;
+		g_pwmstate.duration    = CONFIG_EXAMPLES_PWM_DURATION;
+		g_pwmstate.initialized = true;
+	}
 
 	/* Parse the command line */
 
@@ -510,38 +559,24 @@ int main(int argc, FAR char *argv[])
 	/* Has a device been assigned? */
 
 	if (!g_pwmstate.devpath)
-		{
-			/* No.. use the default device */
+	{
+		/* No.. use the default device */
 
-			pwm_devpath(&g_pwmstate, CONFIG_EXAMPLES_PWM_DEVPATH);
-		}
+		pwm_devpath(&g_pwmstate, CONFIG_EXAMPLES_PWM_DEVPATH);
+	}
 
 	/* Open the PWM device for reading */
 
 	fd = open(g_pwmstate.devpath, O_RDONLY);
 	if (fd < 0)
-		{
-			printf("pwm_main: open %s failed: %d\n", g_pwmstate.devpath, errno);
-			goto errout;
-		}
+	{
+		printf("pwm_main: open %s failed: %d\n", g_pwmstate.devpath, errno);
+		goto errout;
+	}
 
 	/* Configure the characteristics of the pulse train */
-
-	info.frequency = g_pwmstate.freq;
-	// info.duty  = b16divi(uitoub16(g_pwmstate.duty), 100);
-	info.duty  = b16divi(uitoub16(5), 100);
-	printf("pwm_main: starting output "
-				 "with frequency: %" PRIu32 " duty: %08" PRIx32 "\n",
-				 info.frequency, (uint32_t)info.duty);
-
-
-	ret = ioctl(fd, PWMIOC_SETCHARACTERISTICS,
-							(unsigned long)((uintptr_t)&info));
-	if (ret < 0){
-		printf("pwm_main: ioctl(PWMIOC_SETCHARACTERISTICS) failed: %d\n",
-						errno);
-		goto errout_with_dev;
-	}
+	//set initial characteristics
+	setPWM(&info, fd, 5000, 50);
 
 	//read serial to control output
 	while(1){
@@ -570,9 +605,19 @@ int main(int argc, FAR char *argv[])
 			// printf("\n");
 			//correct ^^
 
-			decodeBmsg(buf);
+			
+			decodeBmsg(buf, &msg);
+			printf("On/Off: %d Motor: %d Duty: %d Freq: %d\n", msg.on_off, msg.motor, msg.duty, msg.freq);
 
+			if(msg.on_off){ //1 is on
+				startPWM(&info,fd);
+				setPWM(&info,fd,msg.duty,msg.freq);
+			}
+			else{
+				stopPWM(&info,fd);
+			}
 
+			
 
 			// if(buf[0]=='h'){
 			//   ret = ioctl(fd, PWMIOC_START, 0);
