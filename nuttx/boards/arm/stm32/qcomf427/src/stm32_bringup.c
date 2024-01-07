@@ -138,6 +138,6 @@ printf("stm32_gpio_initialize done \n");
     syslog(LOG_ERR, "ERROR: stm32_pwm_setup failed: %d\n", ret);
     return ret;
   }
-  syslog(LOG_INFO, "PWM  have initialized\n");
+  syslog(LOG_INFO, "PWM  have initialized --nuttx/boards/arm/stm32/qcomf427/src/stm32_bringup.c\n");
 }
 #endif

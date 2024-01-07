@@ -61,34 +61,76 @@
 int stm32_pwm_setup(void)
 {
   static bool initialized = false;
-  struct pwm_lowerhalf_s *pwm;
+  struct pwm_lowerhalf_s *pwm0;
+  struct pwm_lowerhalf_s *pwm1;
+  struct pwm_lowerhalf_s *pwm2;
+  struct pwm_lowerhalf_s *pwm3;
   int ret;
 
   /* Have we already initialized? */
 
-  if (!initialized)
-    {
-      /* Call stm32_pwminitialize() to get an instance of the PWM interface */
-      
-    syslog(LOG_INFO, "PWM  have initializeddddd\n");
-    pwm = stm32_pwminitialize(11);
-    if (!pwm)
-      {
-        aerr("ERROR: Failed to get the STM32F4 PWM lower half\n");
-        return -ENODEV;
-      }
+	if (!initialized){
+		/* Call stm32_pwminitialize() to get an instance of the PWM interface */
+	
+		pwm0 = stm32_pwminitialize(11);
+		if (!pwm0){
+			aerr("ERROR: Failed to get the STM32F4 PWM lower half\n");
+			return -ENODEV;
+		}
 
-    ret = pwm_register("/dev/pwm0", pwm);
-    if (ret < 0)
-      {
-        aerr("ERROR: pwm_register failed: %d\n", ret);
-        return ret;
-      }
+		ret = pwm_register("/dev/pwm0", pwm0);
+		if (ret < 0){
+			aerr("ERROR: pwm_register failed: %d\n", ret);
+			return ret;
+		}
+		syslog(LOG_INFO, "PWM0 initialized\n");
+		//--------------------------------------
 
-      /* Now we are initialized */
+		pwm1 = stm32_pwminitialize(13);
+		if (!pwm1){
+			aerr("ERROR: Failed to get the STM32F4 PWM lower half\n");
+			return -ENODEV;
+		}
 
-      initialized = true;
-    }
+		ret = pwm_register("/dev/pwm1", pwm1);
+		if (ret < 0){
+			aerr("ERROR: pwm_register failed: %d\n", ret);
+			return ret;
+		}
+		syslog(LOG_INFO, "PWM1 initialized\n");
+		//--------------------------------------
+		
+		pwm2 = stm32_pwminitialize(5);
+		if (!pwm2){
+			aerr("ERROR: Failed to get the STM32F4 PWM lower half\n");
+			return -ENODEV;
+		}
+
+		ret = pwm_register("/dev/pwm2", pwm2);
+		if (ret < 0){
+			aerr("ERROR: pwm_register failed: %d\n", ret);
+			return ret;
+		}
+		syslog(LOG_INFO, "PWM2 initialized\n");
+		//--------------------------------------
+
+		pwm3 = stm32_pwminitialize(5);
+		if (!pwm3){
+			aerr("ERROR: Failed to get the STM32F4 PWM lower half\n");
+			return -ENODEV;
+		}
+
+		ret = pwm_register("/dev/pwm3", pwm3);
+		if (ret < 0){
+			aerr("ERROR: pwm_register failed: %d\n", ret);
+			return ret;
+		}
+		syslog(LOG_INFO, "PWM3 initialized\n");
+		//--------------------------------------
+		
+			/* Now we are initialized */
+		initialized = true;
+	}
 
   return OK;
 }
