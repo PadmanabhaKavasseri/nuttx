@@ -14,15 +14,15 @@ if EXAMPLES_KEYBPWM
 
 config EXAMPLES_KEYBPWM_DEVPATH
 	string "PWM device path"
-	default "/dev/pwm0"
+	default "/dev/pwm1"
 	---help---
-		The path to the PWM device.  Default: /dev/pwm0
+		The path to the PWM device.  Default: /dev/pwm1
 
 config EXAMPLES_KEYBPWM_FREQUENCY
 	int "Default PWM frequency"
-	default 100
+	default 50
 	---help---
-		The default PWM frequency.  Default: 100 Hz
+		The default PWM frequency.  Default: 50 Hz
 
 config EXAMPLES_KEYBPWM_DURATION
 	int "Default PWM duration"
@@ -34,9 +34,9 @@ config EXAMPLES_KEYBPWM_DURATION
 
 config EXAMPLES_KEYBPWM_DUTYPCT
 	int "Default PWM duty percentage"
-	default 50
+	default 5
 	range 1 99
 	---help---
-		The default PWM duty as a percentage.  Default: 50%
+		The default PWM duty as a percentage.  Default: 5%
 
 endif

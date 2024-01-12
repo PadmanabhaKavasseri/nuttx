@@ -91,6 +91,10 @@
  * Private Types
  ****************************************************************************/
 
+//remove before compile
+// #define CONFIG_PWM_MULTICHAN 
+// #define CONFIG_PWM_NCHANNELS 4
+
 struct pwm_state_s
 {
 	bool      initialized;
@@ -116,6 +120,13 @@ struct stlitMSG {
 	int duty;
 };
 
+typedef struct {
+	int timer_group;
+	int channel; //this should be a fd
+	int fd;
+} Pin;
+
+
 /****************************************************************************
  * Private Function Prototypes
  ****************************************************************************/
@@ -125,19 +136,9 @@ struct stlitMSG {
  * Private Data
  ****************************************************************************/
 
-static struct pwm_state_s g_pwmstate;
+// static struct pwm_state_s g_pwmstate1;
+// static struct pwm_state_s g_pwmstate2;//timer group
 
-/****************************************************************************
- * Public Data
- ****************************************************************************/
-
-/****************************************************************************
- * Private Functions
- ****************************************************************************/
-
-/****************************************************************************
- * Name: pwm_devpath
- ****************************************************************************/
 
 static void pwm_devpath(FAR struct pwm_state_s *pwm, FAR const char *devpath)
 {
@@ -153,290 +154,6 @@ static void pwm_devpath(FAR struct pwm_state_s *pwm, FAR const char *devpath)
 	pwm->devpath = strdup(devpath);
 }
 
-/****************************************************************************
- * Name: pwm_help
- ****************************************************************************/
-
-static void pwm_help(FAR struct pwm_state_s *pwm)
-{
-#ifdef CONFIG_PWM_MULTICHAN
-	uint8_t channels[CONFIG_PWM_NCHANNELS] =
-	{
-		CONFIG_EXAMPLES_PWM_CHANNEL1,
-#if CONFIG_PWM_NCHANNELS > 1
-		CONFIG_EXAMPLES_PWM_CHANNEL2,
-#endif
-#if CONFIG_PWM_NCHANNELS > 2
-		CONFIG_EXAMPLES_PWM_CHANNEL3,
-#endif
-#if CONFIG_PWM_NCHANNELS > 3
-		CONFIG_EXAMPLES_PWM_CHANNEL4,
-#endif
-#if CONFIG_PWM_NCHANNELS > 4
-		CONFIG_EXAMPLES_PWM_CHANNEL5,
-#endif
-#if CONFIG_PWM_NCHANNELS > 5
-		CONFIG_EXAMPLES_PWM_CHANNEL6,
-#endif
-	};
-
-	uint8_t duties[CONFIG_PWM_NCHANNELS] =
-	{
-		CONFIG_EXAMPLES_PWM_DUTYPCT1,
-#if CONFIG_PWM_NCHANNELS > 1
-		CONFIG_EXAMPLES_PWM_DUTYPCT2,
-#endif
-#if CONFIG_PWM_NCHANNELS > 2
-		CONFIG_EXAMPLES_PWM_DUTYPCT3,
-#endif
-#if CONFIG_PWM_NCHANNELS > 3
-		CONFIG_EXAMPLES_PWM_DUTYPCT4,
-#endif
-#if CONFIG_PWM_NCHANNELS > 4
-		CONFIG_EXAMPLES_PWM_DUTYPCT5,
-#endif
-#if CONFIG_PWM_NCHANNELS > 5
-		CONFIG_EXAMPLES_PWM_DUTYPCT6,
-#endif
-	};
-
-	int i;
-#endif
-
-	printf("Usage: pwm [OPTIONS]\n");
-	printf("\nArguments are \"sticky\".  "
-				 "For example, once the PWM frequency is\n");
-	printf("specified, that frequency will be re-used until it is changed.\n");
-	printf("\n\"sticky\" OPTIONS include:\n");
-	printf("  [-p devpath] selects the PWM device.  "
-				 "Default: %s Current: %s\n",
-				 CONFIG_EXAMPLES_PWM_DEVPATH, pwm->devpath ? pwm->devpath : "NONE");
-	printf("  [-f frequency] selects the pulse frequency.  "
-				 "Default: %d Hz Current: %" PRIu32 " Hz\n",
-				 CONFIG_EXAMPLES_PWM_FREQUENCY, pwm->freq);
-#ifdef CONFIG_PWM_MULTICHAN
-	printf("  [[-c channel1] [[-c channel2] ...]] "
-				 "selects the channel number for each channel.  ");
-	printf("Default:");
-	for (i = 0; i < CONFIG_PWM_NCHANNELS; i++)
-		{
-			printf(" %d", channels[i]);
-		}
-
-	printf(" Current:");
-	for (i = 0; i < CONFIG_PWM_NCHANNELS; i++)
-		{
-			printf(" %d", pwm->channels[i]);
-		}
-
-	printf("\n");
-
-	printf("  [[-d duty1] [[-d duty2] ...]] "
-				 "selects the pulse duty as a percentage.  ");
-	printf("Default:");
-	for (i = 0; i < CONFIG_PWM_NCHANNELS; i++)
-		{
-			printf(" %d %%", duties[i]);
-		}
-
-	printf(" Current:");
-	for (i = 0; i < CONFIG_PWM_NCHANNELS; i++)
-		{
-			printf(" %d %%", pwm->duties[i]);
-		}
-
-	printf("\n");
-#else
-	printf("  [-d duty] selects the pulse duty as a percentage.  "
-				 "Default: %d %% Current: %d %%\n",
-				 CONFIG_EXAMPLES_PWM_DUTYPCT, pwm->duty);
-#endif
-#ifdef CONFIG_PWM_PULSECOUNT
-	printf("  [-n count] selects the pulse count.  "
-				 "Default: %d Current: %" PRIx32 "\n",
-				 CONFIG_EXAMPLES_PWM_PULSECOUNT, pwm->count);
-#endif
-	printf("  [-t duration] is the duration of the pulse train in seconds.  "
-				 "Default: %d Current: %d\n",
-				 CONFIG_EXAMPLES_PWM_DURATION, pwm->duration);
-	printf("  [-h] shows this message and exits\n");
-}
-
-/****************************************************************************
- * Name: arg_string
- ****************************************************************************/
-
-static int arg_string(FAR char **arg, FAR char **value)
-{
-	FAR char *ptr = *arg;
-
-	if (ptr[2] == '\0')
-		{
-			*value = arg[1];
-			return 2;
-		}
-	else
-		{
-			*value = &ptr[2];
-			return 1;
-		}
-}
-
-/****************************************************************************
- * Name: arg_decimal
- ****************************************************************************/
-
-static int arg_decimal(FAR char **arg, FAR long *value)
-{
-	FAR char *string;
-	int ret;
-
-	ret = arg_string(arg, &string);
-	*value = strtol(string, NULL, 10);
-	return ret;
-}
-
-/****************************************************************************
- * Name: parse_args
- ****************************************************************************/
-
-static void parse_args(FAR struct pwm_state_s *pwm, int argc,
-											 FAR char **argv)
-{
-	FAR char *ptr;
-	FAR char *str;
-	long value;
-	int index;
-	int nargs;
-#ifdef CONFIG_PWM_MULTICHAN
-	int nchannels = 0;
-	int nduties   = 0;
-#endif
-
-	for (index = 1; index < argc; )
-		{
-			ptr = argv[index];
-			if (ptr[0] != '-')
-				{
-					printf("Invalid options format: %s\n", ptr);
-					exit(0);
-				}
-
-			switch (ptr[1])
-				{
-					case 'f':
-						nargs = arg_decimal(&argv[index], &value);
-						if (value < 1)
-							{
-								printf("Frequency out of range: %ld\n", value);
-								exit(1);
-							}
-
-						pwm->freq = (uint32_t)value;
-						index += nargs;
-						break;
-
-#ifdef CONFIG_PWM_MULTICHAN
-					case 'c':
-						nargs = arg_decimal(&argv[index], &value);
-						if (value < -1 || value > CONFIG_PWM_NCHANNELS)
-							{
-								printf("Channel out of range: %ld\n", value);
-								exit(1);
-							}
-
-						if (nchannels < CONFIG_PWM_NCHANNELS)
-							{
-								nchannels++;
-							}
-						else
-							{
-								memmove(pwm->channels, pwm->channels + 1,
-												CONFIG_PWM_NCHANNELS - 1);
-							}
-
-						pwm->channels[nchannels - 1] = (int8_t)value;
-						index += nargs;
-						break;
-#endif
-
-					case 'd':
-						nargs = arg_decimal(&argv[index], &value);
-						if (value < 0 || value > 100)
-							{
-								printf("Duty out of range: %ld\n", value);
-								exit(1);
-							}
-
-#ifdef CONFIG_PWM_MULTICHAN
-						if (nduties < CONFIG_PWM_NCHANNELS)
-							{
-								nduties++;
-							}
-						else
-							{
-								memmove(pwm->duties, pwm->duties + 1,
-												CONFIG_PWM_NCHANNELS - 1);
-							}
-
-						pwm->duties[nduties - 1] = (uint8_t)value;
-#else
-						pwm->duty = (uint8_t)value;
-#endif
-						index += nargs;
-						break;
-
-#ifdef CONFIG_PWM_PULSECOUNT
-					case 'n':
-						nargs = arg_decimal(&argv[index], &value);
-						if (value < 0)
-							{
-								printf("Count must be non-negative: %ld\n", value);
-								exit(1);
-							}
-
-						pwm->count = (uint32_t)value;
-						index += nargs;
-						break;
-#endif
-
-					case 'p':
-						nargs = arg_string(&argv[index], &str);
-						pwm_devpath(pwm, str);
-						index += nargs;
-						break;
-
-					case 't':
-						nargs = arg_decimal(&argv[index], &value);
-						if (value < 1 || value > INT_MAX)
-							{
-								printf("Duration out of range: %ld\n", value);
-								exit(1);
-							}
-
-						pwm->duration = (int)value;
-						index += nargs;
-						break;
-
-					case 'h':
-						pwm_help(pwm);
-						exit(0);
-
-					default:
-						printf("Unsupported option: %s\n", ptr);
-						pwm_help(pwm);
-						exit(1);
-				}
-		}
-}
-
-/****************************************************************************
- * Public Functions
- ****************************************************************************/
-
-/****************************************************************************
- * Name: pwm_main
- ****************************************************************************/
 void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
 	char binMsgStr[33];
 	char msg_start[4], motor[5], on_off[2], freq[8], duty[15], msg_stop[4];
@@ -489,22 +206,31 @@ void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
 }
 
 //assuming pwm is started
-void setPWM(FAR struct pwm_info_s* pwm, int fd, int duty, int freq){
-	pwm->duty = b16divi(uitoub16(duty), 100000);
+//only needs pwm stats and fd ONLY
+void setPWM(FAR struct pwm_info_s* pwm, Pin* p, int duty, int freq){
+	// pwm->duty = b16divi(uitoub16(duty), 100000);
 	pwm->frequency = freq;
-	int ret = ioctl(fd, PWMIOC_SETCHARACTERISTICS, (unsigned long)((uintptr_t)pwm));
+
+	
+	int chIDX = p->channel-1;
+	pwm->channels[chIDX].channel = p->channel;
+	pwm->channels[chIDX].duty = b16divi(uitoub16(duty), 100000);
+
+
+	int ret = ioctl(p->fd, PWMIOC_SETCHARACTERISTICS, (unsigned long)((uintptr_t)pwm));
 	if (ret < 0){
 		printf("pwm_main: ioctl(PWMIOC_SETCHARACTERISTICS) failed: %d\n",
 						errno);
-		close(fd);
+		close(p->fd);
 	}
-	ret = ioctl(fd, PWMIOC_START, 0);
+	ret = ioctl(p->fd, PWMIOC_START, 0);
 	if (ret < 0){
 		printf("pwm_main: ioctl(PWMIOC_START) failed: %d\n", errno);
-		close(fd);
+		close(p->fd);
 	}
 }
 
+//how to stop a specific channel does it just stop the entire timer group?
 void stopPWM(FAR struct pwm_info_s* pwm, int fd){
 	
 	int ret = ioctl(fd, PWMIOC_STOP, 0);
@@ -524,14 +250,86 @@ void startPWM(FAR struct pwm_info_s* pwm, int fd){
 	printf("START\n");
 }
 
+// void initPWM(){
+// 	//PWM1
+// 	if (!g_pwmstate1.initialized)
+// 	{
+// 		// g_pwmstate1.duty        = CONFIG_EXAMPLES_PWM_DUTYPCT;
+// 		g_pwmstate1.freq        = CONFIG_EXAMPLES_PWM_FREQUENCY;
+// 		g_pwmstate1.duration    = CONFIG_EXAMPLES_PWM_DURATION;
+// 		g_pwmstate1.initialized = true;
+// 	}
+// 	if (!g_pwmstate1.devpath)
+// 	{
+// 		/* No.. use the default device */
+// 		pwm_devpath(&g_pwmstate1, CONFIG_EXAMPLES_KYBPWM1_DEVPATH);
+// 	}
+// 	//-------------------------------------------------------------
+
+// 	//PWM2
+// 	if (!g_pwmstate2.initialized)
+// 	{
+// 		// g_pwmstate2.duty       = CONFIG_EXAMPLES_PWM_DUTYPCT;
+// 		g_pwmstate2.freq        = CONFIG_EXAMPLES_PWM_FREQUENCY;
+// 		g_pwmstate2.duration    = CONFIG_EXAMPLES_PWM_DURATION;
+// 		g_pwmstate2.initialized = true;
+// 	}
+// 	if (!g_pwmstate2.devpath)
+// 	{
+// 		/* No.. use the default device */
+// 		pwm_devpath(&g_pwmstate2, CONFIG_EXAMPLES_KYBPWM2_DEVPATH);
+// 	}
+// 	//-------------------------------------------------------------
+// }
+
+//TODO... FREE MEMORYYYY!!!!!! DO NOT FORGETTTTTT
+Pin* createPin(int timer_group, int channel, FAR const char *devpath){
+	Pin* p = (Pin*) malloc(sizeof(Pin));
+	//create fd here
+	p->timer_group = timer_group; //theres no timer group to dev path map
+	p->channel = channel;
+	//end goal is to just have a fd element that setPWM can write to
+	//generate fd
+
+
+	int fd = open(devpath, O_RDONLY);
+	printf("PWM DEVPATH: %s\n", devpath);
+	if (fd < 0)
+	{
+		printf("pwm_main: open %s failed: %d\n", devpath, errno);
+		fflush(stdout);
+	}
+	p->fd = fd;
+
+	return p;
+}
+
+
+Pin** initPins(){
+    //should read Konfig file.. will add that later
+    Pin** pins = malloc(8 * sizeof(Pin*)); // Allocate memory for 8 pointers to Pin
+    pins[0] = createPin(13, 1, CONFIG_EXAMPLES_KYBPWM_TIM13_DEVPATH); //17 ///should be a file descriptor instead
+	pins[1] = createPin(5, 4, CONFIG_EXAMPLES_KYBPWM_TIM5_DEVPATH);
+	pins[2] = createPin(5, 1, CONFIG_EXAMPLES_KYBPWM_TIM5_DEVPATH);
+
+    // Initialize other pins...
+    return pins;
+}
+
+void deletePins(Pin** pins){
+    for(int i = 0; i < 8; i++){
+        deletePin(pins[i]);
+    }
+    free(pins);
+}
+
 int main(int argc, FAR char *argv[])
 {
 	struct pwm_info_s info;
 	struct stlitMSG msg;
-	int fd, ser_fd;
+	int ser_fd;
 	int ret;
-	char buf[4];//4 bytes
-	int duty_perc = 5;
+	char buf[4];//4 bytes for streamlit message
 
 	//initialize serial port
 	ser_fd = open("/dev/ttyS2", O_RDONLY | O_NONBLOCK);
@@ -540,43 +338,11 @@ int main(int argc, FAR char *argv[])
 		return 1;
 	}
 
+	Pin** pins = initPins();
 
-	/* Initialize the state data */
-
-	if (!g_pwmstate.initialized)
-	{
-		g_pwmstate.duty        = CONFIG_EXAMPLES_PWM_DUTYPCT;
-		g_pwmstate.freq        = CONFIG_EXAMPLES_PWM_FREQUENCY;
-		g_pwmstate.duration    = CONFIG_EXAMPLES_PWM_DURATION;
-		g_pwmstate.initialized = true;
-	}
-
-	/* Parse the command line */
-
-	parse_args(&g_pwmstate, argc, argv);
-
-
-	/* Has a device been assigned? */
-
-	if (!g_pwmstate.devpath)
-	{
-		/* No.. use the default device */
-
-		pwm_devpath(&g_pwmstate, CONFIG_EXAMPLES_PWM_DEVPATH);
-	}
-
-	/* Open the PWM device for reading */
-
-	fd = open(g_pwmstate.devpath, O_RDONLY);
-	if (fd < 0)
-	{
-		printf("pwm_main: open %s failed: %d\n", g_pwmstate.devpath, errno);
-		goto errout;
-	}
-
-	/* Configure the characteristics of the pulse train */
-	//set initial characteristics
-	setPWM(&info, fd, 5000, 50);
+	setPWM(&info, pins[0], 5000, 50);
+	setPWM(&info, pins[1], 5000, 50);
+	setPWM(&info, pins[2], 5000, 50);
 
 	//read serial to control output
 	while(1){
@@ -593,115 +359,25 @@ int main(int argc, FAR char *argv[])
 			}
 		}
 		else {
-			//correct
-			// printf("Read %zd bytes: ", n);
-			// for (ssize_t i = 0; i < n; ++i) {
-			//   // Print each byte as a binary string
-			//   for (int j = 7; j >= 0; --j) {
-			//       printf("%d", (buf[i] >> j) & 1);
-			//   }
-			//   printf(" ");
-			// }
-			// printf("\n");
-			//correct ^^
-
-			
 			decodeBmsg(buf, &msg);
 			printf("On/Off: %d Motor: %d Duty: %d Freq: %d\n", msg.on_off, msg.motor, msg.duty, msg.freq);
+			//make this a function that just applies the message... maybe this is okay
 
 			if(msg.on_off){ //1 is on
-				startPWM(&info,fd);
-				setPWM(&info,fd,msg.duty,msg.freq);
+				// startPWM(&info,fd); // I dont think i need this
+				setPWM(&info, pins[msg.motor-1], msg.duty, msg.freq);
 			}
 			else{
-				stopPWM(&info,fd);
+				//do we need to set a specific channel here to 0? how to deal with servos vs other motors... cant just set it to 0.
+				stopPWM(&info, pins[msg.motor-1]->fd);
 			}
-
-			
-
-			// if(buf[0]=='h'){
-			//   ret = ioctl(fd, PWMIOC_START, 0);
-			//   if (ret < 0){
-			//     printf("pwm_main: ioctl(PWMIOC_START) failed: %d\n", errno);
-			//     goto errout_with_dev;
-			//   }
-			//   printf("Set PWM PB9 to ON\n");
-			// }
-			// else if(buf[0]=='l'){
-			//   ret = ioctl(fd, PWMIOC_STOP, 0);
-			//   if (ret < 0){
-			//     printf("pwm_main: ioctl(PWMIOC_STOP) failed: %d\n", errno);
-			//     goto errout_with_dev;
-			//   }
-			//   printf("Set PWM PB9 to OFF\n");
-			// }
-			// else if(buf[0]=='u'){
-			//   int check_duty = duty_perc + 1;
-			//   duty_perc = MIN(check_duty,10);
-				
-			//   info.duty  = b16divi(uitoub16(duty_perc), 100);
-			//   printf("pwm_main: starting output "
-			//    "with frequency: %" PRIu32 " duty: %08" PRIx32 "\n",
-			//    info.frequency, (uint32_t)info.duty);
-
-			//   ret = ioctl(fd, PWMIOC_SETCHARACTERISTICS,
-			//               (unsigned long)((uintptr_t)&info));
-			//   if (ret < 0){
-			//     printf("pwm_main: ioctl(PWMIOC_SETCHARACTERISTICS) failed: %d\n",
-			//             errno);
-			//     goto errout_with_dev;
-			//   }
-			//   //get current duty cycle
-			//   //incease by +5 and ensure we dont go over a hundred
-			//   //set characteristics
-			//   //pwm start
-
-			//   ret = ioctl(fd, PWMIOC_START, 0);
-			//   if (ret < 0){
-			//     printf("pwm_main: ioctl(PWMIOC_START) failed: %d\n", errno);
-			//     goto errout_with_dev;
-			//   }
-			//   printf("Increased PWM duty cycle to %d\n", duty_perc);
-			// }
-			// else if(buf[0]=='d'){
-			//   int check_duty = duty_perc - 1;
-			//   duty_perc = MAX(check_duty,0);
-				
-			//   info.duty  = b16divi(uitoub16(duty_perc), 100);
-			//   printf("pwm_main: starting output "
-			//    "with frequency: %" PRIu32 " duty: %08" PRIx32 "\n",
-			//    info.frequency, (uint32_t)info.duty);
-
-			//   ret = ioctl(fd, PWMIOC_SETCHARACTERISTICS,
-			//               (unsigned long)((uintptr_t)&info));
-			//   if (ret < 0){
-			//     printf("pwm_main: ioctl(PWMIOC_SETCHARACTERISTICS) failed: %d\n",
-			//             errno);
-			//     goto errout_with_dev;
-			//   }
-			//   //get current duty cycle
-			//   //incease by +5 and ensure we dont go over a hundred
-			//   //set characteristics
-			//   //pwm start
-
-			//   ret = ioctl(fd, PWMIOC_START, 0);
-			//   if (ret < 0){
-			//     printf("pwm_main: ioctl(PWMIOC_START) failed: %d\n", errno);
-			//     goto errout_with_dev;
-			//   }
-			//   printf("Increased PWM duty cycle to %d\n", duty_perc);
-			// }
-			
 		}
 	}
 
 
-	close(fd);
+	deletePins(pins);
 	fflush(stdout);
 	return OK;
-
-errout_with_dev:
-	close(fd);
 errout:
 	fflush(stdout);
 	return ERROR;

@@ -47,8 +47,12 @@
 #  error "PWM device support is not enabled (CONFIG_PWM)"
 #endif
 
-#ifndef CONFIG_EXAMPLES_PWM_DEVPATH
-#  define CONFIG_EXAMPLES_PWM_DEVPATH "/dev/pwm0"
+#ifndef CONFIG_EXAMPLES_KYBPWM1_DEVPATH
+#  define CONFIG_EXAMPLES_KYBPWM_TIM13_DEVPATH "/dev/pwm1"
+#endif
+
+#ifndef CONFIG_EXAMPLES_KYBPWM2_DEVPATH
+#  define CONFIG_EXAMPLES_KYBPWM_TIM5_DEVPATH "/dev/pwm2"
 #endif
 
 #ifndef CONFIG_EXAMPLES_PWM_FREQUENCY
