@@ -65,6 +65,7 @@ int stm32_pwm_setup(void)
   struct pwm_lowerhalf_s *pwm1;
   struct pwm_lowerhalf_s *pwm2;
   struct pwm_lowerhalf_s *pwm3;
+  struct pwm_lowerhalf_s *pwm4;
   int ret;
 
   /* Have we already initialized? */
@@ -100,7 +101,7 @@ int stm32_pwm_setup(void)
 		syslog(LOG_INFO, "PWM1 initialized\n");
 		//--------------------------------------
 		
-		pwm2 = stm32_pwminitialize(5); //channel 4
+		pwm2 = stm32_pwminitialize(5); 
 		if (!pwm2){
 			aerr("ERROR: Failed to get the STM32F4 PWM lower half\n");
 			return -ENODEV;
@@ -112,6 +113,34 @@ int stm32_pwm_setup(void)
 			return ret;
 		}
 		syslog(LOG_INFO, "PWM2 initialized\n");
+		//--------------------------------------
+
+		pwm3 = stm32_pwminitialize(4);
+		if (!pwm3){
+			aerr("ERROR: Failed to get the STM32F4 PWM lower half\n");
+			return -ENODEV;
+		}
+
+		ret = pwm_register("/dev/pwm3", pwm3);
+		if (ret < 0){
+			aerr("ERROR: pwm_register failed: %d\n", ret);
+			return ret;
+		}
+		syslog(LOG_INFO, "PWM3 initialized\n");
+		//--------------------------------------
+
+		pwm4 = stm32_pwminitialize(3);
+		if (!pwm4){
+			aerr("ERROR: Failed to get the STM32F4 PWM lower half\n");
+			return -ENODEV;
+		}
+
+		ret = pwm_register("/dev/pwm4", pwm4);
+		if (ret < 0){
+			aerr("ERROR: pwm_register failed: %d\n", ret);
+			return ret;
+		}
+		syslog(LOG_INFO, "PWM4 initialized\n");
 		//--------------------------------------
 		
 		/* Now we are initialized */
