@@ -122,11 +122,13 @@ struct stlitMSG {
 
 typedef struct {
 	int timer_group;
-	int channel; //this should be a fd
+	int channel;
 	int fd;
+	int duty;
+	int freq;
 } Pin;
 
-
+int numPins = 0;
 /****************************************************************************
  * Private Function Prototypes
  ****************************************************************************/
@@ -207,26 +209,51 @@ void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
 
 //assuming pwm is started
 //only needs pwm stats and fd ONLY
-void setPWM(FAR struct pwm_info_s* pwm, Pin* p, int duty, int freq){
+void setPWM(FAR struct pwm_info_s* pwm, Pin** pins, int pin_idx, int duty, int freq){
 	// pwm->duty = b16divi(uitoub16(duty), 100000);
 	pwm->frequency = freq;
 
+	/*Newly added*/
+	//goal is to set two pins
+	Pin* currPin = pins[pin_idx];
+	currPin->duty = duty;
+
+	for(int i=0; i<numPins; i++){
+		if(pins[i]->timer_group ==  currPin->timer_group){
+			pwm->channels[pins[i]->channel-1].channel = pins[i]->channel;
+			pwm->channels[pins[i]->channel-1].duty = b16divi(uitoub16(pins[i]->duty), 100000);
+		}
+	}
+
+	//just blue is working
+	// pwm->channels[chIDX].channel = pins[pin_idx]->channel;
+	// pwm->channels[chIDX].duty = b16divi(uitoub16(pins[pin_idx]->duty), 100000);
+
+	/* end */
+
+	/* modified by jiong  */
 	
-	int chIDX = p->channel-1;
-	pwm->channels[chIDX].channel = p->channel;
-	pwm->channels[chIDX].duty = b16divi(uitoub16(duty), 100000);
+	//int chIDX = p->channel-1;
+	// Pin* p = pins[2];
+	
+	// pwm->channels[pins[1]->channel -1].channel = pins[1]->channel;
+	// pwm->channels[pins[1]->channel -1].duty = b16divi(uitoub16(duty), 100000);
 
+	// pwm->channels[pins[2]->channel -1].channel = pins[2]->channel;
+	// pwm->channels[pins[2]->channel -1].duty = b16divi(uitoub16(duty), 100000);
 
-	int ret = ioctl(p->fd, PWMIOC_SETCHARACTERISTICS, (unsigned long)((uintptr_t)pwm));
+	/* end */
+
+	int ret = ioctl(currPin->fd, PWMIOC_SETCHARACTERISTICS, (unsigned long)((uintptr_t)pwm));
 	if (ret < 0){
 		printf("pwm_main: ioctl(PWMIOC_SETCHARACTERISTICS) failed: %d\n",
 						errno);
-		close(p->fd);
+		close(currPin->fd);
 	}
-	ret = ioctl(p->fd, PWMIOC_START, 0);
+	ret = ioctl(currPin->fd, PWMIOC_START, 0);
 	if (ret < 0){
 		printf("pwm_main: ioctl(PWMIOC_START) failed: %d\n", errno);
-		close(p->fd);
+		close(currPin->fd);
 	}
 }
 
@@ -250,38 +277,6 @@ void startPWM(FAR struct pwm_info_s* pwm, int fd){
 	printf("START\n");
 }
 
-// void initPWM(){
-// 	//PWM1
-// 	if (!g_pwmstate1.initialized)
-// 	{
-// 		// g_pwmstate1.duty        = CONFIG_EXAMPLES_PWM_DUTYPCT;
-// 		g_pwmstate1.freq        = CONFIG_EXAMPLES_PWM_FREQUENCY;
-// 		g_pwmstate1.duration    = CONFIG_EXAMPLES_PWM_DURATION;
-// 		g_pwmstate1.initialized = true;
-// 	}
-// 	if (!g_pwmstate1.devpath)
-// 	{
-// 		/* No.. use the default device */
-// 		pwm_devpath(&g_pwmstate1, CONFIG_EXAMPLES_KYBPWM1_DEVPATH);
-// 	}
-// 	//-------------------------------------------------------------
-
-// 	//PWM2
-// 	if (!g_pwmstate2.initialized)
-// 	{
-// 		// g_pwmstate2.duty       = CONFIG_EXAMPLES_PWM_DUTYPCT;
-// 		g_pwmstate2.freq        = CONFIG_EXAMPLES_PWM_FREQUENCY;
-// 		g_pwmstate2.duration    = CONFIG_EXAMPLES_PWM_DURATION;
-// 		g_pwmstate2.initialized = true;
-// 	}
-// 	if (!g_pwmstate2.devpath)
-// 	{
-// 		/* No.. use the default device */
-// 		pwm_devpath(&g_pwmstate2, CONFIG_EXAMPLES_KYBPWM2_DEVPATH);
-// 	}
-// 	//-------------------------------------------------------------
-// }
-
 //TODO... FREE MEMORYYYY!!!!!! DO NOT FORGETTTTTT
 Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 	Pin* p = (Pin*) malloc(sizeof(Pin));
@@ -300,6 +295,9 @@ Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 		fflush(stdout);
 	}
 	p->fd = fd;
+	p->duty = 5000;
+
+	numPins++;
 
 	return p;
 }
@@ -340,9 +338,11 @@ int main(int argc, FAR char *argv[])
 
 	Pin** pins = initPins();
 
-	setPWM(&info, pins[0], 5000, 50);
-	setPWM(&info, pins[1], 5000, 50);
-	setPWM(&info, pins[2], 5000, 50);
+	//setPWM(&info, pins[0], 5000, 50);
+	//setPWM(&info, pins[1], 5000, 50);
+	setPWM(&info, pins, 0, 5000, 50);
+	setPWM(&info, pins, 1, 5000, 50);
+	setPWM(&info, pins, 2, 5000, 50);
 
 	//read serial to control output
 	while(1){
@@ -365,7 +365,7 @@ int main(int argc, FAR char *argv[])
 
 			if(msg.on_off){ //1 is on
 				// startPWM(&info,fd); // I dont think i need this
-				setPWM(&info, pins[msg.motor-1], msg.duty, msg.freq);
+				setPWM(&info, pins, msg.motor-1, msg.duty, msg.freq);
 			}
 			else{
 				//do we need to set a specific channel here to 0? how to deal with servos vs other motors... cant just set it to 0.
