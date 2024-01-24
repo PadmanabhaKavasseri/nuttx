@@ -4931,8 +4931,9 @@ Linker script and memory map
                 0x00000000081150a8      0x258 /home/nuttx_qcomamr/nuttx/staging/libapps.a(ultrasound_main.c.home.nuttx_qcomamr.nuttx-apps.examples.ultrasound.o)
                 0x00000000081150a8                ultrasound_main
  .text.decodeBmsg
-                0x0000000008115300       0xd0 /home/nuttx_qcomamr/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx_qcomamr.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115300       0xce /home/nuttx_qcomamr/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx_qcomamr.nuttx-apps.examples.keybpwm.o)
                 0x0000000008115300                decodeBmsg
+ *fill*         0x00000000081153ce        0x2 
  .text.setPWM   0x00000000081153d0       0xa0 /home/nuttx_qcomamr/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx_qcomamr.nuttx-apps.examples.keybpwm.o)
                 0x00000000081153d0                setPWM
  .text.stopPWM  0x0000000008115470       0x38 /home/nuttx_qcomamr/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx_qcomamr.nuttx-apps.examples.keybpwm.o)

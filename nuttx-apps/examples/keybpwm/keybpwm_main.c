@@ -138,9 +138,6 @@ int numPins = 0;
  * Private Data
  ****************************************************************************/
 
-// static struct pwm_state_s g_pwmstate1;
-// static struct pwm_state_s g_pwmstate2;//timer group
-
 
 static void pwm_devpath(FAR struct pwm_state_s *pwm, FAR const char *devpath)
 {
@@ -158,7 +155,7 @@ static void pwm_devpath(FAR struct pwm_state_s *pwm, FAR const char *devpath)
 
 void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
 	char binMsgStr[33];
-	char msg_start[4], motor[5], on_off[2], freq[8], duty[15], msg_stop[4];
+	char msg_start[4], motor[5], on_off[2], freq[8], duty[18], msg_stop[4];
 	int idx = 0;
 	// printf("Printing Binary MSG in decodebmsg:: ");
 	//loop through binary message and convert to string
@@ -182,8 +179,8 @@ void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
 	strncpy(motor, binMsgStr + 3, 4); motor[4] = '\0';
 	strncpy(on_off, binMsgStr + 7, 1); on_off[1] = '\0';
 	strncpy(freq, binMsgStr + 8, 7); freq[7] = '\0';
-	strncpy(duty, binMsgStr + 15, 14); duty[14] = '\0';
-	strncpy(msg_stop, binMsgStr + 29, 3); msg_stop[3] = '\0';
+	strncpy(duty, binMsgStr + 15, 17); duty[17] = '\0';
+	strncpy(msg_stop, binMsgStr + 32, 3); msg_stop[3] = '\0';
 
 	// Convert frequency from binary to integer
     int freq_int = strtol(freq, NULL, 2);
@@ -207,14 +204,10 @@ void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
 
 }
 
-//assuming pwm is started
-//only needs pwm stats and fd ONLY
 void setPWM(FAR struct pwm_info_s* pwm, Pin** pins, int pin_idx, int duty, int freq){
 	// pwm->duty = b16divi(uitoub16(duty), 100000);
 	pwm->frequency = freq;
 
-	/*Newly added*/
-	//goal is to set two pins
 	Pin* currPin = pins[pin_idx];
 	currPin->duty = duty;
 
@@ -224,25 +217,6 @@ void setPWM(FAR struct pwm_info_s* pwm, Pin** pins, int pin_idx, int duty, int f
 			pwm->channels[pins[i]->channel-1].duty = b16divi(uitoub16(pins[i]->duty), 100000);
 		}
 	}
-
-	//just blue is working
-	// pwm->channels[chIDX].channel = pins[pin_idx]->channel;
-	// pwm->channels[chIDX].duty = b16divi(uitoub16(pins[pin_idx]->duty), 100000);
-
-	/* end */
-
-	/* modified by jiong  */
-	
-	//int chIDX = p->channel-1;
-	// Pin* p = pins[2];
-	
-	// pwm->channels[pins[1]->channel -1].channel = pins[1]->channel;
-	// pwm->channels[pins[1]->channel -1].duty = b16divi(uitoub16(duty), 100000);
-
-	// pwm->channels[pins[2]->channel -1].channel = pins[2]->channel;
-	// pwm->channels[pins[2]->channel -1].duty = b16divi(uitoub16(duty), 100000);
-
-	/* end */
 
 	int ret = ioctl(currPin->fd, PWMIOC_SETCHARACTERISTICS, (unsigned long)((uintptr_t)pwm));
 	if (ret < 0){
@@ -277,7 +251,6 @@ void startPWM(FAR struct pwm_info_s* pwm, int fd){
 	printf("START\n");
 }
 
-//TODO... FREE MEMORYYYY!!!!!! DO NOT FORGETTTTTT
 Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 	Pin* p = (Pin*) malloc(sizeof(Pin));
 	//create fd here
@@ -302,20 +275,24 @@ Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 	return p;
 }
 
-
 Pin** initPins(){
     //should read Konfig file.. will add that later
     Pin** pins = malloc(8 * sizeof(Pin*)); // Allocate memory for 8 pointers to Pin
     pins[0] = createPin(13, 1, CONFIG_EXAMPLES_KYBPWM_TIM13_DEVPATH); //17 ///should be a file descriptor instead
 	pins[1] = createPin(5, 4, CONFIG_EXAMPLES_KYBPWM_TIM5_DEVPATH);
 	pins[2] = createPin(5, 1, CONFIG_EXAMPLES_KYBPWM_TIM5_DEVPATH);
+	pins[3] = createPin(4, 4, CONFIG_EXAMPLES_KYBPWM_TIM4_DEVPATH);
+	pins[4] = createPin(4, 3, CONFIG_EXAMPLES_KYBPWM_TIM4_DEVPATH);
+	pins[5] = createPin(4, 2, CONFIG_EXAMPLES_KYBPWM_TIM4_DEVPATH);
+	pins[6] = createPin(3, 4, CONFIG_EXAMPLES_KYBPWM_TIM3_DEVPATH);
+	pins[7] = createPin(3, 3, CONFIG_EXAMPLES_KYBPWM_TIM3_DEVPATH);
 
-    // Initialize other pins...
+
     return pins;
 }
 
 void deletePins(Pin** pins){
-    for(int i = 0; i < 8; i++){
+    for(int i = 0; i < numPins; i++){
         deletePin(pins[i]);
     }
     free(pins);
@@ -338,11 +315,14 @@ int main(int argc, FAR char *argv[])
 
 	Pin** pins = initPins();
 
-	//setPWM(&info, pins[0], 5000, 50);
-	//setPWM(&info, pins[1], 5000, 50);
 	setPWM(&info, pins, 0, 5000, 50);
 	setPWM(&info, pins, 1, 5000, 50);
 	setPWM(&info, pins, 2, 5000, 50);
+	setPWM(&info, pins, 3, 5000, 50);
+	setPWM(&info, pins, 4, 5000, 50);
+	setPWM(&info, pins, 5, 5000, 50);
+	setPWM(&info, pins, 6, 5000, 50);
+	setPWM(&info, pins, 7, 5000, 50);
 
 	//read serial to control output
 	while(1){
@@ -361,15 +341,12 @@ int main(int argc, FAR char *argv[])
 		else {
 			decodeBmsg(buf, &msg);
 			printf("On/Off: %d Motor: %d Duty: %d Freq: %d\n", msg.on_off, msg.motor, msg.duty, msg.freq);
-			//make this a function that just applies the message... maybe this is okay
-
 			if(msg.on_off){ //1 is on
-				// startPWM(&info,fd); // I dont think i need this
-				setPWM(&info, pins, msg.motor-1, msg.duty, msg.freq);
+				setPWM(&info, pins, msg.motor, msg.duty, msg.freq);
 			}
 			else{
 				//do we need to set a specific channel here to 0? how to deal with servos vs other motors... cant just set it to 0.
-				stopPWM(&info, pins[msg.motor-1]->fd);
+				stopPWM(&info, pins[msg.motor]->fd);
 			}
 		}
 	}

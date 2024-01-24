@@ -3,8 +3,8 @@ from streamlit_extras.stateful_button import button
 import os, sys, termios, fcntl
 
 
-minDuty = 5.000
-maxDuty = 10.000
+minDuty = 0.000
+maxDuty = 100.000
 defDuty = minDuty
 stepsDuty = 0.005
 
@@ -48,10 +48,12 @@ class pwm:
         freqBits = format(freq,'07b')
         dutyBits = format(duty,'017b')
 
+        st.write(dutyBits)
+
         # Check the lengths of the binary strings
-        if len(startBits) > 3 or len(stopBits) > 3 or len(motorBits) > 4 or len(onOffBits) > 1 or len(freqBits) > 7 or len(dutyBits) > 17:
-            print("Error: One or more inputs are too large for their respective bit lengths.")
-            return None
+        # if len(startBits) > 3 or len(stopBits) > 3 or len(motorBits) > 4 or len(onOffBits) > 1 or len(freqBits) > 7 or len(dutyBits) > 14:
+        #     print("Error: One or more inputs are too large for their respective bit lengths.")
+        #     return None
 
         binaryMsg = startBits + motorBits + onOffBits + freqBits + dutyBits + stopBits
 
@@ -83,4 +85,7 @@ pwm4 = pwm(4)
 pwm5 = pwm(5)
 pwm6 = pwm(6)
 pwm6 = pwm(7)
+
+
+# pwm0.dutySlider = pwm1.dutySlider
 
