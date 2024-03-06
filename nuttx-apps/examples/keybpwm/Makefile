@@ -19,10 +19,7 @@
 ############################################################################
 
 include $(APPDIR)/Make.defs
-
-# PWM Example.
-
-MAINSRC = keybpwm_main.c
+QTIARM_DIR := $(APPDIR)/examples/keybpwm
 
 # PWM built-in application info
 
@@ -30,5 +27,31 @@ PROGNAME = keybpwm
 PRIORITY = SCHED_PRIORITY_DEFAULT
 STACKSIZE = $(CONFIG_DEFAULT_TASK_STACKSIZE)
 MODULE = $(CONFIG_EXAMPLES_KEYBPWM)
+
+DEPPATH += --dep-path app
+
+C_INCLUDES +=  \
+	-I$(QTIARM_DIR)/libqrc/include/app_msg \
+    -I$(QTIARM_DIR)/libqrc/include/module \
+    -I$(QTIARM_DIR)/libqrc/protocol/qrc \
+	-I$(QTIARM_DIR)/libqrc/protocol/qrc/* \
+	-I$(QTIARM_DIR)/libqrc/protocol/qrc/tinyframe \
+	-I$(QTIARM_DIR)/libqrc/protocol/tinyframe \
+
+
+MAINSRC = keybpwm_main.c
+
+CSRCS += $(QTIARM_DIR)/libqrc/protocol/qrc/qrc.c
+CSRCS += $(QTIARM_DIR)/libqrc/protocol/qrc/qrc_threadpool.c
+CSRCS += $(QTIARM_DIR)/libqrc/protocol/tinyframe/TinyFrame.c
+CSRCS += $(QTIARM_DIR)/libqrc/protocol/qrc_msg_management.c
+
+# add define
+CFLAGS += -DQRC_MCB
+CFLAGS += -DDEBUG_MCB
+
+CFLAGS += $(C_INCLUDES)
+
+CFLAGS += -Wl,-u_printf_float,-o0
 
 include $(APPDIR)/Application.mk

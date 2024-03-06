@@ -39,6 +39,7 @@
 #include <nuttx/timers/pwm.h>
 
 #include "keybpwm.h"
+#include "qrc.h"
 
 /****************************************************************************
  * Pre-processor Definitions
@@ -128,6 +129,9 @@ typedef struct {
 	int freq;
 } Pin;
 
+
+
+
 int numPins = 0;
 /****************************************************************************
  * Private Function Prototypes
@@ -154,6 +158,8 @@ static void pwm_devpath(FAR struct pwm_state_s *pwm, FAR const char *devpath)
 }
 
 void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
+
+	//where to read the config file?
 	char binMsgStr[33];
 	char msg_start[4], motor[5], on_off[2], freq[8], duty[18], msg_stop[4];
 	int idx = 0;
@@ -277,7 +283,7 @@ Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 
 Pin** initPins(){
     //should read Konfig file.. will add that later
-    Pin** pins = malloc(8 * sizeof(Pin*)); // Allocate memory for 8 pointers to Pin
+    Pin** pins = malloc(9 * sizeof(Pin*)); // Allocate memory for 8 pointers to Pin
     pins[0] = createPin(13, 1, CONFIG_EXAMPLES_KYBPWM_TIM13_DEVPATH); //17 ///should be a file descriptor instead
 	pins[1] = createPin(5, 4, CONFIG_EXAMPLES_KYBPWM_TIM5_DEVPATH);
 	pins[2] = createPin(5, 1, CONFIG_EXAMPLES_KYBPWM_TIM5_DEVPATH);
@@ -286,7 +292,7 @@ Pin** initPins(){
 	pins[5] = createPin(4, 2, CONFIG_EXAMPLES_KYBPWM_TIM4_DEVPATH);
 	pins[6] = createPin(3, 4, CONFIG_EXAMPLES_KYBPWM_TIM3_DEVPATH);
 	pins[7] = createPin(3, 3, CONFIG_EXAMPLES_KYBPWM_TIM3_DEVPATH);
-
+	pins[8] = createPin(9, 2, CONFIG_EXAMPLES_KYBPWM_TIM9_DEVPATH);
 
     return pins;
 }
@@ -298,13 +304,34 @@ void deletePins(Pin** pins){
     free(pins);
 }
 
+void serCleanPrint(char* msg){
+	char binMsgStr[33];
+	char msg_start[4], motor[5], on_off[2], freq[8], duty[18], msg_stop[4];
+	int idx = 0;
+	// printf("Printing Binary MSG in decodebmsg:: ");
+	//loop through binary message and convert to string
+	for (ssize_t i = 0; i < 4; ++i) {
+		for (int j = 7; j >= 0; --j) {
+			int bit = (msg[i] >> j) & 1; //get most significant bit & 1 to convert to binary string
+			// printf("%d", bit);
+			idx = (8*i) + (7-j);
+			binMsgStr[idx] = bit + '0';  // Add '0' to convert the integer to a character
+		}
+			// printf(" ");
+	}
+	printf("\n");
+	binMsgStr[32] = '\0';  // Null-terminate the string
+	// printf("Bin Msg Str: ");
+	printf("%s\n", binMsgStr);
+}
+
 int main(int argc, FAR char *argv[])
 {
 	struct pwm_info_s info;
 	struct stlitMSG msg;
 	int ser_fd;
 	int ret;
-	char buf[4];//4 bytes for streamlit message
+	char buf[1024];//4 bytes for streamlit message
 
 	//initialize serial port
 	ser_fd = open("/dev/ttyS2", O_RDONLY | O_NONBLOCK);
@@ -312,6 +339,9 @@ int main(int argc, FAR char *argv[])
 		perror("unable to open serial port");
 		return 1;
 	}
+
+	int testval = CONFIG_EXAMPLES_KEYBPWM_TESTBED;
+	printf("The number is %d\n", testval);
 
 	Pin** pins = initPins();
 
@@ -323,6 +353,8 @@ int main(int argc, FAR char *argv[])
 	setPWM(&info, pins, 5, 5000, 50);
 	setPWM(&info, pins, 6, 5000, 50);
 	setPWM(&info, pins, 7, 5000, 50);
+	setPWM(&info, pins, 8, 5000, 50);
+
 
 	//read serial to control output
 	while(1){
@@ -339,15 +371,18 @@ int main(int argc, FAR char *argv[])
 			}
 		}
 		else {
-			decodeBmsg(buf, &msg);
-			printf("On/Off: %d Motor: %d Duty: %d Freq: %d\n", msg.on_off, msg.motor, msg.duty, msg.freq);
-			if(msg.on_off){ //1 is on
-				setPWM(&info, pins, msg.motor, msg.duty, msg.freq);
-			}
-			else{
-				//do we need to set a specific channel here to 0? how to deal with servos vs other motors... cant just set it to 0.
-				stopPWM(&info, pins[msg.motor]->fd);
-			}
+			// buf[n] = '\0'; 
+			printf("Received: %s\n",buf);
+			serCleanPrint(buf);
+			// decodeBmsg(buf, &msg);
+			// printf("On/Off: %d Motor: %d Duty: %d Freq: %d\n", msg.on_off, msg.motor, msg.duty, msg.freq);
+			// if(msg.on_off){ //1 is on
+			// 	setPWM(&info, pins, msg.motor, msg.duty, msg.freq);
+			// }
+			// else{
+			// 	//do we need to set a specific channel here to 0? how to deal with servos vs other motors... cant just set it to 0.
+			// 	stopPWM(&info, pins[msg.motor]->fd);
+			// }
 		}
 	}
 
