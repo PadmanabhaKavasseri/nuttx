@@ -1,0 +1,13 @@
+library for motor control.
+
+please download https://github.qualcomm.com/China-IoT-Robotics-Team/qti_amr_motor_control
+to sync full project.
+
+Sync code command:
+git clone https://github.qualcomm.com/China-IoT-Robotics-Team/qti_amr_motor_control
+
+cd qti_amr_motor_control
+
+git submodule init
+
+git submodule update
