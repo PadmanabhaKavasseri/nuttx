@@ -11,7 +11,8 @@ This file should get info from the streamlit app and write messages to Tiny Fram
 
 TODO:
 1. Send a message from here to mcb and see the output
-
+2. Convert streamlit parameters into streamlit
+3. 
 */
 // using namespace qti_amr_robot_control;
 // using namespace robot_base;

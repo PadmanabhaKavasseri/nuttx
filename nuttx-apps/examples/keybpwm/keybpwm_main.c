@@ -88,6 +88,7 @@
 #  endif
 #endif
 
+#define CONFIG_PIPE "config"
 /****************************************************************************
  * Private Types
  ****************************************************************************/
@@ -325,6 +326,17 @@ void serCleanPrint(char* msg){
 	printf("%s\n", binMsgStr);
 }
 
+void init(){
+	printf("::init::\n");
+	init_qrc_management();
+	config_parameter_init();
+	syslog(LOG_INFO, "main: qtiamr main startup completed\n");
+  	qrc_pipe_threads_join();
+	// char pipe_name[] = CONFIG_PIPE;
+	// struct qrc_pipe_s *pipe = qrc_get_pipe(pipe_name);
+	// printf("Pipe name %s\n", pipe->pipe_name);
+}
+
 int main(int argc, FAR char *argv[])
 {
 	struct pwm_info_s info;
@@ -339,6 +351,11 @@ int main(int argc, FAR char *argv[])
 		perror("unable to open serial port");
 		return 1;
 	}
+
+	printf("here::\n");
+	init();
+
+
 
 	int testval = CONFIG_EXAMPLES_KEYBPWM_TESTBED;
 	printf("The number is %d\n", testval);

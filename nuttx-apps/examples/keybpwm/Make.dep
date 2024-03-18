@@ -54,6 +54,7 @@ keybpwm_main.c.home.nuttx_qcomamr.nuttx-apps.examples.keybpwm.o: \
  /home/nuttx_qcomamr/nuttx/include/inttypes.h \
  /home/nuttx_qcomamr/nuttx/include/nuttx/timers/pwm.h \
  /home/nuttx_qcomamr/nuttx/include/fixedmath.h keybpwm.h \
+ /home/nuttx_qcomamr/nuttx-apps/examples/keybpwm/libqrc/include/app_msg/config_msg.h \
  /home/nuttx_qcomamr/nuttx-apps/examples/keybpwm/libqrc/protocol/qrc/qrc.h \
  /home/nuttx_qcomamr/nuttx/include/sys/time.h \
  /home/nuttx_qcomamr/nuttx/include/sys/select.h \
