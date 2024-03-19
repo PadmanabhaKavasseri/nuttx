@@ -26,7 +26,6 @@
  ****************************************************************************/
 
 #include <nuttx/config.h>
-#include "config_msg.h"
 
 /****************************************************************************
  * Pre-processor Definitions
@@ -96,10 +95,5 @@
 /****************************************************************************
  * Public Function Prototypes
  ****************************************************************************/
-int get_configuration_parameters(enum config_msg_type_e type, void *parameters);
-
-void config_notify_completed(bool initialized);
-int config_parameter_init(void);  /* called by main */
-
 
 #endif /* __APPS_EXAMPLES_PWM_KEYBPWM_H */

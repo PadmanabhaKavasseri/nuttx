@@ -1,74 +1,65 @@
-amr_main.c.home.nuttx_qcomamr.nuttx-apps.qcomamr.o: amr_main.c \
- /home/nuttx_qcomamr/nuttx/include/nuttx/config.h \
- /home/nuttx_qcomamr/nuttx/include/stdio.h \
- /home/nuttx_qcomamr/nuttx/include/sys/types.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/compiler.h \
- /home/nuttx_qcomamr/nuttx/include/stdint.h \
- /home/nuttx_qcomamr/nuttx/include/arch/types.h \
- /home/nuttx_qcomamr/nuttx/include/arch/inttypes.h \
- /home/nuttx_qcomamr/nuttx/include/limits.h \
- /home/nuttx_qcomamr/nuttx/include/arch/limits.h \
+amr_main.c.home.nuttx.nuttx-apps.qcomamr.o: amr_main.c \
+ /home/nuttx/nuttx/include/nuttx/config.h \
+ /home/nuttx/nuttx/include/stdio.h /home/nuttx/nuttx/include/sys/types.h \
+ /home/nuttx/nuttx/include/nuttx/compiler.h \
+ /home/nuttx/nuttx/include/stdint.h \
+ /home/nuttx/nuttx/include/arch/types.h \
+ /home/nuttx/nuttx/include/arch/inttypes.h \
+ /home/nuttx/nuttx/include/limits.h \
+ /home/nuttx/nuttx/include/arch/limits.h \
  /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
- /home/nuttx_qcomamr/nuttx/include/time.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/fs/fs.h \
- /home/nuttx_qcomamr/nuttx/include/stdbool.h \
- /home/nuttx_qcomamr/nuttx/include/dirent.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/mutex.h \
- /home/nuttx_qcomamr/nuttx/include/errno.h \
- /home/nuttx_qcomamr/nuttx/include/assert.h \
- /home/nuttx_qcomamr/nuttx/include/unistd.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/semaphore.h \
- /home/nuttx_qcomamr/nuttx/include/semaphore.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/queue.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/clock.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/sched.h \
- /home/nuttx_qcomamr/nuttx/include/sched.h \
- /home/nuttx_qcomamr/nuttx/include/strings.h \
- /home/nuttx_qcomamr/nuttx/include/string.h \
- /home/nuttx_qcomamr/nuttx/include/stddef.h \
- /home/nuttx_qcomamr/nuttx/include/signal.h \
- /home/nuttx_qcomamr/nuttx/include/pthread.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/irq.h \
- /home/nuttx_qcomamr/nuttx/include/arch/irq.h \
- /home/nuttx_qcomamr/nuttx/include/arch/chip/irq.h \
- /home/nuttx_qcomamr/nuttx/include/arch/stm32/chip.h \
- /home/nuttx_qcomamr/nuttx/include/arch/stm32/stm32f40xxx_irq.h \
- /home/nuttx_qcomamr/nuttx/include/arch/armv7-m/irq.h \
- /home/nuttx_qcomamr/nuttx/include/arch/armv7-m/nvicpri.h \
- /home/nuttx_qcomamr/nuttx/include/arch/chip/chip.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/wdog.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/mm/shm.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/mm/gran.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/net/net.h \
- /home/nuttx_qcomamr/nuttx/include/arch/arch.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/pgalloc.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/addrenv.h \
- /home/nuttx_qcomamr/nuttx/include/stdlib.h \
- /home/nuttx_qcomamr/nuttx/include/fcntl.h \
- /home/nuttx_qcomamr/nuttx/include/sys/ioctl.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/fs/ioctl.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/serial/tioctl.h \
- /home/nuttx_qcomamr/nuttx/include/syslog.h task_config.h main.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/rc/rc.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/motion/motion_task.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/motion/canopen.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/motion/motor_driver.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/imu/imu.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/sensors/icm42688.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/ultrasound/ultrasound.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/task_config.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/roscom/ros_com.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/motion/motor_driver.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/auto_charging/auto_charging.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/can/can.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/list.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/nuttx.h \
- /home/nuttx_qcomamr/nuttx-apps/qcomamr/misc/amr_adc.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/analog/adc.h \
- /home/nuttx_qcomamr/nuttx/include/poll.h \
- /home/nuttx_qcomamr/nuttx/include/sys/poll.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/spi/spi.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/i2c/i2c_master.h \
- /home/nuttx_qcomamr/nuttx/include/nuttx/analog/ioctl.h
+ /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
+ /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
+ /home/nuttx/nuttx/include/nuttx/mutex.h \
+ /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
+ /home/nuttx/nuttx/include/unistd.h \
+ /home/nuttx/nuttx/include/nuttx/semaphore.h \
+ /home/nuttx/nuttx/include/semaphore.h \
+ /home/nuttx/nuttx/include/nuttx/queue.h \
+ /home/nuttx/nuttx/include/nuttx/clock.h \
+ /home/nuttx/nuttx/include/nuttx/sched.h \
+ /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
+ /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
+ /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/pthread.h \
+ /home/nuttx/nuttx/include/nuttx/irq.h \
+ /home/nuttx/nuttx/include/arch/irq.h \
+ /home/nuttx/nuttx/include/arch/chip/irq.h \
+ /home/nuttx/nuttx/include/arch/stm32/chip.h \
+ /home/nuttx/nuttx/include/arch/stm32/stm32f40xxx_irq.h \
+ /home/nuttx/nuttx/include/arch/armv7-m/irq.h \
+ /home/nuttx/nuttx/include/arch/armv7-m/nvicpri.h \
+ /home/nuttx/nuttx/include/arch/chip/chip.h \
+ /home/nuttx/nuttx/include/nuttx/wdog.h \
+ /home/nuttx/nuttx/include/nuttx/mm/shm.h \
+ /home/nuttx/nuttx/include/nuttx/mm/gran.h \
+ /home/nuttx/nuttx/include/nuttx/net/net.h \
+ /home/nuttx/nuttx/include/arch/arch.h \
+ /home/nuttx/nuttx/include/nuttx/pgalloc.h \
+ /home/nuttx/nuttx/include/nuttx/addrenv.h \
+ /home/nuttx/nuttx/include/stdlib.h /home/nuttx/nuttx/include/fcntl.h \
+ /home/nuttx/nuttx/include/sys/ioctl.h \
+ /home/nuttx/nuttx/include/nuttx/fs/ioctl.h \
+ /home/nuttx/nuttx/include/nuttx/serial/tioctl.h \
+ /home/nuttx/nuttx/include/syslog.h task_config.h main.h \
+ /home/nuttx/nuttx-apps/qcomamr/rc/rc.h \
+ /home/nuttx/nuttx-apps/qcomamr/motion/motion_task.h \
+ /home/nuttx/nuttx-apps/qcomamr/motion/canopen.h \
+ /home/nuttx/nuttx-apps/qcomamr/motion/motor_driver.h \
+ /home/nuttx/nuttx-apps/qcomamr/imu/imu.h \
+ /home/nuttx/nuttx/include/nuttx/sensors/icm42688.h \
+ /home/nuttx/nuttx-apps/qcomamr/ultrasound/ultrasound.h \
+ /home/nuttx/nuttx-apps/qcomamr/task_config.h \
+ /home/nuttx/nuttx-apps/qcomamr/roscom/ros_com.h \
+ /home/nuttx/nuttx-apps/qcomamr/motion/motor_driver.h \
+ /home/nuttx/nuttx-apps/qcomamr/auto_charging/auto_charging.h \
+ /home/nuttx/nuttx/include/nuttx/can/can.h \
+ /home/nuttx/nuttx/include/nuttx/list.h \
+ /home/nuttx/nuttx/include/nuttx/nuttx.h \
+ /home/nuttx/nuttx-apps/qcomamr/misc/amr_adc.h \
+ /home/nuttx/nuttx/include/nuttx/analog/adc.h \
+ /home/nuttx/nuttx/include/poll.h /home/nuttx/nuttx/include/sys/poll.h \
+ /home/nuttx/nuttx/include/nuttx/spi/spi.h \
+ /home/nuttx/nuttx/include/nuttx/i2c/i2c_master.h \
+ /home/nuttx/nuttx/include/nuttx/analog/ioctl.h
 # No files specified for dependency generation
 # No files specified for dependency generation

@@ -16,20 +16,16 @@ extern "C" {
 
 #define CONFIG_PIPE "config"
 
-
-struct config_tbm_s
-{
-  int top_motor;
-  int bottom_motor;
-  int la;
-  int stepper;
-}__attribute__((aligned(4)));
-
-
 enum config_msg_type_e
 {
-  TBM,
+  CAR = 0,
+  MOTION,
+  SCALE,
+  SENSOR,
+  RC,
+  OBSTACLE_AVOIDANCE,
   CONFIG_MSG_TYPE_MAX,
+  APPLY,
 };
 
 enum mcb_task_id_e
@@ -56,12 +52,82 @@ struct config_apply_s
   enum mcb_task_id_e error_type;	/* which task caused error */
 }__attribute__((aligned(4)));
 
+enum car_model_e
+{
+  CYCLE_CAR,
+  AMR_6040,
+  CAR_MODE_MAX,
+};
+
+enum kinematic_model_e
+{
+  DIFF_CAR,
+  ACKERMAN_CAR,
+  KINEMATIC_MODEL_MAX,
+};
+
+struct config_car_s
+{
+  int car_model;
+  int kinematic_model;
+  float wheel_space;
+  float wheel_perimeter;
+}__attribute__((aligned(4)));
+
+struct config_motion_s
+{
+  float max_speed;
+  float max_angle_speed;
+  float max_position_dist;
+  float max_position_angle;
+  float max_position_line_speed;
+  float max_position_angle_speed;
+  float pid_speed[3];
+  float pid_position[3];
+  uint32_t odom_frequency;
+}__attribute__((aligned(4)));
+
+struct config_scale_s
+{
+  float speed_scale[2];	/* 0: line speed; 1: angle speed */
+  float position_scale[2];
+  float speed_odom_scale[2];
+  float position_odom_scale[2];
+}__attribute__((aligned(4)));
+
+struct config_sensor_s
+{
+  int imu_enable;
+  int ultra_enable;
+  int ultra_quantity;
+}__attribute__((aligned(4)));
+
+struct config_remote_controller_s
+{
+  int rc_enable;
+  float max_speed;
+  float max_angle_speed;
+}__attribute__((aligned(4)));
+
+struct config_obstacle_avoidance_s
+{
+  float bottom_dist; /*unit: m*/
+  float side_dist;
+  float front_dist;
+}__attribute__((aligned(4)));
+
 struct config_msg_s
 {
-  enum config_msg_type_e type;
+  int type;
   union
   {
-    struct config_tbm_s tbm;
+    struct config_apply_s apply;
+    struct config_car_s car;
+    struct config_motion_s motion;
+    struct config_scale_s scale;
+    struct config_sensor_s sensor;
+    struct config_remote_controller_s rc;
+    struct config_obstacle_avoidance_s ob;
   } data;
 } __attribute__((aligned(4)));
 

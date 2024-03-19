@@ -38,8 +38,10 @@
 
 #include <nuttx/timers/pwm.h>
 
-#include "keybpwm.h"
-#include "qrc.h"
+#include "keybpwm_msg.h"
+
+#include "qrc_msg_management.h"
+//#include "qrc.h"  do not include this header
 
 /****************************************************************************
  * Pre-processor Definitions
@@ -88,7 +90,6 @@
 #  endif
 #endif
 
-#define CONFIG_PIPE "config"
 /****************************************************************************
  * Private Types
  ****************************************************************************/
@@ -281,7 +282,7 @@ Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 
 	return p;
 }
-
+/*
 Pin** initPins(){
     //should read Konfig file.. will add that later
     Pin** pins = malloc(9 * sizeof(Pin*)); // Allocate memory for 8 pointers to Pin
@@ -297,7 +298,7 @@ Pin** initPins(){
 
     return pins;
 }
-
+*/
 void deletePins(Pin** pins){
     for(int i = 0; i < numPins; i++){
         deletePin(pins[i]);
@@ -326,15 +327,63 @@ void serCleanPrint(char* msg){
 	printf("%s\n", binMsgStr);
 }
 
-void init(){
-	printf("::init::\n");
-	init_qrc_management();
-	config_parameter_init();
-	syslog(LOG_INFO, "main: qtiamr main startup completed\n");
-  	qrc_pipe_threads_join();
-	// char pipe_name[] = CONFIG_PIPE;
-	// struct qrc_pipe_s *pipe = qrc_get_pipe(pipe_name);
-	// printf("Pipe name %s\n", pipe->pipe_name);
+
+/*qrc message callback*/
+static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg);
+static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, bool response);
+
+
+static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, bool response)
+{
+  struct pwm_msg_s *msg;
+
+  if (pipe == NULL || data ==NULL)
+    {
+      return;
+    }
+  if (len == sizeof(struct pwm_msg_s))
+    {
+      msg = (struct pwm_msg_s *)data;
+      keybpwm_msg_parse(pipe, msg);
+    }
+   else
+   {
+	  printf("ERROR: keybpwm_qrc_msg_cb msg size mismatch \n");
+   }
+}
+
+/* you can modify this function to fit your requirement */
+static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg)
+{
+	struct pwm_msg_s reply_msg;
+
+	switch (msg->type)
+    {
+      case GET_HELLO:
+        {
+          //send hello to RB5
+		  memset(reply_msg.data, '\0', 32);
+		  memcpy(reply_msg.data, "hello,this is MCB", strlen("hello,this is MCB") * sizeof(char));
+		  reply_msg.type = PRINT_HELLO;
+		  qrc_write(pipe, (uint8_t *)&reply_msg, sizeof(struct pwm_msg_s), false);
+          break;
+        }
+	  case PRINT_HELLO:
+        {
+		  printf("\n Get message, type is PRINT_HELLO : (%s) \n", msg->data);
+          break;
+        }
+	  case SET_VALUE:
+        {
+          printf("\n Get message, type is SET_VALUE : (%d) \n", msg->value);
+		  if(msg->data){
+			printf("\n Get message, type is SET_VALUE : (%s) \n", msg->data);
+		  }
+          break;
+        }
+		default:
+			printf("keybpwm_msg_parse: unknow message type \n");
+	}
 }
 
 int main(int argc, FAR char *argv[])
@@ -345,22 +394,16 @@ int main(int argc, FAR char *argv[])
 	int ret;
 	char buf[1024];//4 bytes for streamlit message
 
+	//qrc has opend the serial port.
 	//initialize serial port
-	ser_fd = open("/dev/ttyS2", O_RDONLY | O_NONBLOCK);
+	/*ser_fd = open("/dev/ttyS2", O_RDONLY | O_NONBLOCK);
 	if (ser_fd < 0) {
 		perror("unable to open serial port");
 		return 1;
 	}
+	*/
 
-	printf("here::\n");
-	init();
-
-
-
-	int testval = CONFIG_EXAMPLES_KEYBPWM_TESTBED;
-	printf("The number is %d\n", testval);
-
-	Pin** pins = initPins();
+	/* Pin** pins = initPins();
 
 	setPWM(&info, pins, 0, 5000, 50);
 	setPWM(&info, pins, 1, 5000, 50);
@@ -371,9 +414,39 @@ int main(int argc, FAR char *argv[])
 	setPWM(&info, pins, 6, 5000, 50);
 	setPWM(&info, pins, 7, 5000, 50);
 	setPWM(&info, pins, 8, 5000, 50);
+	*/
+	/* write by jiong */ 
 
+	/* init qrc */
+  	char pipe_name[] = PWM_PIPE;
+	struct qrc_pipe_s *pipe;
+	if (false == init_qrc_management())
+    {
+      syslog(LOG_ERR, "main: qrc init failed\n");
+      return -1;
+    }
 
+	pipe =  qrc_get_pipe(pipe_name);
+	if (pipe == NULL)
+    {
+      syslog(LOG_ERR,"qrc get pipe error\n");
+      return -1;
+    }
+
+	/* register msg callback */
+	if (!qrc_register_message_cb(pipe, keybpwm_qrc_msg_cb))
+    {
+      syslog(LOG_ERR,"qrc register robot control cb error\n");
+      return -1;
+    }
+
+	syslog(LOG_INFO, "main: keybpwm startup completed\n");
+	qrc_pipe_threads_join();
+	/* end	*/
+
+	/* below function should be executed in message callback */
 	//read serial to control output
+	/*
 	while(1){
 		ssize_t n = read(ser_fd, buf, sizeof(buf));
 		if(n<0){
@@ -403,11 +476,13 @@ int main(int argc, FAR char *argv[])
 		}
 	}
 
-
+	*/
+/*
 	deletePins(pins);
 	fflush(stdout);
 	return OK;
 errout:
 	fflush(stdout);
+	*/
 	return ERROR;
 }
