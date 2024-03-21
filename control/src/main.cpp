@@ -32,39 +32,39 @@ static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg)
 {
 	struct pwm_msg_s reply_msg;
 
-	switch (msg->type)
-		{
-		case GET_HELLO:
-			{
-			//send hello to RB5
-			memcpy(reply_msg.data, "hello, RB5", strlen("hello, RB5") * sizeof(char));
-			reply_msg.type = PRINT_HELLO;
-			qrc_write(pipe, (uint8_t *)&reply_msg, sizeof(struct pwm_msg_s), false);
-			break;
-			}
-		case PRINT_HELLO:
-			{
-			printf("\n Get message, type is PRINT_HELLO : (%s) \n", msg->data);
-			break;
-			}
-		case SET_VALUE:
-			{
-			printf("\n Get message, type is SET_VALUE : (%d) \n", msg->value);
-			break;
-			}
-		default:
-			printf("keybpwm_msg_parse: unknow message type \n");
-	}
+	// switch (msg->type)
+	// 	{
+	// 	case GET_HELLO:
+	// 		{
+	// 		//send hello to RB5
+	// 		memcpy(reply_msg.data, "hello, RB5", strlen("hello, RB5") * sizeof(char));
+	// 		reply_msg.type = PRINT_HELLO;
+	// 		qrc_write(pipe, (uint8_t *)&reply_msg, sizeof(struct pwm_msg_s), false);
+	// 		break;
+	// 		}
+	// 	case PRINT_HELLO:
+	// 		{
+	// 			printf("\n Get message, type is PRINT_HELLO : (%s) \n", msg->data);
+	// 		break;
+	// 		}
+	// 	case SET_VALUE:
+	// 		{
+	// 			printf("\n Get message, type is SET_VALUE : (%d) \n", msg->value);
+	// 		break;
+	// 		}
+	// 	default:
+	// 		printf("keybpwm_msg_parse: unknow message type \n");
+	// }
 }
 
 
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
+	std::cout << "Started main.cpp" << std::endl;
 	if (!init_qrc_management()){
 		std::cout << "init_qrc_management failed" << std::endl;
 	}
-	std::cout << "INITIALIZED" << std::endl;
+	std::cout << "Initialized QRC" << std::endl;
 	
 	char pipe_name[] = PWM_PIPE; //does this need to be initialized somewhere else
 	struct qrc_pipe_s *pipe;
@@ -81,33 +81,46 @@ int main() {
 		return -1;
 	}
 
-	sleep(3);
 
+
+	sleep(3);
 	struct pwm_msg_s msg;
-	msg.type = PRINT_HELLO;
-	memset(msg.data, '\0', 32);
-	memcpy(msg.data, "hello,this is RB5", strlen("hello,this is RB5") * sizeof(char));
+	msg.type = SET_MOTOR;
+	msg.motor = 1;
+	msg.on_off = 1;
+	msg.duty = 5.33223;
+	msg.freq = 1000.45;
 	qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	std::cout << "send message type  PRINT_HELLO done " << std::endl;
-	
-	sleep(3);
-	msg.type = GET_HELLO;
-	qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	std::cout << "send message type  GET_HELLO done " << std::endl;
-	
-	sleep(3);
-	msg.type = SET_VALUE;
-	msg.value = 1111;
-	qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	std::cout << "send message type  SET_VALUE done "<<"value ="<<msg.value << std::endl;
+	std::cout << "Sent command to motor: " << msg.motor << std::endl;
 
-	sleep(3);
-	msg.type = SET_VALUE;
-	msg.value = 444;
-	memset(msg.data, '\0', 32);
-	memcpy(msg.data, "new message", strlen("new message") * sizeof(char));
-	qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	std::cout << "send message type newwww SET_VALUE done "<<"value ="<<msg.value << std::endl;
+
+	sleep(5);
+
+
+	// msg.type = PRINT_HELLO;
+	// memset(msg.data, '\0', 32);
+	// memcpy(msg.data, "hello,this is RB5", strlen("hello,this is RB5") * sizeof(char));
+	// qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
+	// std::cout << "send message type  PRINT_HELLO done " << std::endl;
+	
+	// sleep(3);
+	// msg.type = GET_HELLO;
+	// qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
+	// std::cout << "send message type  GET_HELLO done " << std::endl;
+	
+	// sleep(3);
+	// msg.type = SET_VALUE;
+	// msg.value = 1111;
+	// qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
+	// std::cout << "send message type  SET_VALUE done "<<"value ="<<msg.value << std::endl;
+
+	// sleep(3);
+	// msg.type = SET_VALUE;
+	// msg.value = 444;
+	// memset(msg.data, '\0', 32);
+	// memcpy(msg.data, "new message", strlen("new message") * sizeof(char));
+	// qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
+	// std::cout << "send message type newwww SET_VALUE done "<<"value ="<<msg.value << std::endl;
 
 
 

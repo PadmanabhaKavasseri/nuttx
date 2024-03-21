@@ -15,13 +15,17 @@ enum pwm_msg_type_e
   GET_HELLO = 0,
   PRINT_HELLO,
   SET_VALUE,
+  SET_MOTOR,
 };
 
 struct pwm_msg_s
 {
   int type; /* Use int replace enum for 4-bytes-align */
-  int value;
-  char data[32];
+  int motor; 
+  int on_off;
+  double duty;
+  double freq;
+  
 }__attribute__((aligned(4)));
 
 #ifdef __cplusplus

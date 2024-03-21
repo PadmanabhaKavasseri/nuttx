@@ -359,26 +359,28 @@ static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg)
 
 	switch (msg->type)
     {
+		case SET_MOTOR:
+			printf("\n Got SET_MOTOR msg: Motor:%d On/Off:%d Duty:%f Frequency:%f \n", msg->motor, msg->on_off, msg->duty, msg->freq);
       case GET_HELLO:
         {
           //send hello to RB5
-		  memset(reply_msg.data, '\0', 32);
-		  memcpy(reply_msg.data, "hello,this is MCB", strlen("hello,this is MCB") * sizeof(char));
-		  reply_msg.type = PRINT_HELLO;
-		  qrc_write(pipe, (uint8_t *)&reply_msg, sizeof(struct pwm_msg_s), false);
+		//   memset(reply_msg.data, '\0', 32);
+		//   memcpy(reply_msg.data, "hello,this is MCB", strlen("hello,this is MCB") * sizeof(char));
+		//   reply_msg.type = PRINT_HELLO;
+		//   qrc_write(pipe, (uint8_t *)&reply_msg, sizeof(struct pwm_msg_s), false);
           break;
         }
 	  case PRINT_HELLO:
         {
-		  printf("\n Get message, type is PRINT_HELLO : (%s) \n", msg->data);
+		//   printf("\n Get message, type is PRINT_HELLO : (%s) \n", msg->data);
           break;
         }
 	  case SET_VALUE:
         {
-          printf("\n Get message, type is SET_VALUE : (%d) \n", msg->value);
-		  if(msg->data){
-			printf("\n Get message, type is SET_VALUE : (%s) \n", msg->data);
-		  }
+        //   printf("\n Get message, type is SET_VALUE : (%d) \n", msg->value);
+		//   if(msg->data){
+		// 	printf("\n Get message, type is SET_VALUE : (%s) \n", msg->data);
+		//   }
           break;
         }
 		default:
