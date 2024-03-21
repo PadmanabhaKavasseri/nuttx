@@ -3,8 +3,23 @@
 #include "qrc_msg_management.h"
 #include "keybpwm_msg.h"
 
+#include <pybind11/pybind11.h>
+
+namespace py = pybind11;
+
 static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg);
 static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, bool response);
+
+
+int add(int i, int j){
+	return i +j;
+}
+
+PYBIND11_MODULE(main, m) {
+    m.doc() = "pybind11 example plugin"; // optional module docstring
+
+    m.def("add", &add, "A function that adds two numbers");
+}
 
 
 /*qrc message callback*/
@@ -95,6 +110,11 @@ int main() {
 
 
 	sleep(5);
+
+	/*
+	sendMotorMessage(motor,on_off,duty,freq)
+	
+	*/
 
 
 	// msg.type = PRINT_HELLO;
