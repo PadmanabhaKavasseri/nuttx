@@ -8,7 +8,7 @@ CXX = g++
 #  -g    adds debugging information to the executable file
 #  -Wall turns on most, but not all, compiler warnings
 CFLAGS  = -g -Wall
-CXXFLAGS = $(CFLAGS) -O3 -shared -std=c++11 -fPIC $(shell python3 -m pybind11 --includes) -lstdc++
+CXXFLAGS = $(CFLAGS)
 
 INCLUDE_FILES = \
 	-I./inc/libqrc/include/app_msg \
@@ -25,13 +25,13 @@ CFLAGS += -DQRC_RB5
 CXXFLAGS += $(INCLUDE_FILES)
 
 # the name to use for both the target source file, and the output file:
-TARGET_NAME = main
+TARGET_NAME = motor_control
 TARGET_EXT = $(shell python3-config --extension-suffix)
 TARGET = $(TARGET_NAME)$(TARGET_EXT)
+EXECUTABLE = $(TARGET_NAME)
 
 # source files
 C_SRCS := $(shell find ./inc/libqrc/ -name "*.c")
-
 
 $(info $$C_SRCS is [${C_SRCS}])
 
@@ -44,12 +44,16 @@ CPP_OBJS = $(CPP_SRCS:.cpp=.o)
 
 OBJS = $(C_OBJS) $(CPP_OBJS)
 
-LDLIBS = -lpthread
+LDLIBS = -lpthread -lpython3.8
 
-all: $(TARGET)
+all: $(TARGET) $(EXECUTABLE)
 
+$(TARGET): CXXFLAGS += -O3 -shared -std=c++11 -fPIC $(shell python3 -m pybind11 --includes) -lstdc++
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(LDLIBS)
+
+$(EXECUTABLE): $(OBJS)
+	$(CXX) $(CFLAGS) -o $(EXECUTABLE) $(OBJS) $(LDLIBS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -58,8 +62,4 @@ $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(TARGET) $(OBJS)
-
-
-
-	
+	$(RM) $(TARGET) $(EXECUTABLE) $(OBJS)
