@@ -15,15 +15,23 @@ static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, 
 
 
 
-int add(int i, int j){
-	return i +j;
-}
+// int add(int i, int j){
+// 	return i +j;
+// }
+
+// PYBIND11_MODULE(motor_control, m) {
+//     m.doc() = "pybind11 example plugin"; // optional module docstring
+
+//     m.def("add", &add, "A function that adds two numbers");
+// }
 
 PYBIND11_MODULE(motor_control, m) {
-    m.doc() = "pybind11 example plugin"; // optional module docstring
-
-    m.def("add", &add, "A function that adds two numbers");
+	py::class_<MotorControl>(m,"MotorControl")
+		.def(py::init<>())
+		.def("sendMotorMessage", &MotorControl::sendMotorMessage);
 }
+
+
 
 
 
