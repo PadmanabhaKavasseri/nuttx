@@ -39,6 +39,7 @@
 #include <nuttx/timers/pwm.h>
 
 #include "keybpwm_msg.h"
+#include "keybpwm.h"
 
 #include "qrc_msg_management.h"
 //#include "qrc.h"  do not include this header
@@ -131,7 +132,7 @@ typedef struct {
 	int freq;
 } Pin;
 
-
+Pin** pins;
 
 
 int numPins = 0;
@@ -212,8 +213,11 @@ void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
 
 }
 
-void setPWM(FAR struct pwm_info_s* pwm, Pin** pins, int pin_idx, int duty, int freq){
-	// pwm->duty = b16divi(uitoub16(duty), 100000);
+void setPWM(int pin_idx, int duty, int freq){
+	// pwm->duty = b16divi(uitoub16(duty), 100000); duty was like 5000
+	printf("\n SETPWM msg: Motor:%d Duty:%d Frequency:%d \n", pin_idx, duty, freq);
+	struct pwm_info_s* pwm = malloc(sizeof(struct pwm_info_s));
+
 	pwm->frequency = freq;
 
 	Pin* currPin = pins[pin_idx];
@@ -237,6 +241,7 @@ void setPWM(FAR struct pwm_info_s* pwm, Pin** pins, int pin_idx, int duty, int f
 		printf("pwm_main: ioctl(PWMIOC_START) failed: %d\n", errno);
 		close(currPin->fd);
 	}
+	free(pwm);
 }
 
 //how to stop a specific channel does it just stop the entire timer group?
@@ -282,7 +287,7 @@ Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 
 	return p;
 }
-/*
+
 Pin** initPins(){
     //should read Konfig file.. will add that later
     Pin** pins = malloc(9 * sizeof(Pin*)); // Allocate memory for 8 pointers to Pin
@@ -298,13 +303,13 @@ Pin** initPins(){
 
     return pins;
 }
-*/
-void deletePins(Pin** pins){
-    for(int i = 0; i < numPins; i++){
-        deletePin(pins[i]);
-    }
-    free(pins);
-}
+
+// void deletePins(Pin** pins){
+//     for(int i = 0; i < numPins; i++){
+//         deletePin(pins[i]);
+//     }
+//     free(pins);
+// }
 
 void serCleanPrint(char* msg){
 	char binMsgStr[33];
@@ -360,29 +365,34 @@ static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg)
 	switch (msg->type)
     {
 		case SET_MOTOR:
+		{
 			printf("\n Got SET_MOTOR msg: Motor:%d On/Off:%d Duty:%f Frequency:%f \n", msg->motor, msg->on_off, msg->duty, msg->freq);
-      case GET_HELLO:
-        {
-          //send hello to RB5
+			if(msg->on_off){
+				setPWM(msg->motor,msg->duty*100,msg->freq);
+			}
+		}
+		case GET_HELLO:
+		{
+			//send hello to RB5
 		//   memset(reply_msg.data, '\0', 32);
 		//   memcpy(reply_msg.data, "hello,this is MCB", strlen("hello,this is MCB") * sizeof(char));
 		//   reply_msg.type = PRINT_HELLO;
 		//   qrc_write(pipe, (uint8_t *)&reply_msg, sizeof(struct pwm_msg_s), false);
-          break;
-        }
-	  case PRINT_HELLO:
-        {
+			break;
+		}
+		case PRINT_HELLO:
+		{
 		//   printf("\n Get message, type is PRINT_HELLO : (%s) \n", msg->data);
-          break;
-        }
-	  case SET_VALUE:
-        {
-        //   printf("\n Get message, type is SET_VALUE : (%d) \n", msg->value);
+			break;
+		}
+		case SET_VALUE:
+		{
+		//   printf("\n Get message, type is SET_VALUE : (%d) \n", msg->value);
 		//   if(msg->data){
 		// 	printf("\n Get message, type is SET_VALUE : (%s) \n", msg->data);
 		//   }
-          break;
-        }
+			break;
+		}
 		default:
 			printf("keybpwm_msg_parse: unknow message type \n");
 	}
@@ -405,18 +415,20 @@ int main(int argc, FAR char *argv[])
 	}
 	*/
 
-	/* Pin** pins = initPins();
+	pins = initPins();
 
-	setPWM(&info, pins, 0, 5000, 50);
-	setPWM(&info, pins, 1, 5000, 50);
-	setPWM(&info, pins, 2, 5000, 50);
-	setPWM(&info, pins, 3, 5000, 50);
-	setPWM(&info, pins, 4, 5000, 50);
-	setPWM(&info, pins, 5, 5000, 50);
-	setPWM(&info, pins, 6, 5000, 50);
-	setPWM(&info, pins, 7, 5000, 50);
-	setPWM(&info, pins, 8, 5000, 50);
-	*/
+	setPWM(0, 5000, 50);
+
+	setPWM(1, 5000, 50);
+	printf("Set PWM0\n");
+	setPWM(2, 5000, 50);
+	setPWM(3, 5000, 50);
+	setPWM(4, 5000, 50);
+	setPWM(5, 5000, 50);
+	setPWM(6, 5000, 50);
+	setPWM(7, 5000, 50);
+	setPWM(8, 5000, 50);
+	
 	/* write by jiong */ 
 
 	/* init qrc */
@@ -486,5 +498,5 @@ int main(int argc, FAR char *argv[])
 errout:
 	fflush(stdout);
 	*/
-	return ERROR;
+	// return ERROR;
 }

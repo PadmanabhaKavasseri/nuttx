@@ -44,7 +44,7 @@ keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o: keybpwm_main.c \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/inttypes.h \
  /home/nuttx/nuttx/include/nuttx/timers/pwm.h \
- /home/nuttx/nuttx/include/fixedmath.h keybpwm_msg.h \
+ /home/nuttx/nuttx/include/fixedmath.h keybpwm_msg.h keybpwm.h \
  /home/nuttx/nuttx-apps/examples/keybpwm/libqrc/include/module/qrc_msg_management.h \
  /home/nuttx/nuttx-apps/examples/keybpwm/libqrc/protocol/qrc/qrc.h \
  /home/nuttx/nuttx/include/sys/time.h \

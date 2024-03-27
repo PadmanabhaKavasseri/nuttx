@@ -1,11 +1,4 @@
 import motor_control
-
-# mc = motor_control.MotorControl()
-
-
-# todo.. add streamlit to this
-
-
 import streamlit as st
 from streamlit_extras.stateful_button import button
 import os, sys, termios, fcntl
@@ -41,35 +34,6 @@ class pwm:
         freq_label = "Frequency " + key
         self.freq_key = "f" + key
         self.freqSlider = st.slider(freq_label, minFreqHz, maxFreqHz, defFreq, stepsFreq, "%f", key=self.freq_key, on_change=self.sendMCB, disabled = not self.button)
-        
-
-        
-
-    def makeBmsg(self, motor, on_off, freq, duty):
-        msg_start = 0
-        msg_stop = 7
-
-        # Convert duty from a float to an integer between 5000 and 10000
-        duty = int((duty) * 1000)
-        print("duty: ", duty)
-
-        startBits = format(msg_start, '03b')
-        stopBits = format(msg_stop, '03b')
-        motorBits = format(motor, '04b')
-        onOffBits = format(on_off, '01b')
-        freqBits = format(freq,'07b')
-        dutyBits = format(duty,'017b')
-
-        st.write(dutyBits)
-
-        # Check the lengths of the binary strings
-        # if len(startBits) > 3 or len(stopBits) > 3 or len(motorBits) > 4 or len(onOffBits) > 1 or len(freqBits) > 7 or len(dutyBits) > 14:
-        #     print("Error: One or more inputs are too large for their respective bit lengths.")
-        #     return None
-
-        binaryMsg = startBits + motorBits + onOffBits + freqBits + dutyBits + stopBits
-
-        return binaryMsg
 
     def sendMCB(self):
         motor = self.key
@@ -77,7 +41,7 @@ class pwm:
         freq = st.session_state[self.freq_key]
         duty = st.session_state[self.duty_key]
 
-        mc.sendMotorMessage(motor,on_off,freq,duty) #enusre order of freq and duty is correct
+        mc.sendMotorMessage(motor,on_off,duty,freq) #enusre order of freq and duty is correct
 
 
 

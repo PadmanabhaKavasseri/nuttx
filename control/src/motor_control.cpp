@@ -12,9 +12,6 @@ static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg);
 static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, bool response);
 
 
-
-
-
 // int add(int i, int j){
 // 	return i +j;
 // }
@@ -30,10 +27,6 @@ PYBIND11_MODULE(motor_control, m) {
 		.def(py::init<>())
 		.def("sendMotorMessage", &MotorControl::sendMotorMessage);
 }
-
-
-
-
 
 
 /*qrc message callback*/
