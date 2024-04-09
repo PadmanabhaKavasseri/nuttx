@@ -25,8 +25,10 @@ static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, 
 PYBIND11_MODULE(motor_control, m) {
 	py::class_<MotorControl>(m,"MotorControl")
 		.def(py::init<>())
-		.def("sendBLADCMotorMessage", &MotorControl::sendBLADCMotorMessage);
+		.def("sendBLADCMotorMessage", &MotorControl::sendBLADCMotorMessage)
+		.def("sendSTEPMotorMessage", &MotorControl::sendSTEPMotorMessage);
 }
+
 
 
 /*qrc message callback*/
@@ -120,7 +122,7 @@ void MotorControl::sendBLADCMotorMessage(int motor, int on_off, double duty, dou
 	std::cout << "Sent command to motor: " << msg.data.bldc_la.motor << std::endl;
 }
 
-void sendSTEPMotorMessage(int motor, int on_off, int lock, double duty, double freq, int direction){
+void MotorControl::sendSTEPMotorMessage(int motor, int on_off, int lock, double duty, double frequency, int direction){
 	struct motor_msg_s msg;
 	msg.type = MOTOR_BLDC_LA;
 	msg.data.stepper.motor = motor;
