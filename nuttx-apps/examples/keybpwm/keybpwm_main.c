@@ -311,44 +311,24 @@ Pin** initPins(){
 //     free(pins);
 // }
 
-void serCleanPrint(char* msg){
-	char binMsgStr[33];
-	char msg_start[4], motor[5], on_off[2], freq[8], duty[18], msg_stop[4];
-	int idx = 0;
-	// printf("Printing Binary MSG in decodebmsg:: ");
-	//loop through binary message and convert to string
-	for (ssize_t i = 0; i < 4; ++i) {
-		for (int j = 7; j >= 0; --j) {
-			int bit = (msg[i] >> j) & 1; //get most significant bit & 1 to convert to binary string
-			// printf("%d", bit);
-			idx = (8*i) + (7-j);
-			binMsgStr[idx] = bit + '0';  // Add '0' to convert the integer to a character
-		}
-			// printf(" ");
-	}
-	printf("\n");
-	binMsgStr[32] = '\0';  // Null-terminate the string
-	// printf("Bin Msg Str: ");
-	printf("%s\n", binMsgStr);
-}
 
 
 /*qrc message callback*/
-static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg);
+static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg);
 static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, bool response);
 
 
 static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, bool response)
 {
-  struct pwm_msg_s *msg;
+  struct motor_msg_s *msg;
 
   if (pipe == NULL || data ==NULL)
     {
       return;
     }
-  if (len == sizeof(struct pwm_msg_s))
+  if (len == sizeof(struct motor_msg_s))
     {
-      msg = (struct pwm_msg_s *)data;
+      msg = (struct motor_msg_s *)data;
       keybpwm_msg_parse(pipe, msg);
     }
    else
@@ -358,41 +338,25 @@ static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, 
 }
 
 /* you can modify this function to fit your requirement */
-static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg)
+static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg)
 {
-	struct pwm_msg_s reply_msg;
+	struct motor_msg_s reply_msg;
 
 	switch (msg->type)
     {
-		case SET_MOTOR:
+		case MOTOR_BLDC_LA:
 		{
-			printf("\n Got SET_MOTOR msg: Motor:%d On/Off:%d Duty:%f Frequency:%f \n", msg->motor, msg->on_off, msg->duty, msg->freq);
-			if(msg->on_off){
-				setPWM(msg->motor,msg->duty*100,msg->freq);
+			printf("\n Got MOTOR_BLDC_LA msg: Motor:%d On/Off:%d Duty:%f Frequency:%f \n", msg->data.bldc_la.motor, msg->data.bldc_la.on_off, msg->data.bldc_la.duty, msg->data.bldc_la.freq);
+			if(msg->data.bldc_la.on_off){
+				setPWM(msg->data.bldc_la.motor,msg->data.bldc_la.duty*100,msg->data.bldc_la.freq);
 			}
-		}
-		case GET_HELLO:
-		{
-			//send hello to RB5
-		//   memset(reply_msg.data, '\0', 32);
-		//   memcpy(reply_msg.data, "hello,this is MCB", strlen("hello,this is MCB") * sizeof(char));
-		//   reply_msg.type = PRINT_HELLO;
-		//   qrc_write(pipe, (uint8_t *)&reply_msg, sizeof(struct pwm_msg_s), false);
 			break;
-		}
-		case PRINT_HELLO:
+		} 
+		case MOTOR_STEPPER:
 		{
-		//   printf("\n Get message, type is PRINT_HELLO : (%s) \n", msg->data);
-			break;
+			printf("\n Got MOTOR_BLDC_LA msg: Motor:%d On/Off:%d Lock:%d Duty:%f Frequency:%f Direction:%d\n", msg->data.stepper.motor, msg->data.stepper.on_off, msg->data.stepper.lock, msg->data.stepper.duty, msg->data.stepper.freq, msg->data.stepper.direction);
 		}
-		case SET_VALUE:
-		{
-		//   printf("\n Get message, type is SET_VALUE : (%d) \n", msg->value);
-		//   if(msg->data){
-		// 	printf("\n Get message, type is SET_VALUE : (%s) \n", msg->data);
-		//   }
-			break;
-		}
+		
 		default:
 			printf("keybpwm_msg_parse: unknow message type \n");
 	}

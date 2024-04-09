@@ -8,7 +8,7 @@
 
 namespace py = pybind11;
 
-static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg);
+static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg);
 static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, bool response);
 
 
@@ -25,22 +25,22 @@ static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, 
 PYBIND11_MODULE(motor_control, m) {
 	py::class_<MotorControl>(m,"MotorControl")
 		.def(py::init<>())
-		.def("sendMotorMessage", &MotorControl::sendMotorMessage);
+		.def("sendBLADCMotorMessage", &MotorControl::sendBLADCMotorMessage);
 }
 
 
 /*qrc message callback*/
 static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, bool response)
 {
-	struct pwm_msg_s *msg;
+	struct motor_msg_s *msg;
 
 	if (pipe == NULL || data ==NULL)
 		{
 			return;
 		}
-	if (len == sizeof(struct pwm_msg_s))
+	if (len == sizeof(struct motor_msg_s))
 		{
-			msg = (struct pwm_msg_s *)data;
+			msg = (struct motor_msg_s *)data;
 			keybpwm_msg_parse(pipe, msg);
 		}
 	 else
@@ -50,9 +50,9 @@ static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, 
 }
 
 /* you can modify this function to fit your requirement */
-static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct pwm_msg_s *msg)
+static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg)
 {
-	struct pwm_msg_s reply_msg;
+	struct motor_msg_s reply_msg;
 
 	// switch (msg->type)
 	// 	{
@@ -109,16 +109,30 @@ bool MotorControl::init(){
 	return true;
 }
 
-void MotorControl::sendMotorMessage(int motor, int on_off, double duty, double frequency){
-	struct pwm_msg_s msg;
-	msg.type = SET_MOTOR;
-	msg.motor = motor;
-	msg.on_off = on_off;
-	msg.duty = duty;
-	msg.freq = frequency;
-	qrc_write(m_pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	std::cout << "Sent command to motor: " << msg.motor << std::endl;
+void MotorControl::sendBLADCMotorMessage(int motor, int on_off, double duty, double frequency){
+	struct motor_msg_s msg;
+	msg.type = MOTOR_BLDC_LA;
+	msg.data.bldc_la.motor = motor;
+	msg.data.bldc_la.on_off = on_off;
+	msg.data.bldc_la.duty = duty;
+	msg.data.bldc_la.freq = frequency;
+	qrc_write(m_pipe, (uint8_t *)&msg, sizeof(struct motor_msg_s), false);
+	std::cout << "Sent command to motor: " << msg.data.bldc_la.motor << std::endl;
 }
+
+void sendSTEPMotorMessage(int motor, int on_off, int lock, double duty, double freq, int direction){
+	struct motor_msg_s msg;
+	msg.type = MOTOR_BLDC_LA;
+	msg.data.stepper.motor = motor;
+	msg.data.stepper.on_off = on_off;
+	msg.data.stepper.lock = lock;
+	msg.data.stepper.duty = duty;
+	msg.data.stepper.freq = frequency;
+	msg.data.stepper.direction = direction;
+	qrc_write(m_pipe, (uint8_t *)&msg, sizeof(struct motor_msg_s), false);
+	std::cout << "Sent command to motor: " << msg.data.stepper.motor << std::endl;
+}
+
 
 MotorControl::MotorControl(){
 	init();
@@ -137,7 +151,7 @@ int main() {
 
 	sleep(3);
 
-	mc.sendMotorMessage(1,1,5.33223,1000.4995);
+	mc.sendBLADCMotorMessage(1,1,5.33223,1000.4995);
 
 	sleep(3);
 	// char pipe_name[] = PWM_PIPE; //does this need to be initialized somewhere else

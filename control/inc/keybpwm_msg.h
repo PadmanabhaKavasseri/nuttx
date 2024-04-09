@@ -10,23 +10,48 @@ extern "C" {
 
 #define PWM_PIPE "keybpwm"
 
-enum pwm_msg_type_e
+enum motor_msg_type_e
 {
-  GET_HELLO = 0,
-  PRINT_HELLO,
-  SET_VALUE,
-  SET_MOTOR,
+  MOTOR_BLDC_LA = 0,
+  MOTOR_STEPPER,
 };
 
-struct pwm_msg_s
+struct motor_bldc_la
 {
-  int type; /* Use int replace enum for 4-bytes-align */
+  // int type; /* Use int replace enum for 4-bytes-align */
   int motor; 
   int on_off;
   double duty;
   double freq;
   
 }__attribute__((aligned(4)));
+
+
+struct motor_stepper
+{
+  // int type; /* Use int replace enum for 4-bytes-align */
+  int motor;
+  int on_off;
+  int lock;
+  double duty;
+  double freq;
+  int direction; 
+  
+}__attribute__((aligned(4)));
+
+
+
+
+struct motor_msg_s
+{
+  int type;
+  union
+  {
+    struct motor_bldc_la bldc_la;
+    struct motor_stepper stepper;
+  } data;
+} __attribute__((aligned(4)));
+// step dir enable
 
 #ifdef __cplusplus
 }

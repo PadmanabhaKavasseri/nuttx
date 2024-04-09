@@ -4,7 +4,8 @@
 class MotorControl {
 public:
     MotorControl();
-    void sendMotorMessage(int motor, int on_off, double duty, double frequency);
+    void sendBLADCMotorMessage(int motor, int on_off, double duty, double frequency);
+    void sendSTEPMotorMessage(int motor, int on_off, int lock, double duty, double freq, int direction);
     ~MotorControl();
 private:
     bool init();
