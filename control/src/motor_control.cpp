@@ -40,6 +40,7 @@ static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, 
 		{
 			return;
 		}
+	printf("MOTOR_CONTROL DEBUG:: len:%d",len);
 	if (len == sizeof(struct motor_msg_s))
 		{
 			msg = (struct motor_msg_s *)data;
@@ -124,7 +125,7 @@ void MotorControl::sendBLADCMotorMessage(int motor, int on_off, double duty, dou
 
 void MotorControl::sendSTEPMotorMessage(int motor, int on_off, int lock, double duty, double frequency, int direction){
 	struct motor_msg_s msg;
-	msg.type = MOTOR_BLDC_LA;
+	msg.type = MOTOR_STEPPER;
 	msg.data.stepper.motor = motor;
 	msg.data.stepper.on_off = on_off;
 	msg.data.stepper.lock = lock;
@@ -154,6 +155,7 @@ int main() {
 	sleep(3);
 
 	mc.sendBLADCMotorMessage(1,1,5.33223,1000.4995);
+	// mc.sendSTEPMotorMessage
 
 	sleep(3);
 	// char pipe_name[] = PWM_PIPE; //does this need to be initialized somewhere else

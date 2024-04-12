@@ -106,6 +106,7 @@ class motor:
             self.toggle_key = "t" + self.key
             self.toggle = st.toggle("Lock", key=self.toggle_key,on_change=self.sendStepper)
 
+
         with col3:
             self.radio_key = "r" + self.key
             radio = st.radio("Rotation Direction",options=["Clockwise","Counter-Clockwise"],key=self.radio_key,on_change=self.sendStepper, disabled=not self.button)
@@ -136,8 +137,11 @@ class motor:
         freq = st.session_state[self.freq_key]
         duty = st.session_state[self.duty_key]
         dir = st.session_state[self.radio_key]
+        lock = st.session_state[self.toggle_key]
         dir_val = 0 if dir == "Clockwise" else 1
-        # mc.sendSTEPMotorMessage(motor,on_off,)
+        lock_val = 0 if lock == False else 1
+        mc.sendSTEPMotorMessage(motor,on_off,lock_val,duty,freq,dir_val)
+        
         # make mc send message for stepper motors
 
 

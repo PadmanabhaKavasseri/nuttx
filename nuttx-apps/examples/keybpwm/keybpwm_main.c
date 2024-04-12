@@ -215,7 +215,7 @@ void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
 
 void setPWM(int pin_idx, int duty, int freq){
 	// pwm->duty = b16divi(uitoub16(duty), 100000); duty was like 5000
-	printf("\n SETPWM msg: Motor:%d Duty:%d Frequency:%d \n", pin_idx, duty, freq);
+	// printf("\n SETPWM msg: Motor:%d Duty:%d Frequency:%d \n", pin_idx, duty, freq);
 	struct pwm_info_s* pwm = malloc(sizeof(struct pwm_info_s));
 
 	pwm->frequency = freq;
@@ -323,9 +323,10 @@ static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, 
   struct motor_msg_s *msg;
 
   if (pipe == NULL || data ==NULL)
-    {
-      return;
-    }
+	{
+		return;
+	}
+	printf("KEYBPWM DEBUG:: len:%d",len);
   if (len == sizeof(struct motor_msg_s))
     {
       msg = (struct motor_msg_s *)data;
@@ -354,11 +355,12 @@ static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg)
 		} 
 		case MOTOR_STEPPER:
 		{
-			printf("\n Got MOTOR_BLDC_LA msg: Motor:%d On/Off:%d Lock:%d Duty:%f Frequency:%f Direction:%d\n", msg->data.stepper.motor, msg->data.stepper.on_off, msg->data.stepper.lock, msg->data.stepper.duty, msg->data.stepper.freq, msg->data.stepper.direction);
+			printf("\n Got STEPPER msg: Motor:%d On/Off:%d Lock:%d Duty:%f Frequency:%f Direction:%d\n", msg->data.stepper.motor, msg->data.stepper.on_off, msg->data.stepper.lock, msg->data.stepper.duty, msg->data.stepper.freq, msg->data.stepper.direction);
+			break;
 		}
 		
 		default:
-			printf("keybpwm_msg_parse: unknow message type \n");
+			printf("keybpwm_msg_parse: unknow message type %d\n", msg->type);
 	}
 }
 
