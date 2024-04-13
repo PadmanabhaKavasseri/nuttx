@@ -119,7 +119,11 @@ static const uint32_t g_gpiooutputs[BOARD_NGPIOOUT] =
   GPIO_CAN_STBY,
   GPIO_IMU_CS,
   GPIO_TIM11_CH1OUT,
-  GPIO_TIM1_CH2OUT,
+  GPIO_TIM9_CH2OUT, //gpio3
+  GPIO_TIM9_CH1OUT, //gpio4
+  GPIO_TIM1_CH2OUT, //gpio5
+  GPIO_TIM1_CH1OUT, //gpio6
+  GPIO_TIM2_CH3OUT, //gpio7
 };
 
 static struct stm32gpio_dev_s g_gpout[BOARD_NGPIOOUT];

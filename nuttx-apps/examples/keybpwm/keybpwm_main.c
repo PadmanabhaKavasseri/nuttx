@@ -290,7 +290,7 @@ Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 
 Pin** initPins(){
     //should read Konfig file.. will add that later
-    Pin** pins = malloc(9 * sizeof(Pin*)); // Allocate memory for 8 pointers to Pin
+    Pin** pins = malloc(8 * sizeof(Pin*)); // Allocate memory for 8 pointers to Pin
     pins[0] = createPin(13, 1, CONFIG_EXAMPLES_KYBPWM_TIM13_DEVPATH); //17 ///should be a file descriptor instead
 	pins[1] = createPin(5, 4, CONFIG_EXAMPLES_KYBPWM_TIM5_DEVPATH);
 	pins[2] = createPin(5, 1, CONFIG_EXAMPLES_KYBPWM_TIM5_DEVPATH);
@@ -299,8 +299,6 @@ Pin** initPins(){
 	pins[5] = createPin(4, 2, CONFIG_EXAMPLES_KYBPWM_TIM4_DEVPATH);
 	pins[6] = createPin(3, 4, CONFIG_EXAMPLES_KYBPWM_TIM3_DEVPATH);
 	pins[7] = createPin(3, 3, CONFIG_EXAMPLES_KYBPWM_TIM3_DEVPATH);
-	pins[8] = createPin(9, 2, CONFIG_EXAMPLES_KYBPWM_TIM9_DEVPATH);
-
     return pins;
 }
 
@@ -384,16 +382,13 @@ int main(int argc, FAR char *argv[])
 	pins = initPins();
 
 	setPWM(0, 5000, 50);
-
 	setPWM(1, 5000, 50);
-	printf("Set PWM0\n");
 	setPWM(2, 5000, 50);
 	setPWM(3, 5000, 50);
 	setPWM(4, 5000, 50);
 	setPWM(5, 5000, 50);
 	setPWM(6, 5000, 50);
 	setPWM(7, 5000, 50);
-	setPWM(8, 5000, 50);
 	
 	/* write by jiong */ 
 

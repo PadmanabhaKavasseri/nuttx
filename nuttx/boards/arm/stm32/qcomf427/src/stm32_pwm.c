@@ -66,7 +66,6 @@ int stm32_pwm_setup(void)
   struct pwm_lowerhalf_s *pwm2;
   struct pwm_lowerhalf_s *pwm3;
   struct pwm_lowerhalf_s *pwm4;
-  struct pwm_lowerhalf_s *pwm5;
   int ret;
 
   /* Have we already initialized? */
@@ -142,20 +141,6 @@ int stm32_pwm_setup(void)
 			return ret;
 		}
 		syslog(LOG_INFO, "PWM4 initialized\n");
-		//--------------------------------------
-
-		pwm5 = stm32_pwminitialize(9);
-		if (!pwm5){
-			aerr("ERROR: Failed to get the STM32F4 PWM lower half\n");
-			return -ENODEV;
-		}
-
-		ret = pwm_register("/dev/pwm5", pwm5);
-		if (ret < 0){
-			aerr("ERROR: pwm_register failed: %d\n", ret);
-			return ret;
-		}
-		syslog(LOG_INFO, "PWM5 initialized\n");
 		//--------------------------------------
 		
 		/* Now we are initialized */
