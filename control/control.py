@@ -100,7 +100,7 @@ class motor:
         with col1: 
             button_label = "start/stop motor" + self.key
             self.button_key = "b" + self.key
-            self.button = button(button_label, key=self.button_key, on_click=self.sendBLDC)
+            self.button = button(button_label, key=self.button_key, on_click=self.sendStepper)
         
         with col2:
             self.toggle_key = "t" + self.key

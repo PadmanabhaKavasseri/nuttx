@@ -37,6 +37,7 @@
 #include <inttypes.h>
 
 #include <nuttx/timers/pwm.h>
+#include <nuttx/ioexpander/gpio.h>
 
 #include "keybpwm_msg.h"
 #include "keybpwm.h"
@@ -133,6 +134,10 @@ typedef struct {
 } Pin;
 
 Pin** pins;
+int GPIOS[5];
+
+
+//how to know which gpio to turn on?
 
 
 int numPins = 0;
@@ -244,6 +249,19 @@ void setPWM(int pin_idx, int duty, int freq){
 	free(pwm);
 }
 
+void setGPIO(int gpio_num, bool value){
+	printf("Setting GPIO# %d, value: %d\n",gpio_num,value);
+	//gpio_num is 1-5
+	enum gpio_pintype_e pintype;
+	pintype = 3;
+
+	// int fd = GPIOS[gpio_num-1];
+	int fd = open("/dev/gpio3", O_RDWR);
+	int ret = ioctl(fd, GPIOC_SETPINTYPE, (unsigned long) pintype);
+	ret = ioctl(fd, GPIOC_WRITE, (unsigned long)value);
+
+}
+
 //how to stop a specific channel does it just stop the entire timer group?
 void stopPWM(FAR struct pwm_info_s* pwm, int fd){
 	
@@ -262,6 +280,20 @@ void startPWM(FAR struct pwm_info_s* pwm, int fd){
 		close(fd);
 	}
 	printf("START\n");
+}
+
+void initGPIOS(){
+	int fd=0;
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO1_DEVPATH, O_RDONLY);
+	GPIOS[0] = fd;
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO2_DEVPATH, O_RDONLY);
+	GPIOS[1] = fd;
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO3_DEVPATH, O_RDONLY);
+	GPIOS[2] = fd;
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO4_DEVPATH, O_RDONLY);
+	GPIOS[3] = fd;
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO5_DEVPATH, O_RDONLY);
+	GPIOS[4] = fd;
 }
 
 Pin* createPin(int timer_group, int channel, FAR const char *devpath){
@@ -354,6 +386,14 @@ static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg)
 		case MOTOR_STEPPER:
 		{
 			printf("\n Got STEPPER msg: Motor:%d On/Off:%d Lock:%d Duty:%f Frequency:%f Direction:%d\n", msg->data.stepper.motor, msg->data.stepper.on_off, msg->data.stepper.lock, msg->data.stepper.duty, msg->data.stepper.freq, msg->data.stepper.direction);
+			//setPWM
+
+			//setGPIO
+			if(msg->data.stepper.on_off){
+				setPWM(msg->data.stepper.motor,msg->data.stepper.duty*100,msg->data.stepper.freq);
+				setGPIO(msg->data.stepper.motor-3,msg->data.stepper.direction);
+				// setGPIO(0,0);
+			}
 			break;
 		}
 		
@@ -368,18 +408,10 @@ int main(int argc, FAR char *argv[])
 	struct stlitMSG msg;
 	int ser_fd;
 	int ret;
-	char buf[1024];//4 bytes for streamlit message
-
-	//qrc has opend the serial port.
-	//initialize serial port
-	/*ser_fd = open("/dev/ttyS2", O_RDONLY | O_NONBLOCK);
-	if (ser_fd < 0) {
-		perror("unable to open serial port");
-		return 1;
-	}
-	*/
+	char buf[1024];
 
 	pins = initPins();
+	initGPIOS();
 
 	setPWM(0, 5000, 50);
 	setPWM(1, 5000, 50);
@@ -390,7 +422,7 @@ int main(int argc, FAR char *argv[])
 	setPWM(6, 5000, 50);
 	setPWM(7, 5000, 50);
 	
-	/* write by jiong */ 
+	setGPIO(0,0);
 
 	/* init qrc */
   	char pipe_name[] = PWM_PIPE;
@@ -417,47 +449,5 @@ int main(int argc, FAR char *argv[])
 
 	syslog(LOG_INFO, "main: keybpwm startup completed\n");
 	qrc_pipe_threads_join();
-	/* end	*/
-
-	/* below function should be executed in message callback */
-	//read serial to control output
-	/*
-	while(1){
-		ssize_t n = read(ser_fd, buf, sizeof(buf));
-		if(n<0){
-			if (errno = EAGAIN){
-				//No data available, try again
-				usleep(10000);
-				continue;
-			}
-			else{
-				perror("read error in while loop");
-				break;
-			}
-		}
-		else {
-			// buf[n] = '\0'; 
-			printf("Received: %s\n",buf);
-			serCleanPrint(buf);
-			// decodeBmsg(buf, &msg);
-			// printf("On/Off: %d Motor: %d Duty: %d Freq: %d\n", msg.on_off, msg.motor, msg.duty, msg.freq);
-			// if(msg.on_off){ //1 is on
-			// 	setPWM(&info, pins, msg.motor, msg.duty, msg.freq);
-			// }
-			// else{
-			// 	//do we need to set a specific channel here to 0? how to deal with servos vs other motors... cant just set it to 0.
-			// 	stopPWM(&info, pins[msg.motor]->fd);
-			// }
-		}
-	}
-
-	*/
-/*
-	deletePins(pins);
-	fflush(stdout);
-	return OK;
-errout:
-	fflush(stdout);
-	*/
-	// return ERROR;
+	
 }
