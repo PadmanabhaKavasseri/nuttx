@@ -154,68 +154,11 @@ int numPins = 0;
 static void pwm_devpath(FAR struct pwm_state_s *pwm, FAR const char *devpath)
 {
 	/* Get rid of any old device path */
-
-	if (pwm->devpath)
-		{
-			free(pwm->devpath);
-		}
-
-	/* Then set-up the new device path by copying the string */
-
-	pwm->devpath = strdup(devpath);
-}
-
-void decodeBmsg(char* binaryMsg, struct stlitMSG* msg) {
-
-	//where to read the config file?
-	char binMsgStr[33];
-	char msg_start[4], motor[5], on_off[2], freq[8], duty[18], msg_stop[4];
-	int idx = 0;
-	// printf("Printing Binary MSG in decodebmsg:: ");
-	//loop through binary message and convert to string
-	for (ssize_t i = 0; i < 4; ++i) {
-		for (int j = 7; j >= 0; --j) {
-			int bit = (binaryMsg[i] >> j) & 1; //get most significant bit & 1 to convert to binary string
-			// printf("%d", bit);
-			idx = (8*i) + (7-j);
-			binMsgStr[idx] = bit + '0';  // Add '0' to convert the integer to a character
-		}
-			// printf(" ");
+	if (pwm->devpath){
+		free(pwm->devpath);
 	}
-	printf("\n");
-	binMsgStr[32] = '\0';  // Null-terminate the string
-	// printf("Bin Msg Str: ");
-	printf("%s\n", binMsgStr);
-	
-
-	// Extract the binary strings
-	strncpy(msg_start, binMsgStr, 3); msg_start[3] = '\0';
-	strncpy(motor, binMsgStr + 3, 4); motor[4] = '\0';
-	strncpy(on_off, binMsgStr + 7, 1); on_off[1] = '\0';
-	strncpy(freq, binMsgStr + 8, 7); freq[7] = '\0';
-	strncpy(duty, binMsgStr + 15, 17); duty[17] = '\0';
-	strncpy(msg_stop, binMsgStr + 32, 3); msg_stop[3] = '\0';
-
-	// Convert frequency from binary to integer
-    int freq_int = strtol(freq, NULL, 2);
-	int duty_int = strtol(duty, NULL, 2);
-	int on_off_int = strtol(on_off, NULL, 2);
-	int motor_int = strtol(motor, NULL, 2);
-
-	// printf("Decoded Message:\n");
-    // printf("Start: %s\n", msg_start);
-    // printf("Motor: %d (binary: %s)\n", motor_int, motor);
-	// printf("On/Off: %d (binary: %s)\n", on_off_int, on_off);
-    // printf("Frequency: %d (binary: %s)\n", freq_int, freq);
-    // printf("Duty: %d (binary: %s)\n", duty_int, duty);
-    // printf("Stop: %s\n", msg_stop);
-
-	
-	msg->duty = duty_int;
-	msg->freq = freq_int;
-	msg->on_off = on_off_int;
-	msg->motor = motor_int; 
-
+	/* Then set-up the new device path by copying the string */
+	pwm->devpath = strdup(devpath);
 }
 
 void setPWM(int pin_idx, int duty, int freq){
@@ -255,8 +198,7 @@ void setGPIO(int gpio_num, bool value){
 	enum gpio_pintype_e pintype;
 	pintype = 3;
 
-	// int fd = GPIOS[gpio_num-1];
-	int fd = open("/dev/gpio3", O_RDWR);
+	int fd = GPIOS[gpio_num];
 	int ret = ioctl(fd, GPIOC_SETPINTYPE, (unsigned long) pintype);
 	ret = ioctl(fd, GPIOC_WRITE, (unsigned long)value);
 
@@ -284,15 +226,15 @@ void startPWM(FAR struct pwm_info_s* pwm, int fd){
 
 void initGPIOS(){
 	int fd=0;
-	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO1_DEVPATH, O_RDONLY);
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO1_DEVPATH, O_RDWR);
 	GPIOS[0] = fd;
-	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO2_DEVPATH, O_RDONLY);
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO2_DEVPATH, O_RDWR);
 	GPIOS[1] = fd;
-	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO3_DEVPATH, O_RDONLY);
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO3_DEVPATH, O_RDWR);
 	GPIOS[2] = fd;
-	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO4_DEVPATH, O_RDONLY);
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO4_DEVPATH, O_RDWR);
 	GPIOS[3] = fd;
-	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO5_DEVPATH, O_RDONLY);
+	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO5_DEVPATH, O_RDWR);
 	GPIOS[4] = fd;
 }
 
