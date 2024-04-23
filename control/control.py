@@ -27,7 +27,7 @@ def parseMotorType(motor_type):
         maxDuty = 100.000
         defDuty = minDuty
         stepsDuty = 0.005
-        minFreqHz = 1
+        minFreqHz = 1.0
         maxFreqHz = 100
         defFreq = round((minFreqHz + maxFreqHz)/2)
         stepsFreq = 1
@@ -36,8 +36,8 @@ def parseMotorType(motor_type):
         maxDuty = 100.000
         defDuty = minDuty
         stepsDuty = 0.005
-        minFreqHz = 1
-        maxFreqHz = 10000
+        minFreqHz = 1.0
+        maxFreqHz = 10000.0
         defFreq = round((minFreqHz + maxFreqHz)/2)
         stepsFreq = 1
     else:
@@ -113,11 +113,11 @@ class motor:
 
         freq_label = "Freq " + self.key + "%"
         self.freq_key = "f" + self.key
-        self.freqSlider = st.slider(freq_label, minDuty, maxDuty, defDuty, stepsDuty, "%.3f", key=self.freq_key, on_change=self.sendStepper, disabled=not self.button)
+        self.freqSlider = st.slider(freq_label, motor_params['minFreqHz'], motor_params['maxFreqHz'], defDuty, stepsDuty, "%.3f", key=self.freq_key, on_change=self.sendStepper, disabled=not self.button)
 
         duty_label = "Duty " + self.key + "%"
         self.duty_key =  "d" + self.key
-        self.dutySlider = st.slider(duty_label, minDuty, maxDuty, defDuty, stepsDuty, "%.3f", key=self.duty_key, on_change=self.sendStepper, disabled=not self.button)
+        self.dutySlider = st.slider(duty_label, motor_params['minDuty'], motor_params['maxDuty'], defDuty, stepsDuty, "%.3f", key=self.duty_key, on_change=self.sendStepper, disabled=not self.button)
 
         
 

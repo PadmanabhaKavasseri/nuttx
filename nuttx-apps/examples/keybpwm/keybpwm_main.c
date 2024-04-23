@@ -167,6 +167,7 @@ void setPWM(int pin_idx, int duty, int freq){
 	struct pwm_info_s* pwm = malloc(sizeof(struct pwm_info_s));
 
 	pwm->frequency = freq;
+	printf("Frequency: %d ", pwm->frequency);
 
 	Pin* currPin = pins[pin_idx];
 	currPin->duty = duty;
@@ -174,7 +175,9 @@ void setPWM(int pin_idx, int duty, int freq){
 	for(int i=0; i<numPins; i++){
 		if(pins[i]->timer_group ==  currPin->timer_group){
 			pwm->channels[pins[i]->channel-1].channel = pins[i]->channel;
-			pwm->channels[pins[i]->channel-1].duty = b16divi(uitoub16(pins[i]->duty), 100000);
+			pwm->channels[pins[i]->channel-1].duty = b16divi(uitoub16(pins[i]->duty), 10000);
+			// pwm->channels[pins[i]->channel-1].duty = b16divi(uitoub16(50), 50);
+			printf("Channel: %d Duty: %d \n",pwm->channels[pins[i]->channel-1].channel,pwm->channels[pins[i]->channel-1].duty);
 		}
 	}
 
