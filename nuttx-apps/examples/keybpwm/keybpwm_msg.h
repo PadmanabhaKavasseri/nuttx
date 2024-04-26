@@ -35,7 +35,8 @@ struct motor_stepper
   int lock;
   double duty;
   double freq;
-  int direction; 
+  int direction;
+  int num_steps;
   
 }__attribute__((aligned(4)));
 

@@ -123,7 +123,7 @@ void MotorControl::sendBLADCMotorMessage(int motor, int on_off, double duty, dou
 	std::cout << "Sent command to motor: " << msg.data.bldc_la.motor << std::endl;
 }
 
-void MotorControl::sendSTEPMotorMessage(int motor, int on_off, int lock, double duty, double frequency, int direction){
+void MotorControl::sendSTEPMotorMessage(int motor, int on_off, int lock, double duty, double frequency, int direction, int num_steps /*=-1*/){
 	struct motor_msg_s msg;
 	msg.type = MOTOR_STEPPER;
 	msg.data.stepper.motor = motor;
@@ -132,6 +132,7 @@ void MotorControl::sendSTEPMotorMessage(int motor, int on_off, int lock, double 
 	msg.data.stepper.duty = duty;
 	msg.data.stepper.freq = frequency;
 	msg.data.stepper.direction = direction;
+	msg.data.stepper.num_steps = num_steps;
 	qrc_write(m_pipe, (uint8_t *)&msg, sizeof(struct motor_msg_s), false);
 	std::cout << "Sent command to motor: " << msg.data.stepper.motor << std::endl;
 }
@@ -154,74 +155,12 @@ int main() {
 
 	sleep(3);
 
-	mc.sendBLADCMotorMessage(1,1,5.33223,1000.4995);
+	// mc.sendBLADCMotorMessage(1,1,5.33223,1000.4995);
+	mc.sendSTEPMotorMessage(1,1,5.33223,1000.4995,1,1,1);
 	// mc.sendSTEPMotorMessage
 
 	sleep(3);
-	// char pipe_name[] = PWM_PIPE; //does this need to be initialized somewhere else
-	// struct qrc_pipe_s *pipe;
 	
-	// pipe =  qrc_get_pipe(pipe_name);
-	// if (pipe == NULL){
-	// 	std::cout << "qrc_get_pipe failed" << std::endl;
-	// 	return -1;
-	// }
-
-	// /* register msg callback */
-	// if (!qrc_register_message_cb(pipe, keybpwm_qrc_msg_cb)){
-	// 	std::cout << "qrc_register_message_cb failed" << std::endl;
-	// 	return -1;
-	// }
-
-
-
-	// sleep(3);
-	// struct pwm_msg_s msg;
-	// msg.type = SET_MOTOR;
-	// msg.motor = 1;
-	// msg.on_off = 1;
-	// msg.duty = 5.33223;
-	// msg.freq = 1000.45;
-	// qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	// std::cout << "Sent command to motor: " << msg.motor << std::endl;
-
-
-	// sleep(5);
-
-	/*
-	sendMotorMessage(motor,on_off,duty,freq)
-	
-	*/
-
-
-	// msg.type = PRINT_HELLO;
-	// memset(msg.data, '\0', 32);
-	// memcpy(msg.data, "hello,this is RB5", strlen("hello,this is RB5") * sizeof(char));
-	// qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	// std::cout << "send message type  PRINT_HELLO done " << std::endl;
-	
-	// sleep(3);
-	// msg.type = GET_HELLO;
-	// qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	// std::cout << "send message type  GET_HELLO done " << std::endl;
-	
-	// sleep(3);
-	// msg.type = SET_VALUE;
-	// msg.value = 1111;
-	// qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	// std::cout << "send message type  SET_VALUE done "<<"value ="<<msg.value << std::endl;
-
-	// sleep(3);
-	// msg.type = SET_VALUE;
-	// msg.value = 444;
-	// memset(msg.data, '\0', 32);
-	// memcpy(msg.data, "new message", strlen("new message") * sizeof(char));
-	// qrc_write(pipe, (uint8_t *)&msg, sizeof(struct pwm_msg_s), false);
-	// std::cout << "send message type newwww SET_VALUE done "<<"value ="<<msg.value << std::endl;
-
-
-
-	// deinit_qrc_management();
 
 	return 0;
 }
