@@ -18,6 +18,6 @@
 #
 ############################################################################
 
-ifneq ($(CONFIG_EXAMPLES_HELLO),)
-CONFIGURED_APPS += $(APPDIR)/examples/hello
+ifneq ($(CONFIG_HELLO),)
+CONFIGURED_APPS += $(APPDIR)/hello
 endif

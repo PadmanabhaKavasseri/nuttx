@@ -51,46 +51,46 @@
 
 /* Configuration ************************************************************/
 
-#ifdef CONFIG_PWM_MULTICHAN
-#  if CONFIG_PWM_NCHANNELS > 1
-#    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL2
-#      error "Channel numbers must be unique"
-#    endif
-#  endif
-#  if CONFIG_PWM_NCHANNELS > 2
-#    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL3 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL3
-#      error "Channel numbers must be unique"
-#    endif
-#  endif
-#  if CONFIG_PWM_NCHANNELS > 3
-#    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL4 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL4 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL3 == CONFIG_EXAMPLES_PWM_CHANNEL4
-#      error "Channel numbers must be unique"
-#    endif
-#  endif
-#  if CONFIG_PWM_NCHANNELS > 4
-#    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL5 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL5 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL3 == CONFIG_EXAMPLES_PWM_CHANNEL5 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL4 == CONFIG_EXAMPLES_PWM_CHANNEL5
-#      error "Channel numbers must be unique"
-#    endif
-#  endif
-#  if CONFIG_PWM_NCHANNELS > 5
-#    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL3 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL4 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
-				CONFIG_EXAMPLES_PWM_CHANNEL5 == CONFIG_EXAMPLES_PWM_CHANNEL6
-#      error "Channel numbers must be unique"
-#    endif
-#  endif
-#  if CONFIG_PWM_NCHANNELS > 6
-#    error "Too many PWM channels"
-#  endif
-#endif
+// #ifdef CONFIG_PWM_MULTICHAN
+// #  if CONFIG_PWM_NCHANNELS > 1
+// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL2
+// #      error "Channel numbers must be unique"
+// #    endif
+// #  endif
+// #  if CONFIG_PWM_NCHANNELS > 2
+// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL3 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL3
+// #      error "Channel numbers must be unique"
+// #    endif
+// #  endif
+// #  if CONFIG_PWM_NCHANNELS > 3
+// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL4 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL4 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL3 == CONFIG_EXAMPLES_PWM_CHANNEL4
+// #      error "Channel numbers must be unique"
+// #    endif
+// #  endif
+// #  if CONFIG_PWM_NCHANNELS > 4
+// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL5 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL5 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL3 == CONFIG_EXAMPLES_PWM_CHANNEL5 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL4 == CONFIG_EXAMPLES_PWM_CHANNEL5
+// #      error "Channel numbers must be unique"
+// #    endif
+// #  endif
+// #  if CONFIG_PWM_NCHANNELS > 5
+// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL3 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL4 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
+// 				CONFIG_EXAMPLES_PWM_CHANNEL5 == CONFIG_EXAMPLES_PWM_CHANNEL6
+// #      error "Channel numbers must be unique"
+// #    endif
+// #  endif
+// #  if CONFIG_PWM_NCHANNELS > 6
+// #    error "Too many PWM channels"
+// #  endif
+// #endif
 
 /****************************************************************************
  * Private Types
@@ -206,6 +206,29 @@ void setGPIO(int gpio_num, bool value){
 	ret = ioctl(fd, GPIOC_WRITE, (unsigned long)value);
 
 }
+
+void bitBangGPIO(int gpio_num, int steps){
+	for(int i=0; i<steps; i++){
+		setGPIO(gpio_num, true);
+		// printf("sleep on\n"); fflush(stdout);
+		// usleep(1000);
+		// struct timespec to_sleep = { 1, 0 }; // Sleep for 1 second
+		// while ((nanosleep(&to_sleep, &to_sleep) == -1) && (errno == EINTR));
+		// up_udelay(500);
+
+		// printf("sleep off\n"); fflush(stdout);
+		setGPIO(gpio_num, false);
+		// printf("sleep on\n"); fflush(stdout);
+		// usleep(1000);
+		// struct timespec to_sleep = { 1, 0 }; // Sleep for 1 second
+		// while ((nanosleep(&to_sleep, &to_sleep) == -1) && (errno == EINTR));
+		// up_udelay(500);
+
+		// printf("sleep off\n"); fflush(stdout);
+	}
+}
+
+
 
 //how to stop a specific channel does it just stop the entire timer group?
 void stopPWM(FAR struct pwm_info_s* pwm, int fd){
@@ -330,12 +353,13 @@ static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg)
 		} 
 		case MOTOR_STEPPER:
 		{
-			printf("\n Got STEPPER msg: Motor:%d On/Off:%d Lock:%d Duty:%f Frequency:%f Direction:%d\n", msg->data.stepper.motor, msg->data.stepper.on_off, msg->data.stepper.lock, msg->data.stepper.duty, msg->data.stepper.freq, msg->data.stepper.direction);
+			printf("\n Got STEPPER msg: Motor:%d On/Off:%d Lock:%d Duty:%f Frequency:%f Direction:%d Num Steps:%d \n", msg->data.stepper.motor, msg->data.stepper.on_off, msg->data.stepper.lock, msg->data.stepper.duty, msg->data.stepper.freq, msg->data.stepper.direction, msg->data.stepper.num_steps);
 			//setPWM
 
 			//setGPIO
 			if(msg->data.stepper.on_off){
-				setPWM(msg->data.stepper.motor,msg->data.stepper.duty*100,msg->data.stepper.freq);
+				// setPWM(msg->data.stepper.motor,msg->data.stepper.duty*100,msg->data.stepper.freq);
+				bitBangGPIO(msg->data.stepper.motor-2,msg->data.stepper.num_steps);
 				setGPIO(msg->data.stepper.motor-3,msg->data.stepper.direction);
 				// setGPIO(0,0);
 			}
@@ -367,7 +391,7 @@ int main(int argc, FAR char *argv[])
 	setPWM(6, 5000, 50);
 	setPWM(7, 5000, 50);
 	
-	setGPIO(0,0);
+	// setGPIO(0,0);
 
 	/* init qrc */
   	char pipe_name[] = PWM_PIPE;
