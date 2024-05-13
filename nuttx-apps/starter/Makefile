@@ -1,5 +1,5 @@
 ############################################################################
-# boards/arm/stm32/qcomf427/src/Make.defs
+# apps/examples/hello/Make.defs
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -18,34 +18,17 @@
 #
 ############################################################################
 
-include $(TOPDIR)/Make.defs
+include $(APPDIR)/Make.defs
 
-CSRCS = stm32_boot.c stm32_bringup.c
+# Hello, World! built-in application info
 
+PROGNAME  = starter
+PRIORITY  = 100
+STACKSIZE = $(CONFIG_DEFAULT_TASK_STACKSIZE)
+MODULE    = $(CONFIG_STARTER)
 
-CSRCS += stm32_gpio.c stm32_can.c
-CSRCS += stm32_adc.c
-ifeq ($(CONFIG_BOARDCTL),y)
-CSRCS += stm32_appinit.c
-endif
+# Hello, World! Example
 
-ifeq ($(CONFIG_SENSORS_ICM42688),y)
-CSRCS += stm32_icm42688.c
-CSRCS += stm32_spi.c
-endif
+MAINSRC = starter.c
 
-ifeq ($(CONFIG_CAPTURE),y)
-  CSRCS += stm32_capture.c
-endif
-
-ifeq ($(CONFIG_PWM),y)
-  CSRCS += stm32_pwm.c
-endif
-
-ifeq ($(CONFIG_TIMER),y)
-  CSRCS += stm32_timer.c
-endif
-
-DEPPATH += --dep-path board
-VPATH += :board
-CFLAGS += $(shell $(INCDIR) "$(CC)" $(TOPDIR)$(DELIM)arch$(DELIM)$(CONFIG_ARCH)$(DELIM)src$(DELIM)board$(DELIM)board)
+include $(APPDIR)/Application.mk

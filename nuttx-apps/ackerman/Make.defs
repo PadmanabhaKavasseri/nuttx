@@ -1,4 +1,0 @@
-
-ifneq ($(CONFIG_APP_ACKERMAN),)
-CONFIGURED_APPS += $(APPDIR)/ackerman
-endif

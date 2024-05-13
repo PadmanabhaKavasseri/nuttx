@@ -1,4 +1,0 @@
-
-ifneq ($(CONFIG_APP_QTIAMRBOOT),)
-CONFIGURED_APPS += $(APPDIR)/amrboot
-endif

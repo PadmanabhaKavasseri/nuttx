@@ -1,3 +1,0 @@
-ifneq ($(CONFIG_APP_QCOMAMR),)
-CONFIGURED_APPS += $(APPDIR)/qcomamr
-endif 

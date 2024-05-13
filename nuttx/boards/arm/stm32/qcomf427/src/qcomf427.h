@@ -117,6 +117,7 @@ int stm32_bringup(void);
 int stm32_gpio_initialize(void);
 int stm32_can_setup(void);
 int stm32_adc_setup(void);
+int stm32_timer_driver_setup(const char *devpath, int timer);
 
 /* TIMER1 capture for RC */
 #ifdef CONFIG_CAPTURE

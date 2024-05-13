@@ -96,9 +96,7 @@
  * Private Types
  ****************************************************************************/
 
-//remove before compile
-// #define CONFIG_PWM_MULTICHAN 
-// #define CONFIG_PWM_NCHANNELS 4
+
 
 struct pwm_state_s
 {
@@ -161,7 +159,7 @@ static void pwm_devpath(FAR struct pwm_state_s *pwm, FAR const char *devpath)
 	pwm->devpath = strdup(devpath);
 }
 
-void setPWM(int pin_idx, int duty, int freq){
+static void setPWM(int pin_idx, int duty, int freq){
 	// pwm->duty = b16divi(uitoub16(duty), 100000); duty was like 5000
 	// printf("\n SETPWM msg: Motor:%d Duty:%d Frequency:%d \n", pin_idx, duty, freq);
 	struct pwm_info_s* pwm = malloc(sizeof(struct pwm_info_s));
@@ -195,7 +193,7 @@ void setPWM(int pin_idx, int duty, int freq){
 	free(pwm);
 }
 
-void setGPIO(int gpio_num, bool value){
+static void setGPIO(int gpio_num, bool value){
 	printf("Setting GPIO# %d, value: %d\n",gpio_num,value);
 	//gpio_num is 1-5
 	enum gpio_pintype_e pintype;
@@ -207,11 +205,11 @@ void setGPIO(int gpio_num, bool value){
 
 }
 
-void bitBangGPIO(int gpio_num, int steps){
+static void bitBangGPIO(int gpio_num, int steps){
 	for(int i=0; i<steps; i++){
 		setGPIO(gpio_num, true);
 		// printf("sleep on\n"); fflush(stdout);
-		// usleep(1000);
+		usleep(500*1000);
 		// struct timespec to_sleep = { 1, 0 }; // Sleep for 1 second
 		// while ((nanosleep(&to_sleep, &to_sleep) == -1) && (errno == EINTR));
 		// up_udelay(500);
@@ -219,7 +217,7 @@ void bitBangGPIO(int gpio_num, int steps){
 		// printf("sleep off\n"); fflush(stdout);
 		setGPIO(gpio_num, false);
 		// printf("sleep on\n"); fflush(stdout);
-		// usleep(1000);
+		usleep(500*1000);
 		// struct timespec to_sleep = { 1, 0 }; // Sleep for 1 second
 		// while ((nanosleep(&to_sleep, &to_sleep) == -1) && (errno == EINTR));
 		// up_udelay(500);
@@ -231,7 +229,7 @@ void bitBangGPIO(int gpio_num, int steps){
 
 
 //how to stop a specific channel does it just stop the entire timer group?
-void stopPWM(FAR struct pwm_info_s* pwm, int fd){
+static void stopPWM(FAR struct pwm_info_s* pwm, int fd){
 	
 	int ret = ioctl(fd, PWMIOC_STOP, 0);
 	if(ret < 0){
@@ -241,7 +239,7 @@ void stopPWM(FAR struct pwm_info_s* pwm, int fd){
 	printf("STOP\n");
 }
 
-void startPWM(FAR struct pwm_info_s* pwm, int fd){
+static void startPWM(FAR struct pwm_info_s* pwm, int fd){
 	int ret = ioctl(fd, PWMIOC_START, 0);
 	if (ret < 0){
 		printf("pwm_main: ioctl(PWMIOC_START) failed: %d\n", errno);
@@ -250,7 +248,7 @@ void startPWM(FAR struct pwm_info_s* pwm, int fd){
 	printf("START\n");
 }
 
-void initGPIOS(){
+static void initGPIOS(){
 	int fd=0;
 	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO1_DEVPATH, O_RDWR);
 	GPIOS[0] = fd;
@@ -264,7 +262,7 @@ void initGPIOS(){
 	GPIOS[4] = fd;
 }
 
-Pin* createPin(int timer_group, int channel, FAR const char *devpath){
+static Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 	Pin* p = (Pin*) malloc(sizeof(Pin));
 	//create fd here
 	p->timer_group = timer_group; //theres no timer group to dev path map
@@ -288,7 +286,7 @@ Pin* createPin(int timer_group, int channel, FAR const char *devpath){
 	return p;
 }
 
-Pin** initPins(){
+static Pin** initPins(){
     //should read Konfig file.. will add that later
     Pin** pins = malloc(8 * sizeof(Pin*)); // Allocate memory for 8 pointers to Pin
     pins[0] = createPin(13, 1, CONFIG_EXAMPLES_KYBPWM_TIM13_DEVPATH); //17 ///should be a file descriptor instead
@@ -391,7 +389,7 @@ int main(int argc, FAR char *argv[])
 	setPWM(6, 5000, 50);
 	setPWM(7, 5000, 50);
 	
-	// setGPIO(0,0);
+	setGPIO(1,0);
 
 	/* init qrc */
   	char pipe_name[] = PWM_PIPE;
@@ -419,4 +417,5 @@ int main(int argc, FAR char *argv[])
 	syslog(LOG_INFO, "main: keybpwm startup completed\n");
 	qrc_pipe_threads_join();
 	
+	return 0;
 }
