@@ -1,0 +1,24 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config ECHO_SERIAL
+	tristate "Echo Serial"
+	default n
+	---help---
+		Enable the Echo Serial example
+
+if ECHO_SERIAL
+	config ECHO_SERIALRX_DEVPATH
+		string "Serial device path"
+		default "/dev/ttyS4"
+		---help---
+			The default path to the serial device
+
+	config ECHO_SERIALRX_BUFSIZE
+	int "Buffer size"
+	default 11520
+	---help---
+		Specifies the default buffer size
+endif

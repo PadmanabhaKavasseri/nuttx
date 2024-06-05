@@ -95,7 +95,9 @@
 
 // #define GPIO_TIM4   (GPIO_OUTPUT | GPIO_PUSHPULL | GPIO_SPEED_50MHz| GPIO_OUTPUT_SET | GPIO_PORTB | GPIO_PIN6)
 
-
+//Serial Definitions
+#define GPIO_UART7_TX       GPIO_UART7_TX_1 //uartS4
+#define GPIO_UART7_RX       GPIO_UART7_RX_1
 
 
 /****************************************************************************

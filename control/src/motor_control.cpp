@@ -123,16 +123,13 @@ void MotorControl::sendBLADCMotorMessage(int motor, int on_off, double duty, dou
 	std::cout << "Sent command to motor: " << msg.data.bldc_la.motor << std::endl;
 }
 
-void MotorControl::sendSTEPMotorMessage(int motor, int on_off, int lock, double duty, double frequency, int direction, int num_steps /*=-1*/){
+void MotorControl::sendSTEPMotorMessage(int motor, int sleep, int direction, double angle /*=0*/){
 	struct motor_msg_s msg;
 	msg.type = MOTOR_STEPPER;
 	msg.data.stepper.motor = motor;
-	msg.data.stepper.on_off = on_off;
-	msg.data.stepper.lock = lock;
-	msg.data.stepper.duty = duty;
-	msg.data.stepper.freq = frequency;
+	msg.data.stepper.sleep = sleep;
 	msg.data.stepper.direction = direction;
-	msg.data.stepper.num_steps = num_steps;
+	msg.data.stepper.angle = angle;
 	qrc_write(m_pipe, (uint8_t *)&msg, sizeof(struct motor_msg_s), false);
 	std::cout << "Sent command to motor: " << msg.data.stepper.motor << std::endl;
 }
@@ -156,7 +153,7 @@ int main() {
 	sleep(3);
 
 	// mc.sendBLADCMotorMessage(1,1,5.33223,1000.4995);
-	mc.sendSTEPMotorMessage(1,1,5.33223,1000.4995,1,1,1);
+	mc.sendSTEPMotorMessage(1,1,1,90.0);
 	// mc.sendSTEPMotorMessage
 
 	sleep(3);

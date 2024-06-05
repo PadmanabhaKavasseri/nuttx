@@ -223,6 +223,11 @@
 
 //13, 5, 4, 3
 
+//Serial Definitions
+#define GPIO_UART7_TX       GPIO_UART7_TX_1 //uarts4
+#define GPIO_UART7_RX       GPIO_UART7_RX_1
+
+
 #endif /* __BOARDS_ARM_STM32_AXOLOTI_INCLUDE_BOARD_H */
 
 

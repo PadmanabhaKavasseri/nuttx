@@ -3264,6 +3264,7 @@ void arm_serialinit(void)
 
       devname[9] = '0' + minor++;
       uart_register(devname, &g_uart_devs[i]->dev);
+      printf("Device Name: %s\n", devname);
     }
 #endif /* HAVE UART */
 }

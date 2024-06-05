@@ -97,35 +97,21 @@ class motor:
         st.header("STEPPER Motor " + self.key)
 
         col1, col2, col3 = st.columns(3)
-        with col1: 
-            button_label = "start/stop motor" + self.key
-            self.button_key = "b" + self.key
-            self.button = button(button_label, key=self.button_key, on_click=self.sendStepper)
         
+        with col1:
+            num_label = "Num " + self.key
+            self.num_key = "n" + self.key
+            self.numPad = st.number_input('Insert angle from current position', value=-1, format="%d", key=self.num_key, on_change=self.sendStepper)
+
         with col2:
+            self.radio_key = "r" + self.key
+            radio = st.radio("Rotation Direction",options=["Clockwise","Counter-Clockwise"],key=self.radio_key,on_change=self.sendStepper)
+
+        with col3:
             self.toggle_key = "t" + self.key
             self.toggle = st.toggle("Lock", key=self.toggle_key,on_change=self.sendStepper)
 
-
-        with col3:
-            self.radio_key = "r" + self.key
-            radio = st.radio("Rotation Direction",options=["Clockwise","Counter-Clockwise"],key=self.radio_key,on_change=self.sendStepper, disabled=not self.button)
-
-        freq_label = "Freq " + self.key + "%"
-        self.freq_key = "f" + self.key
-        self.freqSlider = st.slider(freq_label, motor_params['minFreqHz'], motor_params['maxFreqHz'], defDuty, stepsDuty, "%.3f", key=self.freq_key, on_change=self.sendStepper, disabled=not self.button)
-
-        duty_label = "Duty " + self.key + "%"
-        self.duty_key =  "d" + self.key
-        self.dutySlider = st.slider(duty_label, motor_params['minDuty'], motor_params['maxDuty'], defDuty, stepsDuty, "%.3f", key=self.duty_key, on_change=self.sendStepper, disabled=not self.button)
-
-        num_label = "Num " + self.key
-        self.num_key = "n" + self.key
-        self.numPad = st.number_input('Insert a number', value=-1, format="%d", key=self.num_key, on_change=self.sendStepper, disabled=not self.button)
-
         
-
-
 
     def sendBLDC(self):
         motor = int(self.key)
@@ -137,16 +123,12 @@ class motor:
 
     def sendStepper(self):
         motor = int(self.key)
-        on_off = st.session_state[self.button_key]
-        freq = st.session_state[self.freq_key]
-        duty = st.session_state[self.duty_key]
+        sleep = st.session_state[self.toggle_key]
         dir = st.session_state[self.radio_key]
-        lock = st.session_state[self.toggle_key]
         dir_val = 0 if dir == "Clockwise" else 1
-        lock_val = 0 if lock == False else 1
         num_val = st.session_state[self.num_key]
-        mc.sendSTEPMotorMessage(motor,on_off,lock_val,duty,freq,dir_val,int(num_val))
-        st.session_state[self.num_key] = -1
+        mc.sendSTEPMotorMessage(motor, sleep, dir_val, float(num_val))
+        st.session_state[self.num_key] = 0
         
         # make mc send message for stepper motors
 

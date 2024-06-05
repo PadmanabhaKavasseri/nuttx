@@ -6,6 +6,7 @@
 #
 
 source "/home/nuttx/nuttx-apps/canutils/Kconfig"
+source "/home/nuttx/nuttx-apps/echo_serial/Kconfig"
 source "/home/nuttx/nuttx-apps/examples/Kconfig"
 source "/home/nuttx/nuttx-apps/fsutils/Kconfig"
 source "/home/nuttx/nuttx-apps/gpio_biba/Kconfig"

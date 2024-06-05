@@ -31,12 +31,9 @@ struct motor_stepper
 {
   // int type; /* Use int replace enum for 4-bytes-align */
   int motor;
-  int on_off;
-  int lock;
-  double duty;
-  double freq;
+  int sleep;
   int direction;
-  int num_steps;
+  double angle;
   
 }__attribute__((aligned(4)));
 

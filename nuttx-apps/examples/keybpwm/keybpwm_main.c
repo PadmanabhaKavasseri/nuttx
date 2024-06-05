@@ -194,7 +194,7 @@ static void setPWM(int pin_idx, int duty, int freq){
 }
 
 static void setGPIO(int gpio_num, bool value){
-	printf("Setting GPIO# %d, value: %d\n",gpio_num,value);
+	// printf("Setting GPIO# %d, value: %d\n",gpio_num,value);
 	//gpio_num is 1-5
 	enum gpio_pintype_e pintype;
 	pintype = 3;
@@ -206,26 +206,24 @@ static void setGPIO(int gpio_num, bool value){
 }
 
 static void bitBangGPIO(int gpio_num, int steps){
+	int dur = 1;
 	for(int i=0; i<steps; i++){
 		setGPIO(gpio_num, true);
-		// printf("sleep on\n"); fflush(stdout);
-		usleep(500*1000);
-		// struct timespec to_sleep = { 1, 0 }; // Sleep for 1 second
-		// while ((nanosleep(&to_sleep, &to_sleep) == -1) && (errno == EINTR));
+		usleep(dur*500);
 		// up_udelay(500);
 
-		// printf("sleep off\n"); fflush(stdout);
 		setGPIO(gpio_num, false);
-		// printf("sleep on\n"); fflush(stdout);
-		usleep(500*1000);
-		// struct timespec to_sleep = { 1, 0 }; // Sleep for 1 second
-		// while ((nanosleep(&to_sleep, &to_sleep) == -1) && (errno == EINTR));
+		usleep(dur*500);
 		// up_udelay(500);
-
-		// printf("sleep off\n"); fflush(stdout);
 	}
 }
 
+
+static void parseStepper(struct motor_msg_s *msg){
+	int num_steps = msg->data.stepper.angle / (1.8/8);
+	bitBangGPIO(msg->data.stepper.motor-2,num_steps);
+	setGPIO(msg->data.stepper.motor-3,msg->data.stepper.direction);
+}
 
 
 //how to stop a specific channel does it just stop the entire timer group?
@@ -307,8 +305,6 @@ static Pin** initPins(){
 //     free(pins);
 // }
 
-
-
 /*qrc message callback*/
 static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg);
 static void keybpwm_qrc_msg_cb(struct qrc_pipe_s *pipe,void * data, size_t len, bool response);
@@ -351,16 +347,17 @@ static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg)
 		} 
 		case MOTOR_STEPPER:
 		{
-			printf("\n Got STEPPER msg: Motor:%d On/Off:%d Lock:%d Duty:%f Frequency:%f Direction:%d Num Steps:%d \n", msg->data.stepper.motor, msg->data.stepper.on_off, msg->data.stepper.lock, msg->data.stepper.duty, msg->data.stepper.freq, msg->data.stepper.direction, msg->data.stepper.num_steps);
-			//setPWM
+			printf("\n Got STEPPER msg: Motor:%d Sleep:%d Direction:%d Angle:%f \n", msg->data.stepper.motor, msg->data.stepper.sleep, msg->data.stepper.direction, msg->data.stepper.angle);
+			
+			parseStepper(msg);
 
-			//setGPIO
-			if(msg->data.stepper.on_off){
-				// setPWM(msg->data.stepper.motor,msg->data.stepper.duty*100,msg->data.stepper.freq);
-				bitBangGPIO(msg->data.stepper.motor-2,msg->data.stepper.num_steps);
-				setGPIO(msg->data.stepper.motor-3,msg->data.stepper.direction);
-				// setGPIO(0,0);
-			}
+			// if(msg->data.stepper.on_off){
+
+			// 	// setPWM(msg->data.stepper.motor,msg->data.stepper.duty*100,msg->data.stepper.freq);
+			// 	// bitBangGPIO(msg->data.stepper.motor-2,msg->data.stepper.num_steps);
+			// 	// setGPIO(msg->data.stepper.motor-3,msg->data.stepper.direction);
+			// 	// setGPIO(0,0);
+			// }
 			break;
 		}
 		

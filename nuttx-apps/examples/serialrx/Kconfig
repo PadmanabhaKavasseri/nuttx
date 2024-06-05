@@ -33,7 +33,7 @@ config EXAMPLES_SERIALRX_BUFSIZE
 
 config EXAMPLES_SERIALRX_DEVPATH
 	string "Serial device path"
-	default "/dev/ttyS0"
+	default "/dev/ttyS4"
 	---help---
 		The default path to the serial device
 
