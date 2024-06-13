@@ -58,7 +58,9 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "unistd.h": "c",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "tmc2209.h": "c",
+        "variant": "c"
     },
     "C_Cpp.default.compilerPath": "/usr/bin/gcc"
 }

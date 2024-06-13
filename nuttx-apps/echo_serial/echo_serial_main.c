@@ -49,6 +49,6 @@ int main(int argc, FAR char *argv[])
   }
 
   fflush(stdout);
-  printf("Done Done\n");
+  printf("\nDone Done\n");
   return 0;
 }

@@ -1,0 +1,25 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+config TMC2209
+	tristate "TMC 2209 Driver"
+	default n
+	---help---
+		Enable the Hello World example
+
+if TMC2209
+	config TMC2209_DEVPATH
+		string "Serial device path"
+		default "/dev/ttyS4"
+		---help---
+			The default path to the serial device
+
+	config TMC2209_BUFSIZE
+	int "Buffer size"
+	default 11520
+	---help---
+		Specifies the default buffer size
+
+endif
