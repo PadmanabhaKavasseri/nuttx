@@ -1,4 +1,4 @@
-starter.c.home.nuttx.nuttx-apps.tmc2209.o: starter.c \
+starter.c.home.nuttx.nuttx-apps.arduinoTMC.o: starter.c \
  /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/ioexpander/gpio.h \
  /home/nuttx/nuttx/include/sys/types.h \
@@ -17,17 +17,16 @@ starter.c.home.nuttx.nuttx-apps.tmc2209.o: starter.c \
  /home/nuttx/nuttx/include/nuttx/wdog.h \
  /home/nuttx/nuttx/include/nuttx/fs/ioctl.h \
  /home/nuttx/nuttx/include/nuttx/serial/tioctl.h \
- /home/nuttx/nuttx/include/nuttx/serial/serial.h \
- /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/termios.h \
- /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
- /home/nuttx/nuttx/include/dirent.h \
- /home/nuttx/nuttx/include/nuttx/mutex.h \
- /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/unistd.h \
- /home/nuttx/nuttx/include/nuttx/semaphore.h \
- /home/nuttx/nuttx/include/semaphore.h \
  /home/nuttx/nuttx/include/sys/ioctl.h /home/nuttx/nuttx/include/stdlib.h \
  /home/nuttx/nuttx/include/stdio.h \
+ /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /home/nuttx/nuttx/include/nuttx/fs/fs.h \
+ /home/nuttx/nuttx/include/dirent.h \
+ /home/nuttx/nuttx/include/nuttx/mutex.h \
+ /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
+ /home/nuttx/nuttx/include/unistd.h \
+ /home/nuttx/nuttx/include/nuttx/semaphore.h \
+ /home/nuttx/nuttx/include/semaphore.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
@@ -46,8 +45,6 @@ starter.c.home.nuttx.nuttx-apps.tmc2209.o: starter.c \
  /home/nuttx/nuttx/include/arch/arch.h \
  /home/nuttx/nuttx/include/nuttx/pgalloc.h \
  /home/nuttx/nuttx/include/nuttx/addrenv.h \
- /home/nuttx/nuttx/include/fcntl.h \
- /home/nuttx/nuttx-apps/tmc2209/inc/TMC2209.h \
- /home/nuttx/nuttx-apps/tmc2209/inc/common.h
+ /home/nuttx/nuttx/include/fcntl.h
 # No files specified for dependency generation
 # No files specified for dependency generation

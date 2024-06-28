@@ -169,12 +169,12 @@ bool TMC2209_Init (TMC2209_t *driver)
     // Perform a status register read/write to clear status flags.
     // If no or bad response from driver return with error.
     printf("Started Init\n");
-    if(!TMC2209_ReadRegister(driver, (TMC2209_datagram_t *)&driver->gstat))
-        return false;
-
+    // if(!TMC2209_ReadRegister(driver, (TMC2209_datagram_t *)&driver->gstat))
+    //     return false;
+    //PK will be empty
     TMC2209_WriteRegister(driver, (TMC2209_datagram_t *)&driver->gstat);
 
-    TMC2209_ReadRegister(driver, (TMC2209_datagram_t *)&driver->gconf);
+    // TMC2209_ReadRegister(driver, (TMC2209_datagram_t *)&driver->gconf);
     driver->gconf.reg.pdn_disable = 1;
     driver->gconf.reg.mstep_reg_select = 1;
 
@@ -184,7 +184,7 @@ bool TMC2209_Init (TMC2209_t *driver)
 //  driver->gconf.reg.en_spreadcycle = 0;
 //  driver->gconf.reg.multistep_filt = 1;
 
-    TMC2209_ReadRegister(driver, (TMC2209_datagram_t *)&driver->ifcnt);
+    // TMC2209_ReadRegister(driver, (TMC2209_datagram_t *)&driver->ifcnt);
 
     uint8_t ifcnt = driver->ifcnt.reg.count;
 
@@ -197,9 +197,10 @@ bool TMC2209_Init (TMC2209_t *driver)
     TMC2209_WriteRegister(driver, (TMC2209_datagram_t *)&driver->tcoolthrs);
     TMC2209_SetCurrent(driver, driver->config.current, driver->config.hold_current_pct);
 
-    TMC2209_ReadRegister(driver, (TMC2209_datagram_t *)&driver->ifcnt);
+    // TMC2209_ReadRegister(driver, (TMC2209_datagram_t *)&driver->ifcnt);
 
-    return (((uint8_t)driver->ifcnt.reg.count - ifcnt) & 0xFF) == 7;
+    // return (((uint8_t)driver->ifcnt.reg.count - ifcnt) & 0xFF) == 7;
+    return true;
 }
 
 uint16_t TMC2209_GetCurrent (TMC2209_t *driver)

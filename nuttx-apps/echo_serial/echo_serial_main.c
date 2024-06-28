@@ -41,7 +41,7 @@ int main(int argc, FAR char *argv[])
   ioctl(wfd, FIONREAD, (unsigned long)&len);
   printf("LEN: %d\n",len);
 
-  ssize_t nn = read(wfd, buf, CONFIG_ECHO_SERIALRX_BUFSIZE);
+  ssize_t nn = read(wfd, buf, wfd);
   up_udelay(10000);
   printf("Sleep Done\n");
   for (int i = 0; i < (int)nn; i++){
