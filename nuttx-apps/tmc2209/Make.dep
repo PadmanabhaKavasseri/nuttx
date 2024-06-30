@@ -47,7 +47,6 @@ starter.c.home.nuttx.nuttx-apps.tmc2209.o: starter.c \
  /home/nuttx/nuttx/include/nuttx/pgalloc.h \
  /home/nuttx/nuttx/include/nuttx/addrenv.h \
  /home/nuttx/nuttx/include/fcntl.h \
- /home/nuttx/nuttx-apps/tmc2209/inc/TMC2209.h \
- /home/nuttx/nuttx-apps/tmc2209/inc/common.h
+ /home/nuttx/nuttx-apps/tmc2209/inc/TMC2209.h
 # No files specified for dependency generation
 # No files specified for dependency generation

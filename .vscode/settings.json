@@ -61,7 +61,9 @@
         "typeindex": "cpp",
         "tmc2209.h": "c",
         "variant": "c",
-        "fcntl.h": "c"
+        "fcntl.h": "c",
+        "fstream": "c",
+        "stop_token": "c"
     },
     "C_Cpp.default.compilerPath": "/usr/bin/gcc"
 }

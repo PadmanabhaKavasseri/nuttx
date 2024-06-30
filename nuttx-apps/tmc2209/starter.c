@@ -15,7 +15,7 @@
 
 #include "TMC2209.h"
 
-#define BUFCOUNT(head, tail, size) (((head) >= (tail)) ? ((head) - (tail)) : ((size) - (tail) + (head)))
+
 
 uint8_t array[19][8] = {
         {5, 0, 128, 0, 0, 1, 192, 246},
@@ -32,152 +32,63 @@ uint8_t array[19][8] = {
         {5, 0, 144, 0, 1, 0, 0, 91},
         {5, 0, 236, 16, 1, 0, 80, 217},
         {5, 0, 240, 193, 9, 0, 36, 69},
-        {5, 0, 240, 193, 1, 0, 36, 231},
-        {5, 0, 236, 22, 1, 0, 80, 140},
-        {5, 0, 144, 0, 1, 31, 0, 231},
-        {5, 0, 236, 22, 1, 0, 83, 194},
-        {5, 0, 162, 0, 0, 0, 200, 119}
+        {5, 0, 240, 193, 1, 0, 36, 231}, //idx14
+        {5, 0, 236, 22, 1, 0, 80, 140},//set micro
+        {5, 0, 144, 0, 1, 31, 0, 231},//set current
+        {5, 0, 236, 22, 1, 0, 83, 194},//enable
+        {5, 0, 162, 0, 0, 0, 200, 119}//vel
     };
 
 int fd;
-int get_tx_buffer_count(){
-	//create file pointer
-	FAR struct file *filep;
-	int ret = fs_getfilep(fd, &filep);
-	if(ret < 0){
-		printf("Failed to get file structure: %d\n", ret);
-	}
-	//todo: handle error with ret
-	FAR struct inode *inode = filep->f_inode;
-	FAR uart_dev_t   *dev   = inode->i_private;
 
-	//determine the number of bytes wiating in the TX buffer
-	int count = 0;
-	irqstate_t flags = enter_critical_section();
-	if (dev->xmit.tail <= dev->xmit.head)
-	{
-		count = dev->xmit.head - dev->xmit.tail;
-	}
-	else
-	{
-		count = dev->xmit.size - (dev->xmit.tail - dev->xmit.head);
-	}
 
-	leave_critical_section(flags);
-	return count;
-}
 
-void reset_read_buffer(){
-	//create file pointer
-	FAR struct file *filep;
-	int ret = fs_getfilep(fd, &filep);
-	if(ret < 0){
-		printf("Failed to get file structure: %d\n", ret);
-	}
-	//todo: handle error with ret
-	FAR struct inode *inode = filep->f_inode;
-	FAR uart_dev_t   *dev   = inode->i_private;
 
-	irqstate_t flags = enter_critical_section();
-	//todo: is recv the rx?
-	dev->recv.tail = dev->recv.head;
-	leave_critical_section(flags);
-}
-
-int get_rx_buffer_count(){
-	//FIONREAD
-	//create file pointer
-	FAR struct file *filep;
-	int ret = fs_getfilep(fd, &filep);
-	if(ret < 0){
-		printf("Failed to get file structure: %d\n", ret);
-	}
-	//todo: handle error with ret
-	FAR struct inode *inode = filep->f_inode;
-	FAR uart_dev_t   *dev   = inode->i_private;
-
-	int count;
-	irqstate_t flags = enter_critical_section();
-
-	/* Determine the number of bytes available in the RX buffer */
-	if (dev->recv.tail <= dev->recv.head)
-	{
-		count = dev->recv.head - dev->recv.tail;
-	}
-	else
-	{
-		count = dev->recv.size - (dev->recv.tail - dev->recv.head);
-	}
-
-	leave_critical_section(flags);
-	return count;
-}
-
-TMC_uart_write_datagram_t *tmc_uart_read (trinamic_motor_t driver, TMC_uart_read_datagram_t *datagram){
-    TMC_uart_write_datagram_t * res = {0};
-	volatile uint32_t dly = 50, ms = g_system_ticks;
-	
-	// write the read_datagram_t
-	printf("uart_read start\n"); fflush(stdout);
-	ssize_t n = write(fd, datagram->data, sizeof(TMC_uart_read_datagram_t));
-	if (n < 0){
-		printf("write failed: %d\n", errno);
-		fflush(stdout);
-	}
-	printf("uart_read write complete\n"); fflush(stdout);
-
-	while(get_tx_buffer_count());
-	while(--dly);
-	reset_read_buffer();
-
-	//Wait for response with 3ms timeout
-	while(get_rx_buffer_count() < 8){
-		if(g_system_ticks - ms >= 3){
-			printf("Break\n");
-			break;
+void TMC2209_init(){
+	for(int i =0; i<15; i++){
+		for(int j = 0; j < 8; j++) {
+			write(fd, &array[i][j], sizeof(array[i][j]));
 		}
-		printf("Waiting for rx buffer to be > 8\n");
+		usleep(1000000);
 	}
-
-	if(get_rx_buffer_count() >= 8){
-		printf("In if\n");
-		// char c;
-		// for(int i=0; i<8; i++){
-		// 	printf("in for\n");
-		// 	// n = read(fd,&c,1);
-		// 	// res->data[i] = c;
-		// }
-	}
-	// else{
-	// 	res->msg.addr.value = 0xFF;
-	// }
-
-	dly = 5000;
-	while(--dly);
-
-    return res;
+	printf("Init Completed\n");
 }
 
-void tmc_uart_write (trinamic_motor_t driver, TMC_uart_write_datagram_t *datagram){
-    printf("uart_write start\n"); fflush(stdout);
-	uint8_t byte;
-	ssize_t n = write(fd, datagram->data, sizeof(TMC_uart_write_datagram_t));
-	// for(int i = 0; i<sizeof(TMC_uart_write_datagram_t); i++){
-	// 	byte = (datagram->data[i] >> (i * 8)) & 0xFF;
-	// 	printf("%u", byte);
-	// }
-
-	// for(int i =0; i<8; i++){
-	// 	prinf("%u",)
-	// }
-
-	printf("\n");
-	//wait while the datagram is delivered
-	while(get_tx_buffer_count());
-	printf("uart_write write complete\n"); fflush(stdout);
+void TMC2209_set_microsteps(){
+	uint8_t msg[8] = {5, 0, 236, 22, 1, 0, 80, 140};
+	for(int j = 0; j < 8; j++) {
+		write(fd, &msg[j], sizeof(msg[j]));
+	}
+	usleep(1000000);
+	printf("Micro Steps Completed\n");
 }
 
+void TMC2209_set_current(){
+	uint8_t msg[8] = {5, 0, 144, 0, 1, 31, 0, 231};
+	for(int j = 0; j < 8; j++) {
+		write(fd, &msg[j], sizeof(msg[j]));
+	}
+	usleep(1000000);
+	printf("Set Current\n");
+}
 
+void TMC2209_enable(){
+	uint8_t msg[8] = {5, 0, 236, 22, 1, 0, 83, 194};
+	for(int j = 0; j < 8; j++) {
+		write(fd, &msg[j], sizeof(msg[j]));
+	}
+	usleep(1000000);
+	printf("Driver Enabled\n");
+}
+
+void TMC2209_velocity(){
+	uint8_t msg[8] = {5, 0, 162, 0, 0, 0, 200, 119};
+	for(int j = 0; j < 8; j++) {
+		write(fd, &msg[j], sizeof(msg[j]));
+	}
+	usleep(1000000);
+	printf("Velocity set. Go!\n");
+}
 
 void custom_init(){
 	// Print the array
@@ -188,12 +99,12 @@ void custom_init(){
         for(int j = 0; j < 8; j++) {
 			
 			// sprintf(hex_str, "%02X", array[i][j]);
-            printf("%02X ", array[i][j]);
+            printf("%d ", array[i][j]);
 			write(fd, &array[i][j], sizeof(array[i][j]));
 			
         }
         printf("\n");
-		usleep(1000000);
+		usleep(100000);
     }
 	// write(fd,&x,sizeof(x));
 	// write(fd,&y,sizeof(y));
@@ -222,8 +133,18 @@ int main(int argc, FAR char *argv[])
 	// }
 
 	custom_init();
-	
-	
+
+	// TMC2209_init();
+	// TMC2209_set_microsteps();
+	// TMC2209_set_current();
+	// TMC2209_enable();
+	// TMC2209_velocity();
+
+
+	init(fd);
+	uint32_t vel = 200;
+	printf("Here\n");
+	moveAtVelocity(vel);
   
 	return 0;
 }

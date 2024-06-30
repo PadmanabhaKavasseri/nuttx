@@ -16,7 +16,7 @@ C_INCLUDES +=  \
 MAINSRC = starter.c
 
 CSRCS += $(APPDIR)/tmc2209/inc/TMC2209.c
-CSRCS += $(APPDIR)/tmc2209/inc/common.c
 CFLAGS += $(C_INCLUDES)
+CFLAGS += -Werror=implicit-function-declaration
 
 include $(APPDIR)/Application.mk
