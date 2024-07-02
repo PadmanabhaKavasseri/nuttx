@@ -22,16 +22,57 @@
 extern int fd_;
 
 extern uint8_t serial_address_;
+extern int16_t hardware_enable_pin_;
 
 
 
+typedef struct 
+{
+    bool is_communicating;
+    bool is_setup;
+    bool software_enabled;
+    uint16_t microsteps_per_step;
+    bool inverse_motor_direction_enabled;
+    bool stealth_chop_enabled;
+    uint8_t standstill_mode;
+    uint8_t irun_percent;
+    uint8_t irun_register_value;
+    uint8_t ihold_percent;
+    uint8_t ihold_register_value;
+    uint8_t iholddelay_percent;
+    uint8_t iholddelay_register_value;
+    bool automatic_current_scaling_enabled;
+    bool automatic_gradient_adaptation_enabled;
+    uint8_t pwm_offset;
+    uint8_t pwm_gradient;
+    bool cool_step_enabled;
+    bool analog_current_scaling_enabled;
+    bool internal_sense_resistors_enabled;
+} Settings;
+Settings getSettings(void);
 
-
-
-
-
-
-
+typedef struct 
+{
+    uint32_t over_temperature_warning : 1;
+    uint32_t over_temperature_shutdown : 1;
+    uint32_t short_to_ground_a : 1;
+    uint32_t short_to_ground_b : 1;
+    uint32_t low_side_short_a : 1;
+    uint32_t low_side_short_b : 1;
+    uint32_t open_load_a : 1;
+    uint32_t open_load_b : 1;
+    uint32_t over_temperature_120c : 1;
+    uint32_t over_temperature_143c : 1;
+    uint32_t over_temperature_150c : 1;
+    uint32_t over_temperature_157c : 1;
+    uint32_t reserved0 : 4;
+    uint32_t current_scaling : 5;
+    uint32_t reserved1 : 9;
+    uint32_t stealth_chop_mode : 1;
+    uint32_t standstill : 1;
+} Status;
+const static uint8_t CURRENT_SCALING_MAX = 31;
+Status getStatus(void);
 
 
 
@@ -174,6 +215,7 @@ const static uint8_t VERSION = 0x21;
 
 
 // Velocity Dependent Driver Feature Control Register Set
+const static uint8_t ADDRESS_IHOLD_IRUN = 0x10;
 typedef union
 {
     struct
@@ -213,7 +255,172 @@ const static uint8_t ADDRESS_VACTUAL = 0x22;
 const static int32_t VACTUAL_DEFAULT = 0;
 const static int32_t VACTUAL_STEP_DIR_INTERFACE = 0;
 
+// CoolStep and StallGuard Control Register Set
+const static uint8_t ADDRESS_TCOOLTHRS = 0x14;
+const static uint8_t TCOOLTHRS_DEFAULT = 0;
+const static uint8_t ADDRESS_SGTHRS = 0x40;
+const static uint8_t SGTHRS_DEFAULT = 0;
+const static uint8_t ADDRESS_SG_RESULT = 0x41;
 
+const static uint8_t ADDRESS_COOLCONF = 0x42;
+const static uint8_t COOLCONF_DEFAULT = 0;
+typedef union CoolConfig
+{
+    struct
+    {
+        uint32_t semin : 4;
+        uint32_t reserved_0 : 1;
+        uint32_t seup : 2;
+        uint32_t reserved_1 : 1;
+        uint32_t semax : 4;
+        uint32_t reserved_2 : 1;
+        uint32_t sedn : 2;
+        uint32_t seimin : 1;
+        uint32_t reserved_3 : 16;
+    };
+    uint32_t bytes;
+} CoolConfig;
+
+extern CoolConfig cool_config_;
+extern bool cool_step_enabled_;
+const static uint8_t SEIMIN_UPPER_CURRENT_LIMIT = 20;
+const static uint8_t SEIMIN_LOWER_SETTING = 0;
+const static uint8_t SEIMIN_UPPER_SETTING = 1;
+const static uint8_t SEMIN_OFF = 0;
+const static uint8_t SEMIN_MIN = 1;
+const static uint8_t SEMIN_MAX = 15;
+const static uint8_t SEMAX_MIN = 0;
+const static uint8_t SEMAX_MAX = 15;
+
+// Microstepping Control Register Set
+const static uint8_t ADDRESS_MSCNT = 0x6A;
+const static uint8_t ADDRESS_MSCURACT = 0x6B;
+
+// Driver Register Set
+const static uint8_t ADDRESS_CHOPCONF = 0x6C;
+typedef union 
+{
+    struct
+    {
+        uint32_t toff : 4;
+        uint32_t hstart : 3;
+        uint32_t hend : 4;
+        uint32_t reserved_0 : 4;
+        uint32_t tbl : 2;
+        uint32_t vsense : 1;
+        uint32_t reserved_1 : 6;
+        uint32_t mres : 4;
+        uint32_t interpolation : 1;
+        uint32_t double_edge : 1;
+        uint32_t diss2g : 1;
+        uint32_t diss2vs : 1;
+    };
+    uint32_t bytes;
+} ChopperConfig;
+
+extern ChopperConfig chopper_config_;
+const static uint32_t CHOPPER_CONFIG_DEFAULT = 0x10000053;
+const static uint8_t TBL_DEFAULT = 0b10;
+const static uint8_t HEND_DEFAULT = 0;
+const static uint8_t HSTART_DEFAULT = 5;
+const static uint8_t TOFF_DEFAULT = 3;
+const static uint8_t TOFF_DISABLE = 0;
+extern uint8_t toff_;// = TOFF_DEFAULT;
+const static uint8_t MRES_256 = 0b0000;
+const static uint8_t MRES_128 = 0b0001;
+const static uint8_t MRES_064 = 0b0010;
+const static uint8_t MRES_032 = 0b0011;
+const static uint8_t MRES_016 = 0b0100;
+const static uint8_t MRES_008 = 0b0101;
+const static uint8_t MRES_004 = 0b0110;
+const static uint8_t MRES_002 = 0b0111;
+const static uint8_t MRES_001 = 0b1000;
+const static uint8_t DOUBLE_EDGE_DISABLE = 0;
+const static uint8_t DOUBLE_EDGE_ENABLE = 1;
+
+const static size_t MICROSTEPS_PER_STEP_MIN = 1;
+const static size_t MICROSTEPS_PER_STEP_MAX = 256;
+
+const static uint8_t ADDRESS_DRV_STATUS = 0x6F;
+typedef union 
+{
+    struct
+    {
+        Status status;
+    };
+    uint32_t bytes;
+} DriveStatus;
+
+const static uint8_t ADDRESS_PWMCONF = 0x70;
+typedef union 
+{
+    struct
+    {
+        uint32_t pwm_offset : 8;
+        uint32_t pwm_grad : 8;
+        uint32_t pwm_freq : 2;
+        uint32_t pwm_autoscale : 1;
+        uint32_t pwm_autograd : 1;
+        uint32_t freewheel : 2;
+        uint32_t reserved : 2;
+        uint32_t pwm_reg : 4;
+        uint32_t pwm_lim : 4;
+    };
+    uint32_t bytes;
+} PwmConfig;
+
+extern PwmConfig pwm_config_;
+const static uint32_t PWM_CONFIG_DEFAULT = 0xC10D0024;
+const static uint8_t PWM_OFFSET_MIN = 0;
+const static uint8_t PWM_OFFSET_MAX = 255;
+const static uint8_t PWM_OFFSET_DEFAULT = 0x24;
+const static uint8_t PWM_GRAD_MIN = 0;
+const static uint8_t PWM_GRAD_MAX = 255;
+const static uint8_t PWM_GRAD_DEFAULT = 0x14;
+
+typedef union 
+{
+    struct
+    {
+        uint32_t pwm_scale_sum : 8;
+        uint32_t reserved_0 : 8;
+        uint32_t pwm_scale_auto : 9;
+        uint32_t reserved_1 : 7;
+    };
+    uint32_t bytes;
+} PwmScale;
+
+const static uint8_t ADDRESS_PWM_SCALE = 0x71;
+
+typedef union 
+{
+    struct
+    {
+        uint32_t pwm_offset_auto : 8;
+        uint32_t reserved_0 : 8;
+        uint32_t pwm_gradient_auto : 8;
+        uint32_t reserved_1 : 8;
+    };
+    uint32_t bytes;
+} PwmAuto;
+
+const static uint8_t ADDRESS_PWM_AUTO = 0x72;
+
+
+void writeStoredDriverCurrent(void);
+void writeStoredGlobalConfig(void);
+void setOperationModeToSerial(void);
+void setRegistersToDefaults(void);
+void minimizeMotorCurrent(void);
+void writeStoredChopperConfig(void);
+uint32_t readChopperConfigBytes(void);
+void writeStoredPwmConfig(void);
+uint32_t readPwmConfigBytes(void);
+uint32_t constrain_(uint32_t value, uint32_t low, uint32_t high);
+void setRunCurrent(uint8_t percent);
+void enableCoolStep(uint8_t lower_threshold, uint8_t upper_threshold);
+void setMicrostepsPerStepPowerOfTwo(uint8_t exponent);
+void enable(void);
 
 
 void moveAtVelocity(int32_t microsteps_per_period);

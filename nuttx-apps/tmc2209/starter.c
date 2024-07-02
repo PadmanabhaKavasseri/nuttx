@@ -140,11 +140,16 @@ int main(int argc, FAR char *argv[])
 	// TMC2209_enable();
 	// TMC2209_velocity();
 
-
+	printf("Start of Custom Driver\n");
 	init(fd);
+	setMicrostepsPerStepPowerOfTwo(2);
+	setRunCurrent(100);
+	// enableCoolStep();
+	enable();
 	uint32_t vel = 200;
-	printf("Here\n");
+	
 	moveAtVelocity(vel);
+	
   
 	return 0;
 }

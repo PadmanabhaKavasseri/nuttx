@@ -63,7 +63,9 @@
         "variant": "c",
         "fcntl.h": "c",
         "fstream": "c",
-        "stop_token": "c"
+        "stop_token": "c",
+        "signal.h": "c",
+        "stdint.h": "c"
     },
     "C_Cpp.default.compilerPath": "/usr/bin/gcc"
 }
