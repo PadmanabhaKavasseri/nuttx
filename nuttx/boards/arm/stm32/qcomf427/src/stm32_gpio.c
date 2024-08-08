@@ -105,7 +105,7 @@ static const struct gpio_operations_s gpint_ops =
 
 static const uint32_t g_gpioinputs[BOARD_NGPIOIN] =
 {
-  GPIO_IN1,
+  GPIO_TIM2_CH3IN, //gpio0?
 };
 
 static struct stm32gpio_dev_s g_gpin[BOARD_NGPIOIN];
@@ -116,14 +116,14 @@ static struct stm32gpio_dev_s g_gpin[BOARD_NGPIOIN];
 
 static const uint32_t g_gpiooutputs[BOARD_NGPIOOUT] =
 {
-  GPIO_CAN_STBY,
-  GPIO_IMU_CS,
-  GPIO_TIM11_CH1OUT,
-  GPIO_TIM9_CH2OUT, //gpio3
-  GPIO_TIM9_CH1OUT, //gpio4
-  GPIO_TIM1_CH2OUT, //gpio5
-  GPIO_TIM1_CH1OUT, //gpio6
-  GPIO_TIM2_CH3OUT, //gpio7
+  GPIO_CAN_STBY, //1
+  GPIO_IMU_CS, //2
+  GPIO_TIM11_CH1OUT, //3 
+  GPIO_TIM9_CH2OUT, //gpio4 now 4
+  GPIO_TIM9_CH1OUT, //gpio5 now 5 
+  GPIO_TIM1_CH2OUT, //gpio6
+  GPIO_TIM1_CH1OUT, //gpio7
+  // GPIO_TIM2_CH3OUT, 
 };
 
 static struct stm32gpio_dev_s g_gpout[BOARD_NGPIOOUT];
@@ -132,10 +132,7 @@ static struct stm32gpio_dev_s g_gpout[BOARD_NGPIOOUT];
 #if BOARD_NGPIOINT > 0
 /* This array maps the GPIO pins used as INTERRUPT INPUTS */
 
-static const uint32_t g_gpiointinputs[BOARD_NGPIOINT] =
-{
-  GPIO_INT1,
-};
+static const uint32_t g_gpiointinputs[BOARD_NGPIOINT];
 
 static struct stm32gpint_dev_s g_gpint[BOARD_NGPIOINT];
 #endif

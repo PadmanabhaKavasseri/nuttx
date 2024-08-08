@@ -17,7 +17,7 @@
 
 
 
-uint8_t array[19][8] = {
+uint8_t array[20][8] = {
         {5, 0, 128, 0, 0, 1, 192, 246},
         {5, 0, 144, 0, 1, 31, 16, 223},
         {5, 0, 236, 16, 1, 0, 83, 151},
@@ -29,14 +29,16 @@ uint8_t array[19][8] = {
         {5, 0, 148, 0, 0, 0, 0, 52},
         {5, 0, 192, 0, 0, 0, 0, 141},
         {5, 0, 194, 0, 0, 0, 0, 69},
+		{5, 0, 129, 0, 0, 0, 2, 25},
         {5, 0, 144, 0, 1, 0, 0, 91},
         {5, 0, 236, 16, 1, 0, 80, 217},
         {5, 0, 240, 193, 9, 0, 36, 69},
-        {5, 0, 240, 193, 1, 0, 36, 231}, //idx14
-        {5, 0, 236, 22, 1, 0, 80, 140},//set micro
-        {5, 0, 144, 0, 1, 31, 0, 231},//set current
-        {5, 0, 236, 22, 1, 0, 83, 194},//enable
-        {5, 0, 162, 0, 0, 0, 200, 119}//vel
+        {5, 0, 240, 193, 1, 0, 36, 231},
+		{5, 0, 144, 0, 1, 31, 0, 231},
+		{5, 0, 194, 0, 0, 128, 1, 217},
+		{5, 0, 236, 16, 1, 0, 83, 151},
+		{5, 0, 162, 0, 0, 234, 96, 123}
+        
     };
 
 int fd;
@@ -95,7 +97,7 @@ void custom_init(){
 	// u_int8_t x = 5;
 	// u_int8_t y = 192;
 	char hex_str[3];
-    for(int i = 0; i < 19; i++) {
+    for(int i = 0; i < 20; i++) {
         for(int j = 0; j < 8; j++) {
 			
 			// sprintf(hex_str, "%02X", array[i][j]);
@@ -104,12 +106,24 @@ void custom_init(){
 			
         }
         printf("\n");
-		usleep(100000);
+		usleep(10000);
     }
 	// write(fd,&x,sizeof(x));
 	// write(fd,&y,sizeof(y));
 }
 
+void mcb_serial_flush(int fd)
+{
+int cmd = TCFLSH;
+unsigned long arg = TCIOFLUSH;
+ 
+int ret = ioctl(fd, cmd, arg);
+if (ret != 0)
+{
+	printf("serial flush failed:%d\n",ret);
+}
+ 
+}
 
 
 int main(int argc, FAR char *argv[])
@@ -121,7 +135,7 @@ int main(int argc, FAR char *argv[])
 		fprintf(stderr, "ERROR: write open failed: %d\n", errno);
 	}
 
-
+	mcb_serial_flush(fd);
   	printf("Starter.\n");
 	// TMC2209_t * driver;
 	// bool ret = TMC2209_Init(driver);
@@ -140,15 +154,15 @@ int main(int argc, FAR char *argv[])
 	// TMC2209_enable();
 	// TMC2209_velocity();
 
-	printf("Start of Custom Driver\n");
-	init(fd);
-	setMicrostepsPerStepPowerOfTwo(2);
-	setRunCurrent(100);
-	// enableCoolStep();
-	enable();
-	uint32_t vel = 200;
+	// printf("Start of Custom Driver\n");
+	// init(fd);
+	// // // setMicrostepsPerStepPowerOfTwo(2);
+	// setRunCurrent(100);
+	// enableCoolStep(1,0);
+	// enable();
+	// uint32_t vel = 20000;
 	
-	moveAtVelocity(vel);
+	// moveAtVelocity(vel);
 	
   
 	return 0;

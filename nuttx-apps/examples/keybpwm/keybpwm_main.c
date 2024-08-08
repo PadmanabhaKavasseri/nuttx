@@ -205,16 +205,44 @@ static void setGPIO(int gpio_num, bool value){
 
 }
 
+static bool getLS(){
+	int fd, ret;
+	bool invalue;
+
+	fd = open("/dev/gpio0", O_RDONLY);
+
+	ret = ioctl(fd, GPIOC_READ, (unsigned long)((uintptr_t)&invalue));
+
+	return invalue;
+}
+
+
+
 static void bitBangGPIO(int gpio_num, int steps){
-	int dur = 1;
+	int dur = 5;
 	for(int i=0; i<steps; i++){
 		setGPIO(gpio_num, true);
-		usleep(dur*500);
-		// up_udelay(500);
+		// usleep(dur*2000);
+		up_udelay(dur*10);
 
 		setGPIO(gpio_num, false);
-		usleep(dur*500);
-		// up_udelay(500);
+		// usleep(dur*2000);
+		up_udelay(dur*100);
+	}
+}
+
+static void homeStepper(){
+	//move stepper until it hits limit switch then stop
+	//cout number of steps it takes to get to other side
+	//leave that as global const variable
+	//keep another global variable that keeps track of how many steps we have done
+
+	while(true){
+		bitBangGPIO(1,1);
+		if(!getLS()){
+			printf("Hit Stop!\n");
+			break;
+		}
 	}
 }
 
@@ -256,8 +284,8 @@ static void initGPIOS(){
 	GPIOS[2] = fd;
 	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO4_DEVPATH, O_RDWR);
 	GPIOS[3] = fd;
-	fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO5_DEVPATH, O_RDWR);
-	GPIOS[4] = fd;
+	// fd = open(CONFIG_EXAMPLES_KYBPWM_GPIO5_DEVPATH, O_RDWR);
+	// GPIOS[4] = fd;
 }
 
 static Pin* createPin(int timer_group, int channel, FAR const char *devpath){
@@ -366,6 +394,8 @@ static void keybpwm_msg_parse(struct qrc_pipe_s *pipe, struct motor_msg_s *msg)
 	}
 }
 
+
+
 int main(int argc, FAR char *argv[])
 {
 	struct pwm_info_s info;
@@ -387,6 +417,10 @@ int main(int argc, FAR char *argv[])
 	setPWM(7, 5000, 50);
 	
 	setGPIO(1,0);
+
+	printf("Starting Homing\n");
+	homeStepper();
+	printf("Done Homing\n");
 
 	/* init qrc */
   	char pipe_name[] = PWM_PIPE;

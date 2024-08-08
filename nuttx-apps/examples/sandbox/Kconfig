@@ -4,7 +4,7 @@
 #
 
 config EXAMPLES_SANDBOX
-	tristate "PWM::Sandbox to test pieces of code."
+	tristate "Sandbox GPIO input test"
 	default n
 	---help---
 		Enable Unlimited PWM
