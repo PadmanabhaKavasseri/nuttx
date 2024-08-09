@@ -43,59 +43,6 @@
 #include "keybpwm.h"
 
 #include "qrc_msg_management.h"
-//#include "qrc.h"  do not include this header
-
-/****************************************************************************
- * Pre-processor Definitions
- ****************************************************************************/
-
-/* Configuration ************************************************************/
-
-// #ifdef CONFIG_PWM_MULTICHAN
-// #  if CONFIG_PWM_NCHANNELS > 1
-// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL2
-// #      error "Channel numbers must be unique"
-// #    endif
-// #  endif
-// #  if CONFIG_PWM_NCHANNELS > 2
-// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL3 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL3
-// #      error "Channel numbers must be unique"
-// #    endif
-// #  endif
-// #  if CONFIG_PWM_NCHANNELS > 3
-// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL4 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL4 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL3 == CONFIG_EXAMPLES_PWM_CHANNEL4
-// #      error "Channel numbers must be unique"
-// #    endif
-// #  endif
-// #  if CONFIG_PWM_NCHANNELS > 4
-// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL5 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL5 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL3 == CONFIG_EXAMPLES_PWM_CHANNEL5 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL4 == CONFIG_EXAMPLES_PWM_CHANNEL5
-// #      error "Channel numbers must be unique"
-// #    endif
-// #  endif
-// #  if CONFIG_PWM_NCHANNELS > 5
-// #    if CONFIG_EXAMPLES_PWM_CHANNEL1 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL2 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL3 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL4 == CONFIG_EXAMPLES_PWM_CHANNEL6 || \
-// 				CONFIG_EXAMPLES_PWM_CHANNEL5 == CONFIG_EXAMPLES_PWM_CHANNEL6
-// #      error "Channel numbers must be unique"
-// #    endif
-// #  endif
-// #  if CONFIG_PWM_NCHANNELS > 6
-// #    error "Too many PWM channels"
-// #  endif
-// #endif
-
-/****************************************************************************
- * Private Types
- ****************************************************************************/
-
 
 
 struct pwm_state_s
@@ -133,7 +80,8 @@ typedef struct {
 
 Pin** pins;
 int GPIOS[5];
-
+int currStep = -1;
+const int max_steps = 6288;
 
 //how to know which gpio to turn on?
 
@@ -209,7 +157,7 @@ static bool getLS(int path){
 	
 	bool invalue;
 	int ret = ioctl(path, GPIOC_READ, (unsigned long)((uintptr_t)&invalue));
-	printf("  Input pin:     Value=%u\n",(unsigned int)invalue);
+	// printf("  Input pin:     Value=%u\n",(unsigned int)invalue);
 	return invalue;
 }
 
@@ -217,6 +165,9 @@ static bool getLS(int path){
 
 static void bitBangGPIO(int gpio_num, int steps){
 	int dur = 5;
+	if(steps == 0){
+		return;
+	}
 	for(int i=0; i<steps; i++){
 		setGPIO(gpio_num, true);
 		// usleep(dur*2000);
@@ -228,6 +179,12 @@ static void bitBangGPIO(int gpio_num, int steps){
 	}
 }
 
+void setStepperMid(){
+	setGPIO(0,1);
+	bitBangGPIO(1,3144);
+	currStep = 3144;
+}
+
 static void homeStepper(){
 	//move stepper until it hits limit switch then stop
 	//cout number of steps it takes to get to other side
@@ -237,19 +194,54 @@ static void homeStepper(){
 
 	path = open("/dev/gpio0", O_RDONLY);
 	while(true){
+		setGPIO(0,0);
 		bitBangGPIO(1,1);
 		if(!getLS(path)){
 			printf("Hit Stop!\n");
+			currStep = 0;
+			setStepperMid();
 			break;
 		}
 	}
 }
 
+static int safeStepCheck(int steps_given, int direction){
+	int res = 0;
+	if(direction == 1){
+		//need to add steps
+		res = currStep + steps_given;
+		if(res>max_steps){
+			int moveFwd = max_steps-currStep;
+			currStep = max_steps;
+			return moveFwd; //move to max steps from current position
+		}
+		else{
+			currStep = currStep + steps_given;
+			return steps_given;
+		}
+	}
+	else{
+		//need to subtract steps
+		res = currStep - steps_given;
+		if(res < 0){
+			int moveBack = currStep;
+			currStep = 0;
+			return moveBack; //so we move all they way back to 0
+		}
+		else{
+			currStep = currStep - steps_given;
+			return steps_given;
+		}
+	}
+}
 
 static void parseStepper(struct motor_msg_s *msg){
-	int num_steps = msg->data.stepper.angle / (1.8/8);
-	bitBangGPIO(msg->data.stepper.motor-2,num_steps);
+	// int num_steps = msg->data.stepper.angle; // / (1.8/8);
+	int num_steps = safeStepCheck((int)msg->data.stepper.angle,msg->data.stepper.direction);
+	printf("Num steps to move: %d\n", num_steps);
 	setGPIO(msg->data.stepper.motor-3,msg->data.stepper.direction);
+	bitBangGPIO(msg->data.stepper.motor-2,num_steps);
+	printf("Currsteps: %d\n",currStep);
 }
 
 
@@ -417,9 +409,7 @@ int main(int argc, FAR char *argv[])
 	
 	setGPIO(1,0);
 
-	printf("Starting Homing\n");
-	homeStepper();
-	printf("Done Homing\n");
+	
 
 	/* init qrc */
   	char pipe_name[] = PWM_PIPE;
@@ -445,6 +435,13 @@ int main(int argc, FAR char *argv[])
     }
 
 	syslog(LOG_INFO, "main: keybpwm startup completed\n");
+
+	printf("This command was able to run\n");
+	printf("Starting Homing\n");
+	homeStepper();
+	printf("Done Homing\n");
+
+	
 	qrc_pipe_threads_join();
 	
 	return 0;
