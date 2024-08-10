@@ -8,28 +8,37 @@ def initQRC():
     return motor_control.MotorControl()
 
 
-minDuty = 0.000
-maxDuty = 100.000
-defDuty = minDuty
-stepsDuty = 0.005
+# minDuty = 0.000
+# maxDuty = 100.000
+# defDuty = minDuty
+# stepsDuty = 0.005
 
-minFreqHz = 1
-maxFreqHz = 100
-defFreq = round((minFreqHz + maxFreqHz)/2)
-stepsFreq = 1
+# minFreqHz = 1
+# maxFreqHz = 100
+# defFreq = round((minFreqHz + maxFreqHz)/2)
+# stepsFreq = 1
 
 st.title("Control PWMs")
 
 
 def parseMotorType(motor_type):
-    if motor_type == "BLDC" or motor_type == "LA":
-        minDuty = 0.000
-        maxDuty = 100.000
-        defDuty = minDuty
+    if motor_type == "BLDC":
+        minDuty = 5.000
+        maxDuty = 10.000
+        defDuty = 5.000
         stepsDuty = 0.005
         minFreqHz = 1.0
         maxFreqHz = 100
-        defFreq = round((minFreqHz + maxFreqHz)/2)
+        defFreq = 50
+        stepsFreq = 1
+    elif motor_type == "LA":
+        minDuty = 8.000
+        maxDuty = 10.000
+        defDuty = 8.000
+        stepsDuty = 0.005
+        minFreqHz = 1.0
+        maxFreqHz = 100
+        defFreq = 50
         stepsFreq = 1
     elif motor_type == "STEP":
         minDuty = 0.000
@@ -91,7 +100,8 @@ class motor:
         
         duty_label = "Duty " + self.key + "%"
         self.duty_key =  "d" + self.key
-        self.dutySlider = st.slider(duty_label, minDuty, maxDuty, defDuty, stepsDuty, "%.3f", key=self.duty_key, on_change=self.sendBLDC, disabled = not self.button)
+        print("min duty", motor_params["minDuty"])
+        self.dutySlider = st.slider(duty_label, motor_params["minDuty"], motor_params["maxDuty"], motor_params["defDuty"], motor_params["stepsDuty"], "%.3f", key=self.duty_key, on_change=self.sendBLDC, disabled = not self.button)
 
     def initSTEP(self,motor_params):
         st.header("STEPPER Motor " + self.key)
