@@ -117,7 +117,7 @@ static void setPWM(int pin_idx, int duty, int freq){
 	Pin* currPin = pins[pin_idx];
 	currPin->duty = duty;
 
-	printf("Frequency: %d - Duty: %d\n", pwm->frequency, currPin->duty);
+	printf("PinIDX: %d: - Frequency: %d - Duty: %d\n", pin_idx, pwm->frequency, currPin->duty);
 	for(int i=0; i<numPins; i++){
 		if(pins[i]->timer_group ==  currPin->timer_group){
 			pwm->channels[pins[i]->channel-1].channel = pins[i]->channel;
@@ -400,16 +400,17 @@ int main(int argc, FAR char *argv[])
 
 	setPWM(0, 500, 50);
 	setPWM(1, 500, 50);
-	//setPWM(2, 500, 50);
+	setPWM(2, 850, 50);
 	//setPWM(3, 500, 50);
 	//setPWM(4, 500, 50);
 	//setPWM(5, 500, 50);
 	//setPWM(6, 500, 50);
 	//setPWM(7, 500, 50);
 	
-	setGPIO(1,0);
+	//setGPIO(1,0);
 
 	
+	//setPWM(1, 500, 50);
 
 	/* init qrc */
   	char pipe_name[] = PWM_PIPE;
@@ -440,7 +441,8 @@ int main(int argc, FAR char *argv[])
 	printf("Starting Homing\n");
 	homeStepper();
 	printf("Done Homing\n");
-
+	
+	//setPWM(1, 500, 50);
 	
 	qrc_pipe_threads_join();
 	
