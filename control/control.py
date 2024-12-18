@@ -100,7 +100,7 @@ class motor:
         
         duty_label = "Duty " + self.key + "%"
         self.duty_key =  "d" + self.key
-        print("min duty", motor_params["minDuty"])
+        #print("min duty", motor_params["minDuty"])
         self.dutySlider = st.slider(duty_label, motor_params["minDuty"], motor_params["maxDuty"], motor_params["defDuty"], motor_params["stepsDuty"], "%.3f", key=self.duty_key, on_change=self.sendBLDC, disabled = not self.button)
 
     def initSTEP(self,motor_params):
@@ -147,9 +147,9 @@ class motor:
 
 mc = initQRC()
 
-motor0 = motor(0,"BLDC")
+motor0 = motor(0,"LA")
 motor1 = motor(1,"BLDC")
-motor2 = motor(2,"LA")
+motor2 = motor(2,"BLDC")
 motor3 = motor(3,"STEP")
 # motor3 = motor(3)
 # motor4 = motor(4)

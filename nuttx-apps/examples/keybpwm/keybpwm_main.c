@@ -192,7 +192,7 @@ static void homeStepper(){
 	//keep another global variable that keeps track of how many steps we have done
 	int path, ret;
 
-	path = open("/dev/gpio0", O_RDONLY);
+	path = open("/dev/gpio7", O_RDONLY);
 	while(true){
 		setGPIO(0,0);
 		bitBangGPIO(1,1);
@@ -398,9 +398,9 @@ int main(int argc, FAR char *argv[])
 	pins = initPins();
 	initGPIOS();
 
-	setPWM(0, 500, 50);
+	setPWM(0, 850, 50);
 	setPWM(1, 500, 50);
-	setPWM(2, 850, 50);
+	setPWM(2, 500, 50);
 	//setPWM(3, 500, 50);
 	//setPWM(4, 500, 50);
 	//setPWM(5, 500, 50);
@@ -439,7 +439,8 @@ int main(int argc, FAR char *argv[])
 
 	printf("This command was able to run\n");
 	printf("Starting Homing\n");
-	homeStepper();
+	homeStepper(); 
+	// currStep = 3144;
 	printf("Done Homing\n");
 	
 	//setPWM(1, 500, 50);

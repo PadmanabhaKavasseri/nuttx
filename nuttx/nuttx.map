@@ -2620,7 +2620,7 @@ sram             0x0000000020000000 0x000000000001c000 xrw
 Linker script and memory map
 
 
-.text           0x0000000008100000    0x1ae28
+.text           0x0000000008100000    0x1ae3c
                 0x0000000008100000                _stext = ABSOLUTE (.)
  *(.vectors)
  .vectors       0x0000000008100000      0x19c /home/nuttx/nuttx/staging/libarch.a(arm_vectors.o)
@@ -4932,973 +4932,973 @@ Linker script and memory map
  .text.setGPIO  0x0000000008114974       0x2c /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.createPin
                 0x00000000081149a0       0x64 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
- .text.setPWM   0x0000000008114a04       0xec /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+ .text.setPWM   0x0000000008114a04       0xf4 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.bitBangGPIO.part.0
-                0x0000000008114af0       0x30 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008114af8       0x30 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.keybpwm_qrc_msg_cb
-                0x0000000008114b20      0x120 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008114b28      0x120 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.setStepperMid
-                0x0000000008114c40       0x24 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008114c40                setStepperMid
+                0x0000000008114c48       0x24 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008114c48                setStepperMid
  .text.keybpwm_main
-                0x0000000008114c64      0x1ac /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008114c64                keybpwm_main
+                0x0000000008114c6c      0x1ac /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008114c6c                keybpwm_main
  .text.sandbox_main
-                0x0000000008114e10       0x48 /home/nuttx/nuttx/staging/libapps.a(sandbox_main.c.home.nuttx.nuttx-apps.examples.sandbox.o)
-                0x0000000008114e10                sandbox_main
+                0x0000000008114e18       0x48 /home/nuttx/nuttx/staging/libapps.a(sandbox_main.c.home.nuttx.nuttx-apps.examples.sandbox.o)
+                0x0000000008114e18                sandbox_main
  .text.nsh_system_
-                0x0000000008114e58       0x22 /home/nuttx/nuttx/staging/libapps.a(nsh_system.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008114e60       0x22 /home/nuttx/nuttx/staging/libapps.a(nsh_system.c.home.nuttx.nuttx-apps.nshlib.o)
  .text.nsh_system_ctty
-                0x0000000008114e7a        0x8 /home/nuttx/nuttx/staging/libapps.a(nsh_system.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008114e7a                nsh_system_ctty
- *fill*         0x0000000008114e82        0x2 
+                0x0000000008114e82        0x8 /home/nuttx/nuttx/staging/libapps.a(nsh_system.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008114e82                nsh_system_ctty
+ *fill*         0x0000000008114e8a        0x2 
  .text.stop_pipe_timeout
-                0x0000000008114e84       0x8c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008114e8c       0x8c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.read_thread
-                0x0000000008114f10       0x64 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008114f18       0x64 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.read_response_listener
-                0x0000000008114f74       0xb0 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008114f7c       0xb0 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.qrc_lock_stop_timeout
-                0x0000000008115024       0x40 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811502c       0x40 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.TF_WriteImpl
-                0x0000000008115064       0x28 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115064                TF_WriteImpl
+                0x000000000811506c       0x28 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811506c                TF_WriteImpl
  .text.qrc_pipe_init
-                0x000000000811508c       0x78 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x000000000811508c                qrc_pipe_init
+                0x0000000008115094       0x78 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115094                qrc_pipe_init
  .text.qrc_pipe_find_by_name
-                0x0000000008115104       0x38 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115104                qrc_pipe_find_by_name
+                0x000000000811510c       0x38 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811510c                qrc_pipe_find_by_name
  .text.qrc_pipe_insert
-                0x000000000811513c       0x84 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x000000000811513c                qrc_pipe_insert
+                0x0000000008115144       0x84 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115144                qrc_pipe_insert
  .text.qrc_frame_send
-                0x00000000081151c0       0xa4 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x00000000081151c0                qrc_frame_send
+                0x00000000081151c8       0xa4 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081151c8                qrc_frame_send
  .text.start_pipe_timeout
-                0x0000000008115264       0xb0 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115264                start_pipe_timeout
+                0x000000000811526c       0xb0 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811526c                start_pipe_timeout
  .text.qrc_control_write
-                0x0000000008115314      0x128 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115314                qrc_control_write
+                0x000000000811531c      0x128 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811531c                qrc_control_write
  .text.qrc_pipe_list_init
-                0x000000000811543c       0x78 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x000000000811543c                qrc_pipe_list_init
+                0x0000000008115444       0x78 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115444                qrc_pipe_list_init
  .text.qrc_msg_cb_work
-                0x00000000081154b4       0x3c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081154bc       0x3c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.qrc_bus_lock
-                0x00000000081154f0       0x20 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x00000000081154f0                qrc_bus_lock
+                0x00000000081154f8       0x20 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081154f8                qrc_bus_lock
  .text.qrc_bus_unlock
-                0x0000000008115510       0x20 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115510                qrc_bus_unlock
+                0x0000000008115518       0x20 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115518                qrc_bus_unlock
  .text.qrc_control_pipe_callback
-                0x0000000008115530      0x1a4 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115538      0x1a4 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.qrc_init
-                0x00000000081156d4      0x1a0 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x00000000081156d4                qrc_init
+                0x00000000081156dc      0x1a0 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081156dc                qrc_init
  .text.qrc_pipe_threads_join
-                0x0000000008115874       0x1c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115874                qrc_pipe_threads_join
+                0x000000000811587c       0x1c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811587c                qrc_pipe_threads_join
  .text.thread_hold
-                0x0000000008115890       0x1c /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115898       0x1c /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.workqueue_pull
-                0x00000000081158ac       0x48 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081158b4       0x48 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.thread_run
-                0x00000000081158f4       0xfc /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081158fc       0xfc /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.workqueue_destroy
-                0x00000000081159f0       0x48 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081159f8       0x48 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.qrc_thread_pool_init
-                0x0000000008115a38      0x180 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115a38                qrc_thread_pool_init
+                0x0000000008115a40      0x180 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115a40                qrc_thread_pool_init
  .text.qrc_threadpool_add_work
-                0x0000000008115bb8       0x84 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115bb8                qrc_threadpool_add_work
+                0x0000000008115bc0       0x84 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115bc0                qrc_threadpool_add_work
  .text.qrc_threads_join
-                0x0000000008115c3c       0x54 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115c3c                qrc_threads_join
+                0x0000000008115c44       0x54 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115c44                qrc_threads_join
  .text.cleanup_id_listener
-                0x0000000008115c90       0x3c /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115c98       0x3c /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.TF_SendFrame_End
-                0x0000000008115ccc       0x58 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115cd4       0x58 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.TF_SendFrame_Chunk
-                0x0000000008115d24       0x8c /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115d2c       0x8c /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.TF_HandleReceivedMessage
-                0x0000000008115db0      0x154 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115db8      0x154 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.TF_InitStatic
-                0x0000000008115f04       0x30 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115f04                TF_InitStatic
- .text.TF_Init  0x0000000008115f34       0x28 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115f34                TF_Init
+                0x0000000008115f0c       0x30 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115f0c                TF_InitStatic
+ .text.TF_Init  0x0000000008115f3c       0x28 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115f3c                TF_Init
  .text.TF_AddIdListener
-                0x0000000008115f5c       0x6c /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008115f5c                TF_AddIdListener
+                0x0000000008115f64       0x6c /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115f64                TF_AddIdListener
  .text.TF_SendFrame
-                0x0000000008115fc8       0xe8 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008115fd0       0xe8 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .text.TF_AddGenericListener
-                0x00000000081160b0       0x40 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x00000000081160b0                TF_AddGenericListener
+                0x00000000081160b8       0x40 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081160b8                TF_AddGenericListener
  .text.TF_AcceptChar
-                0x00000000081160f0      0x1e0 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x00000000081160f0                TF_AcceptChar
+                0x00000000081160f8      0x1e0 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081160f8                TF_AcceptChar
  .text.TF_Accept
-                0x00000000081162d0       0x1a /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x00000000081162d0                TF_Accept
- .text.TF_Send  0x00000000081162ea       0x12 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x00000000081162ea                TF_Send
+                0x00000000081162d8       0x1a /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081162d8                TF_Accept
+ .text.TF_Send  0x00000000081162f2       0x12 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x00000000081162f2                TF_Send
  .text.init_qrc_management
-                0x00000000081162fc        0x4 /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x00000000081162fc                init_qrc_management
+                0x0000000008116304        0x4 /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008116304                init_qrc_management
  .text.qrc_get_pipe
-                0x0000000008116300       0x68 /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008116300                qrc_get_pipe
+                0x0000000008116308       0x68 /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008116308                qrc_get_pipe
  .text.qrc_register_message_cb
-                0x0000000008116368       0x1c /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                0x0000000008116368                qrc_register_message_cb
+                0x0000000008116370       0x1c /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008116370                qrc_register_message_cb
  .text.board_app_initialize
-                0x0000000008116384       0x10 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_appinit.o)
-                0x0000000008116384                board_app_initialize
- .text          0x0000000008116394       0x50 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixdfsi.o)
-                0x0000000008116394                __fixdfsi
-                0x0000000008116394                __aeabi_d2iz
+                0x000000000811638c       0x10 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_appinit.o)
+                0x000000000811638c                board_app_initialize
+ .text          0x000000000811639c       0x50 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixdfsi.o)
+                0x000000000811639c                __fixdfsi
+                0x000000000811639c                __aeabi_d2iz
  .text.pthread_start
-                0x00000000081163e4       0x28 /home/nuttx/nuttx/staging/libsched.a(pthread_create.o)
+                0x00000000081163ec       0x28 /home/nuttx/nuttx/staging/libsched.a(pthread_create.o)
  .text.nx_pthread_create
-                0x000000000811640c      0x1dc /home/nuttx/nuttx/staging/libsched.a(pthread_create.o)
-                0x000000000811640c                nx_pthread_create
+                0x0000000008116414      0x1dc /home/nuttx/nuttx/staging/libsched.a(pthread_create.o)
+                0x0000000008116414                nx_pthread_create
  .text.nx_pthread_exit
-                0x00000000081165e8       0x40 /home/nuttx/nuttx/staging/libsched.a(pthread_exit.o)
-                0x00000000081165e8                nx_pthread_exit
+                0x00000000081165f0       0x40 /home/nuttx/nuttx/staging/libsched.a(pthread_exit.o)
+                0x00000000081165f0                nx_pthread_exit
  .text.nxmutex_lock
-                0x0000000008116628       0x20 /home/nuttx/nuttx/staging/libsched.a(pthread_join.o)
+                0x0000000008116630       0x20 /home/nuttx/nuttx/staging/libsched.a(pthread_join.o)
  .text.nxmutex_unlock
-                0x0000000008116648       0x14 /home/nuttx/nuttx/staging/libsched.a(pthread_join.o)
+                0x0000000008116650       0x14 /home/nuttx/nuttx/staging/libsched.a(pthread_join.o)
  .text.pthread_join
-                0x000000000811665c       0xb8 /home/nuttx/nuttx/staging/libsched.a(pthread_join.o)
-                0x000000000811665c                pthread_join
+                0x0000000008116664       0xb8 /home/nuttx/nuttx/staging/libsched.a(pthread_join.o)
+                0x0000000008116664                pthread_join
  .text.pthread_mutex_init
-                0x0000000008116714       0x2a /home/nuttx/nuttx/staging/libsched.a(pthread_mutexinit.o)
-                0x0000000008116714                pthread_mutex_init
+                0x000000000811671c       0x2a /home/nuttx/nuttx/staging/libsched.a(pthread_mutexinit.o)
+                0x000000000811671c                pthread_mutex_init
  .text.pthread_mutex_destroy
-                0x000000000811673e       0x58 /home/nuttx/nuttx/staging/libsched.a(pthread_mutexdestroy.o)
-                0x000000000811673e                pthread_mutex_destroy
+                0x0000000008116746       0x58 /home/nuttx/nuttx/staging/libsched.a(pthread_mutexdestroy.o)
+                0x0000000008116746                pthread_mutex_destroy
  .text.pthread_mutex_unlock
-                0x0000000008116796       0x3a /home/nuttx/nuttx/staging/libsched.a(pthread_mutexunlock.o)
-                0x0000000008116796                pthread_mutex_unlock
+                0x000000000811679e       0x3a /home/nuttx/nuttx/staging/libsched.a(pthread_mutexunlock.o)
+                0x000000000811679e                pthread_mutex_unlock
  .text.pthread_cond_wait
-                0x00000000081167d0       0x5e /home/nuttx/nuttx/staging/libsched.a(pthread_condwait.o)
-                0x00000000081167d0                pthread_cond_wait
+                0x00000000081167d8       0x5e /home/nuttx/nuttx/staging/libsched.a(pthread_condwait.o)
+                0x00000000081167d8                pthread_cond_wait
  .text.pthread_cond_signal
-                0x000000000811682e       0x24 /home/nuttx/nuttx/staging/libsched.a(pthread_condsignal.o)
-                0x000000000811682e                pthread_cond_signal
- *fill*         0x0000000008116852        0x2 
+                0x0000000008116836       0x24 /home/nuttx/nuttx/staging/libsched.a(pthread_condsignal.o)
+                0x0000000008116836                pthread_cond_signal
+ *fill*         0x000000000811685a        0x2 
  .text.pthread_mutex_add
-                0x0000000008116854       0x20 /home/nuttx/nuttx/staging/libsched.a(pthread_mutex.o)
+                0x000000000811685c       0x20 /home/nuttx/nuttx/staging/libsched.a(pthread_mutex.o)
  .text.pthread_mutex_take
-                0x0000000008116874       0x3c /home/nuttx/nuttx/staging/libsched.a(pthread_mutex.o)
-                0x0000000008116874                pthread_mutex_take
+                0x000000000811687c       0x3c /home/nuttx/nuttx/staging/libsched.a(pthread_mutex.o)
+                0x000000000811687c                pthread_mutex_take
  .text.pthread_mutex_give
-                0x00000000081168b0       0x48 /home/nuttx/nuttx/staging/libsched.a(pthread_mutex.o)
-                0x00000000081168b0                pthread_mutex_give
+                0x00000000081168b8       0x48 /home/nuttx/nuttx/staging/libsched.a(pthread_mutex.o)
+                0x00000000081168b8                pthread_mutex_give
  .text.nxsched_get_scheduler
-                0x00000000081168f8       0x24 /home/nuttx/nuttx/staging/libsched.a(sched_getscheduler.o)
-                0x00000000081168f8                nxsched_get_scheduler
+                0x0000000008116900       0x24 /home/nuttx/nuttx/staging/libsched.a(sched_getscheduler.o)
+                0x0000000008116900                nxsched_get_scheduler
  .text.sched_getscheduler
-                0x000000000811691c       0x1a /home/nuttx/nuttx/staging/libsched.a(sched_getscheduler.o)
-                0x000000000811691c                sched_getscheduler
- *fill*         0x0000000008116936        0x2 
+                0x0000000008116924       0x1a /home/nuttx/nuttx/staging/libsched.a(sched_getscheduler.o)
+                0x0000000008116924                sched_getscheduler
+ *fill*         0x000000000811693e        0x2 
  .text.nxtask_exit
-                0x0000000008116938       0x3c /home/nuttx/nuttx/staging/libsched.a(task_exit.o)
-                0x0000000008116938                nxtask_exit
+                0x0000000008116940       0x3c /home/nuttx/nuttx/staging/libsched.a(task_exit.o)
+                0x0000000008116940                nxtask_exit
  .text.group_bind
-                0x0000000008116974       0x10 /home/nuttx/nuttx/staging/libsched.a(group_join.o)
-                0x0000000008116974                group_bind
+                0x000000000811697c       0x10 /home/nuttx/nuttx/staging/libsched.a(group_join.o)
+                0x000000000811697c                group_bind
  .text.group_join
-                0x0000000008116984       0x4a /home/nuttx/nuttx/staging/libsched.a(group_join.o)
-                0x0000000008116984                group_join
- *fill*         0x00000000081169ce        0x2 
+                0x000000000811698c       0x4a /home/nuttx/nuttx/staging/libsched.a(group_join.o)
+                0x000000000811698c                group_join
+ *fill*         0x00000000081169d6        0x2 
  .text.nxsched_add_blocked
-                0x00000000081169d0       0x38 /home/nuttx/nuttx/staging/libsched.a(sched_addblocked.o)
-                0x00000000081169d0                nxsched_add_blocked
- .text.rd_open  0x0000000008116a08        0xc /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+                0x00000000081169d8       0x38 /home/nuttx/nuttx/staging/libsched.a(sched_addblocked.o)
+                0x00000000081169d8                nxsched_add_blocked
+ .text.rd_open  0x0000000008116a10        0xc /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
  .text.rd_geometry
-                0x0000000008116a14       0x22 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+                0x0000000008116a1c       0x22 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
  .text.rd_ioctl
-                0x0000000008116a36       0x1a /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+                0x0000000008116a3e       0x1a /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
  .text.rd_close
-                0x0000000008116a50       0x24 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+                0x0000000008116a58       0x24 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
  .text.rd_write
-                0x0000000008116a74       0x3a /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
- .text.rd_read  0x0000000008116aae       0x32 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+                0x0000000008116a7c       0x3a /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+ .text.rd_read  0x0000000008116ab6       0x32 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
  .text.rd_unlink
-                0x0000000008116ae0       0x20 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+                0x0000000008116ae8       0x20 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
  .text.ramdisk_register
-                0x0000000008116b00       0x70 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
-                0x0000000008116b00                ramdisk_register
- .text.mkrd     0x0000000008116b70       0x40 /home/nuttx/nuttx/staging/libdrivers.a(mkrd.o)
-                0x0000000008116b70                mkrd
+                0x0000000008116b08       0x70 /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+                0x0000000008116b08                ramdisk_register
+ .text.mkrd     0x0000000008116b78       0x40 /home/nuttx/nuttx/staging/libdrivers.a(mkrd.o)
+                0x0000000008116b78                mkrd
  .text.syslog_putc
-                0x0000000008116bb0       0x34 /home/nuttx/nuttx/staging/libdrivers.a(syslog_putc.o)
-                0x0000000008116bb0                syslog_putc
+                0x0000000008116bb8       0x34 /home/nuttx/nuttx/staging/libdrivers.a(syslog_putc.o)
+                0x0000000008116bb8                syslog_putc
  .text.pthread_attr_setstacksize
-                0x0000000008116be4       0x10 /home/nuttx/nuttx/staging/libc.a(pthread_attr_setstacksize.o)
-                0x0000000008116be4                pthread_attr_setstacksize
+                0x0000000008116bec       0x10 /home/nuttx/nuttx/staging/libc.a(pthread_attr_setstacksize.o)
+                0x0000000008116bec                pthread_attr_setstacksize
  .text.pthread_cond_init
-                0x0000000008116bf4       0x36 /home/nuttx/nuttx/staging/libc.a(pthread_condinit.o)
-                0x0000000008116bf4                pthread_cond_init
+                0x0000000008116bfc       0x36 /home/nuttx/nuttx/staging/libc.a(pthread_condinit.o)
+                0x0000000008116bfc                pthread_cond_init
  .text.pthread_cond_destroy
-                0x0000000008116c2a       0x3c /home/nuttx/nuttx/staging/libc.a(pthread_conddestroy.o)
-                0x0000000008116c2a                pthread_cond_destroy
+                0x0000000008116c32       0x3c /home/nuttx/nuttx/staging/libc.a(pthread_conddestroy.o)
+                0x0000000008116c32                pthread_cond_destroy
  .text.pthread_cond_timedwait
-                0x0000000008116c66        0x8 /home/nuttx/nuttx/staging/libc.a(pthread_condtimedwait.o)
-                0x0000000008116c66                pthread_cond_timedwait
+                0x0000000008116c6e        0x8 /home/nuttx/nuttx/staging/libc.a(pthread_condtimedwait.o)
+                0x0000000008116c6e                pthread_cond_timedwait
  .text.pthread_mutex_lock
-                0x0000000008116c6e        0x6 /home/nuttx/nuttx/staging/libc.a(pthread_mutex_lock.o)
-                0x0000000008116c6e                pthread_mutex_lock
+                0x0000000008116c76        0x6 /home/nuttx/nuttx/staging/libc.a(pthread_mutex_lock.o)
+                0x0000000008116c76                pthread_mutex_lock
  .text.sq_count
-                0x0000000008116c74        0xe /home/nuttx/nuttx/staging/libc.a(sq_count.o)
-                0x0000000008116c74                sq_count
- .text.putchar  0x0000000008116c82       0x16 /home/nuttx/nuttx/staging/libc.a(lib_putchar.o)
-                0x0000000008116c82                putchar
+                0x0000000008116c7c        0xe /home/nuttx/nuttx/staging/libc.a(sq_count.o)
+                0x0000000008116c7c                sq_count
+ .text.putchar  0x0000000008116c8a       0x16 /home/nuttx/nuttx/staging/libc.a(lib_putchar.o)
+                0x0000000008116c8a                putchar
  .text.gettimeofday
-                0x0000000008116c98       0x34 /home/nuttx/nuttx/staging/libc.a(lib_gettimeofday.o)
-                0x0000000008116c98                gettimeofday
+                0x0000000008116ca0       0x34 /home/nuttx/nuttx/staging/libc.a(lib_gettimeofday.o)
+                0x0000000008116ca0                gettimeofday
  .text.up_udelay
-                0x0000000008116ccc       0x76 /home/nuttx/nuttx/staging/libarch.a(arm_udelay.o)
-                0x0000000008116ccc                up_udelay
+                0x0000000008116cd4       0x76 /home/nuttx/nuttx/staging/libarch.a(arm_udelay.o)
+                0x0000000008116cd4                up_udelay
  .text.register_blockdriver
-                0x0000000008116d42       0x42 /home/nuttx/nuttx/staging/libfs.a(fs_registerblockdriver.o)
-                0x0000000008116d42                register_blockdriver
+                0x0000000008116d4a       0x42 /home/nuttx/nuttx/staging/libfs.a(fs_registerblockdriver.o)
+                0x0000000008116d4a                register_blockdriver
  .text.pthread_mutex_timedlock
-                0x0000000008116d84       0x46 /home/nuttx/nuttx/staging/libsched.a(pthread_mutextimedlock.o)
-                0x0000000008116d84                pthread_mutex_timedlock
+                0x0000000008116d8c       0x46 /home/nuttx/nuttx/staging/libsched.a(pthread_mutextimedlock.o)
+                0x0000000008116d8c                pthread_mutex_timedlock
  .text.pthread_cond_clockwait
-                0x0000000008116dca       0x92 /home/nuttx/nuttx/staging/libsched.a(pthread_condclockwait.o)
-                0x0000000008116dca                pthread_cond_clockwait
+                0x0000000008116dd2       0x92 /home/nuttx/nuttx/staging/libsched.a(pthread_condclockwait.o)
+                0x0000000008116dd2                pthread_cond_clockwait
  *(.fixup)
  *(.gnu.warning)
  *(.rodata .rodata.*)
  .rodata.g_idle_topstack
-                0x0000000008116e5c        0x4 /home/nuttx/nuttx/staging/libarch.a(stm32_start.o)
-                0x0000000008116e5c                g_idle_topstack
+                0x0000000008116e64        0x4 /home/nuttx/nuttx/staging/libarch.a(stm32_start.o)
+                0x0000000008116e64                g_idle_topstack
  .rodata.g_gpiobase
-                0x0000000008116e60       0x24 /home/nuttx/nuttx/staging/libarch.a(stm32_gpio.o)
-                0x0000000008116e60                g_gpiobase
+                0x0000000008116e68       0x24 /home/nuttx/nuttx/staging/libarch.a(stm32_gpio.o)
+                0x0000000008116e68                g_gpiobase
  .rodata.arm_serialinit.str1.1
-                0x0000000008116e84       0x34 /home/nuttx/nuttx/staging/libarch.a(stm32_serial.o)
+                0x0000000008116e8c       0x34 /home/nuttx/nuttx/staging/libarch.a(stm32_serial.o)
  .rodata.g_uart_devs
-                0x0000000008116eb8       0x20 /home/nuttx/nuttx/staging/libarch.a(stm32_serial.o)
+                0x0000000008116ec0       0x20 /home/nuttx/nuttx/staging/libarch.a(stm32_serial.o)
  .rodata.g_uart_ops
-                0x0000000008116ed8       0x30 /home/nuttx/nuttx/staging/libarch.a(stm32_serial.o)
+                0x0000000008116ee0       0x30 /home/nuttx/nuttx/staging/libarch.a(stm32_serial.o)
  .rodata.stm32_reserved.str1.1
-                0x0000000008116f08       0x11 /home/nuttx/nuttx/staging/libarch.a(stm32_irq.o)
+                0x0000000008116f10       0x11 /home/nuttx/nuttx/staging/libarch.a(stm32_irq.o)
  .rodata.arm_busfault.str1.1
-                0x0000000008116f19       0x17 /home/nuttx/nuttx/staging/libarch.a(arm_busfault.o)
+                0x0000000008116f21       0x17 /home/nuttx/nuttx/staging/libarch.a(arm_busfault.o)
  .rodata.arm_hardfault.str1.1
-                0x0000000008116f30       0x18 /home/nuttx/nuttx/staging/libarch.a(arm_hardfault.o)
+                0x0000000008116f38       0x18 /home/nuttx/nuttx/staging/libarch.a(arm_hardfault.o)
  .rodata.arm_memfault.str1.1
-                0x0000000008116f48       0x17 /home/nuttx/nuttx/staging/libarch.a(arm_memfault.o)
+                0x0000000008116f50       0x17 /home/nuttx/nuttx/staging/libarch.a(arm_memfault.o)
  .rodata.arm_usagefault.str1.1
-                0x0000000008116f5f       0x19 /home/nuttx/nuttx/staging/libarch.a(arm_usagefault.o)
+                0x0000000008116f67       0x19 /home/nuttx/nuttx/staging/libarch.a(arm_usagefault.o)
  .rodata.stm32_bringup.str1.1
-                0x0000000008116f78      0x18d /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_bringup.o)
- *fill*         0x0000000008117105        0x3 
+                0x0000000008116f80      0x18d /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_bringup.o)
+ *fill*         0x000000000811710d        0x3 
  .rodata.g_gpiooutputs
-                0x0000000008117108       0x1c /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_gpio.o)
+                0x0000000008117110       0x1c /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_gpio.o)
  .rodata.gpin_ops
-                0x0000000008117124       0x14 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_gpio.o)
+                0x000000000811712c       0x14 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_gpio.o)
  .rodata.gpout_ops
-                0x0000000008117138       0x14 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_gpio.o)
+                0x0000000008117140       0x14 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_gpio.o)
  .rodata.stm32_can_setup.str1.1
-                0x000000000811714c       0x14 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_can.o)
+                0x0000000008117154       0x14 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_can.o)
  .rodata.stm32_adc_setup.str1.1
-                0x0000000008117160       0x58 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_adc.o)
+                0x0000000008117168       0x58 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_adc.o)
  .rodata.g_chanlist1
-                0x00000000081171b8        0x1 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_adc.o)
+                0x00000000081171c0        0x1 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_adc.o)
  .rodata.stm32_icm42688_initialize.str1.1
-                0x00000000081171b9       0x37 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_icm42688.o)
+                0x00000000081171c1       0x37 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_icm42688.o)
  .rodata.stm32_pwm_setup.str1.1
-                0x00000000081171f0       0x70 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_pwm.o)
+                0x00000000081171f8       0x70 /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_pwm.o)
  .rodata.g_idlename
-                0x0000000008117260        0xa /home/nuttx/nuttx/staging/libsched.a(nx_start.o)
- *fill*         0x000000000811726a        0x2 
+                0x0000000008117268        0xa /home/nuttx/nuttx/staging/libsched.a(nx_start.o)
+ *fill*         0x0000000008117272        0x2 
  .rodata.g_tasklisttable
-                0x000000000811726c       0x48 /home/nuttx/nuttx/staging/libsched.a(nx_start.o)
-                0x000000000811726c                g_tasklisttable
+                0x0000000008117274       0x48 /home/nuttx/nuttx/staging/libsched.a(nx_start.o)
+                0x0000000008117274                g_tasklisttable
  .rodata.nx_start_task.str1.1
-                0x00000000081172b4        0x9 /home/nuttx/nuttx/staging/libsched.a(nx_bringup.o)
+                0x00000000081172bc        0x9 /home/nuttx/nuttx/staging/libsched.a(nx_bringup.o)
  .rodata.nx_bringup.str1.1
-                0x00000000081172bd        0xd /home/nuttx/nuttx/staging/libsched.a(nx_bringup.o)
+                0x00000000081172c5        0xd /home/nuttx/nuttx/staging/libsched.a(nx_bringup.o)
                                          0x11 (size before relaxing)
  .rodata.irq_unexpected_isr.str1.1
-                0x00000000081172ca       0x18 /home/nuttx/nuttx/staging/libsched.a(irq_unexpectedisr.o)
+                0x00000000081172d2       0x18 /home/nuttx/nuttx/staging/libsched.a(irq_unexpectedisr.o)
  .rodata._assert.str1.1
-                0x00000000081172e2       0x33 /home/nuttx/nuttx/staging/libsched.a(assert.o)
+                0x00000000081172ea       0x33 /home/nuttx/nuttx/staging/libsched.a(assert.o)
  .rodata.__FUNCTION__.6908
-                0x0000000008117315        0x8 /home/nuttx/nuttx/staging/libsched.a(assert.o)
+                0x000000000811731d        0x8 /home/nuttx/nuttx/staging/libsched.a(assert.o)
  .rodata.g_noname
-                0x000000000811731d        0x9 /home/nuttx/nuttx/staging/libsched.a(task_setup.o)
+                0x0000000008117325        0x9 /home/nuttx/nuttx/staging/libsched.a(task_setup.o)
  .rodata.setenv.str1.1
-                0x0000000008117326        0x6 /home/nuttx/nuttx/staging/libsched.a(env_setenv.o)
+                0x000000000811732e        0x6 /home/nuttx/nuttx/staging/libsched.a(env_setenv.o)
  .rodata.group_setupidlefiles.str1.1
-                0x000000000811732c        0xd /home/nuttx/nuttx/staging/libsched.a(group_setupidlefiles.o)
+                0x0000000008117334        0xd /home/nuttx/nuttx/staging/libsched.a(group_setupidlefiles.o)
  .rodata.g_adc_callback
-                0x000000000811732c        0x8 /home/nuttx/nuttx/staging/libdrivers.a(adc.o)
+                0x0000000008117334        0x8 /home/nuttx/nuttx/staging/libdrivers.a(adc.o)
  .rodata.g_adc_fops
-                0x0000000008117334       0x20 /home/nuttx/nuttx/staging/libdrivers.a(adc.o)
+                0x000000000811733c       0x20 /home/nuttx/nuttx/staging/libdrivers.a(adc.o)
  .rodata.CSWTCH.19
-                0x0000000008117354        0x6 /home/nuttx/nuttx/staging/libdrivers.a(can.o)
- *fill*         0x000000000811735a        0x2 
+                0x000000000811735c        0x6 /home/nuttx/nuttx/staging/libdrivers.a(can.o)
+ *fill*         0x0000000008117362        0x2 
  .rodata.g_canops
-                0x000000000811735c       0x20 /home/nuttx/nuttx/staging/libdrivers.a(can.o)
+                0x0000000008117364       0x20 /home/nuttx/nuttx/staging/libdrivers.a(can.o)
  .rodata.devnull_register.str1.1
-                0x000000000811737c        0xa /home/nuttx/nuttx/staging/libdrivers.a(dev_null.o)
- *fill*         0x0000000008117386        0x2 
+                0x0000000008117384        0xa /home/nuttx/nuttx/staging/libdrivers.a(dev_null.o)
+ *fill*         0x000000000811738e        0x2 
  .rodata.devnull_fops
-                0x0000000008117388       0x20 /home/nuttx/nuttx/staging/libdrivers.a(dev_null.o)
+                0x0000000008117390       0x20 /home/nuttx/nuttx/staging/libdrivers.a(dev_null.o)
  .rodata.devzero_register.str1.1
-                0x00000000081173a8        0xa /home/nuttx/nuttx/staging/libdrivers.a(dev_zero.o)
- *fill*         0x00000000081173b2        0x2 
+                0x00000000081173b0        0xa /home/nuttx/nuttx/staging/libdrivers.a(dev_zero.o)
+ *fill*         0x00000000081173ba        0x2 
  .rodata.devzero_fops
-                0x00000000081173b4       0x20 /home/nuttx/nuttx/staging/libdrivers.a(dev_zero.o)
+                0x00000000081173bc       0x20 /home/nuttx/nuttx/staging/libdrivers.a(dev_zero.o)
  .rodata.imu_write.str1.1
-                0x00000000081173d4       0x95 /home/nuttx/nuttx/staging/libdrivers.a(icm42688.o)
+                0x00000000081173dc       0x95 /home/nuttx/nuttx/staging/libdrivers.a(icm42688.o)
  .rodata.icm42688_register.str1.1
-                0x0000000008117469       0x2e /home/nuttx/nuttx/staging/libdrivers.a(icm42688.o)
- *fill*         0x0000000008117497        0x1 
+                0x0000000008117471       0x2e /home/nuttx/nuttx/staging/libdrivers.a(icm42688.o)
+ *fill*         0x000000000811749f        0x1 
  .rodata.g_imu_fops
-                0x0000000008117498       0x20 /home/nuttx/nuttx/staging/libdrivers.a(icm42688.o)
+                0x00000000081174a0       0x20 /home/nuttx/nuttx/staging/libdrivers.a(icm42688.o)
  .rodata.g_serialops
-                0x00000000081174b8       0x20 /home/nuttx/nuttx/staging/libdrivers.a(serial.o)
+                0x00000000081174c0       0x20 /home/nuttx/nuttx/staging/libdrivers.a(serial.o)
  .rodata.syslog_dev_channel.str1.1
-                0x00000000081174d8        0xb /home/nuttx/nuttx/staging/libdrivers.a(syslog_devchannel.o)
+                0x00000000081174e0        0xb /home/nuttx/nuttx/staging/libdrivers.a(syslog_devchannel.o)
  .rodata.g_pwmops
-                0x00000000081174d8       0x20 /home/nuttx/nuttx/staging/libdrivers.a(pwm.o)
+                0x00000000081174e0       0x20 /home/nuttx/nuttx/staging/libdrivers.a(pwm.o)
  .rodata.gpio_pin_register.str1.1
-                0x00000000081174f8        0xc /home/nuttx/nuttx/staging/libdrivers.a(gpio.o)
+                0x0000000008117500        0xc /home/nuttx/nuttx/staging/libdrivers.a(gpio.o)
  .rodata.g_gpio_drvrops
-                0x0000000008117504       0x20 /home/nuttx/nuttx/staging/libdrivers.a(gpio.o)
+                0x000000000811750c       0x20 /home/nuttx/nuttx/staging/libdrivers.a(gpio.o)
  .rodata.g_default_channel_ops
-                0x0000000008117524       0x14 /home/nuttx/nuttx/staging/libdrivers.a(syslog_channel.o)
+                0x000000000811752c       0x14 /home/nuttx/nuttx/staging/libdrivers.a(syslog_channel.o)
  .rodata.g_syscrlf
-                0x0000000008117538        0x2 /home/nuttx/nuttx/staging/libdrivers.a(syslog_device.o)
- *fill*         0x000000000811753a        0x2 
+                0x0000000008117540        0x2 /home/nuttx/nuttx/staging/libdrivers.a(syslog_device.o)
+ *fill*         0x0000000008117542        0x2 
  .rodata.g_syslog_dev_ops
-                0x000000000811753c       0x14 /home/nuttx/nuttx/staging/libdrivers.a(syslog_device.o)
+                0x0000000008117544       0x14 /home/nuttx/nuttx/staging/libdrivers.a(syslog_device.o)
  .rodata.vsprintf_internal.constprop.0.str1.1
-                0x0000000008117550        0x8 /home/nuttx/nuttx/staging/libc.a(lib_libvsprintf.o)
+                0x0000000008117558        0x8 /home/nuttx/nuttx/staging/libc.a(lib_libvsprintf.o)
  .rodata.g_nullstring
-                0x0000000008117558        0x7 /home/nuttx/nuttx/staging/libc.a(lib_libvsprintf.o)
- *fill*         0x000000000811755f        0x1 
+                0x0000000008117560        0x7 /home/nuttx/nuttx/staging/libc.a(lib_libvsprintf.o)
+ *fill*         0x0000000008117567        0x1 
  .rodata.g_dtoa_round
-                0x0000000008117560       0x80 /home/nuttx/nuttx/staging/libc.a(lib_dtoa_data.o)
-                0x0000000008117560                g_dtoa_round
+                0x0000000008117568       0x80 /home/nuttx/nuttx/staging/libc.a(lib_dtoa_data.o)
+                0x0000000008117568                g_dtoa_round
  .rodata.g_dtoa_scale_down
-                0x00000000081175e0       0x48 /home/nuttx/nuttx/staging/libc.a(lib_dtoa_data.o)
-                0x00000000081175e0                g_dtoa_scale_down
+                0x00000000081175e8       0x48 /home/nuttx/nuttx/staging/libc.a(lib_dtoa_data.o)
+                0x00000000081175e8                g_dtoa_scale_down
  .rodata.g_dtoa_scale_up
-                0x0000000008117628       0x48 /home/nuttx/nuttx/staging/libc.a(lib_dtoa_data.o)
-                0x0000000008117628                g_dtoa_scale_up
+                0x0000000008117630       0x48 /home/nuttx/nuttx/staging/libc.a(lib_dtoa_data.o)
+                0x0000000008117630                g_dtoa_scale_up
  .rodata.g_daysbeforemonth
-                0x0000000008117670       0x1a /home/nuttx/nuttx/staging/libc.a(lib_daysbeforemonth.o)
+                0x0000000008117678       0x1a /home/nuttx/nuttx/staging/libc.a(lib_daysbeforemonth.o)
  .rodata.umm_initialize.str1.1
-                0x000000000811768a        0x5 /home/nuttx/nuttx/staging/libmm.a(umm_initialize.o)
+                0x0000000008117692        0x5 /home/nuttx/nuttx/staging/libmm.a(umm_initialize.o)
  .rodata.CSWTCH.20
-                0x000000000811768f        0x5 /home/nuttx/nuttx/staging/libarch.a(stm32_spi.o)
+                0x0000000008117697        0x5 /home/nuttx/nuttx/staging/libarch.a(stm32_spi.o)
  .rodata.CSWTCH.21
-                0x0000000008117694        0x5 /home/nuttx/nuttx/staging/libarch.a(stm32_spi.o)
- *fill*         0x0000000008117699        0x3 
+                0x000000000811769c        0x5 /home/nuttx/nuttx/staging/libarch.a(stm32_spi.o)
+ *fill*         0x00000000081176a1        0x3 
  .rodata.g_sp3iops
-                0x000000000811769c       0x24 /home/nuttx/nuttx/staging/libarch.a(stm32_spi.o)
+                0x00000000081176a4       0x24 /home/nuttx/nuttx/staging/libarch.a(stm32_spi.o)
  .rodata.g_adcops
-                0x00000000081176c0       0x18 /home/nuttx/nuttx/staging/libarch.a(stm32_adc.o)
+                0x00000000081176c8       0x18 /home/nuttx/nuttx/staging/libarch.a(stm32_adc.o)
  .rodata.CSWTCH.44
-                0x00000000081176d8       0x2c /home/nuttx/nuttx/staging/libarch.a(stm32_pwm.o)
+                0x00000000081176e0       0x2c /home/nuttx/nuttx/staging/libarch.a(stm32_pwm.o)
  .rodata.g_pwmops
-                0x0000000008117704       0x14 /home/nuttx/nuttx/staging/libarch.a(stm32_pwm.o)
+                0x000000000811770c       0x14 /home/nuttx/nuttx/staging/libarch.a(stm32_pwm.o)
  .rodata.g_canops
-                0x0000000008117718       0x28 /home/nuttx/nuttx/staging/libarch.a(stm32_can.o)
+                0x0000000008117720       0x28 /home/nuttx/nuttx/staging/libarch.a(stm32_can.o)
  .rodata.nsh_main.str1.1
-                0x0000000008117740       0x27 /home/nuttx/nuttx/staging/libapps.a(nsh_main.c.home.nuttx.nuttx-apps.system.nsh.o)
+                0x0000000008117748       0x27 /home/nuttx/nuttx/staging/libapps.a(nsh_main.c.home.nuttx.nuttx-apps.system.nsh.o)
  .rodata.nsh_openifnotopen.part.0.str1.1
-                0x0000000008117767       0x27 /home/nuttx/nuttx/staging/libapps.a(nsh_console.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811776f       0x27 /home/nuttx/nuttx/staging/libapps.a(nsh_console.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0x2 (size before relaxing)
  .rodata.nsh_script.str1.1
-                0x0000000008117767       0x11 /home/nuttx/nuttx/staging/libapps.a(nsh_script.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811776f       0x11 /home/nuttx/nuttx/staging/libapps.a(nsh_script.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x16 (size before relaxing)
  .rodata.nsh_sysinitscript.str1.1
-                0x0000000008117778       0x17 /home/nuttx/nuttx/staging/libapps.a(nsh_script.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117780       0x17 /home/nuttx/nuttx/staging/libapps.a(nsh_script.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x1f (size before relaxing)
  .rodata.nsh_initscript.str1.1
-                0x000000000811778f       0x10 /home/nuttx/nuttx/staging/libapps.a(nsh_script.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117797       0x10 /home/nuttx/nuttx/staging/libapps.a(nsh_script.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x15 (size before relaxing)
  .rodata.nsh_dumpvar.str1.1
-                0x000000000811779f       0x10 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177a7       0x10 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0x4 (size before relaxing)
  .rodata.nsh_getfullpath.str1.1
-                0x000000000811779f       0x10 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177a7       0x10 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0x2 (size before relaxing)
  .rodata.cmd_cd.str1.1
-                0x000000000811779f        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177a7        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0xd (size before relaxing)
  .rodata.cmd_echo.str1.1
-                0x00000000081177aa        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177b2        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0xb (size before relaxing)
  .rodata.cmd_env.str1.1
-                0x00000000081177ae       0x15 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177b6       0x15 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_set.str1.1
-                0x00000000081177c3        0xe /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177cb        0xe /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x19 (size before relaxing)
  .rodata.cmd_unset.str1.1
-                0x00000000081177d1       0x16 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177d9       0x16 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_export.str1.1
-                0x00000000081177e7       0x16 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177ef       0x16 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0x1 (size before relaxing)
  .rodata.g_home
-                0x00000000081177e7        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177ef        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_oldpwd
-                0x00000000081177e9        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
- .rodata.g_pwd  0x00000000081177f0        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177f1        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+ .rodata.g_pwd  0x00000000081177f8        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_envcmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.nsh_catfile.str1.1
-                0x00000000081177f4       0x3e /home/nuttx/nuttx/staging/libapps.a(nsh_fsutils.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081177fc       0x3e /home/nuttx/nuttx/staging/libapps.a(nsh_fsutils.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x4e (size before relaxing)
  .rodata.nsh_foreach_direntry.str1.1
-                0x0000000008117832        0x8 /home/nuttx/nuttx/staging/libapps.a(nsh_fsutils.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811783a        0x8 /home/nuttx/nuttx/staging/libapps.a(nsh_fsutils.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.nsh_getdirpath.str1.1
-                0x000000000811783a        0x6 /home/nuttx/nuttx/staging/libapps.a(nsh_fsutils.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117842        0x6 /home/nuttx/nuttx/staging/libapps.a(nsh_fsutils.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0xc (size before relaxing)
  .rodata.nsh_setvar.str1.1
-                0x0000000008117840        0x6 /home/nuttx/nuttx/staging/libapps.a(nsh_vars.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117848        0x6 /home/nuttx/nuttx/staging/libapps.a(nsh_vars.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.nsh_romfsetc.str1.1
-                0x0000000008117840       0x15 /home/nuttx/nuttx/staging/libapps.a(nsh_romfsetc.c.home.nuttx.nuttx-apps.nshlib.o)
- *fill*         0x0000000008117855        0x3 
+                0x0000000008117848       0x15 /home/nuttx/nuttx/staging/libapps.a(nsh_romfsetc.c.home.nuttx.nuttx-apps.nshlib.o)
+ *fill*         0x000000000811785d        0x3 
  .rodata.romfs_img
-                0x0000000008117858      0x400 /home/nuttx/nuttx/staging/libapps.a(nsh_romfsetc.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117858                romfs_img
+                0x0000000008117860      0x400 /home/nuttx/nuttx/staging/libapps.a(nsh_romfsetc.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117860                romfs_img
  .rodata.nsh_execute.str1.1
-                0x0000000008117c58       0x29 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117c60       0x29 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x2e (size before relaxing)
  .rodata.nsh_strcat.str1.1
-                0x0000000008117c81        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117c89        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.nsh_argument.str1.1
-                0x0000000008117c83       0x34 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117c8b       0x34 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x3d (size before relaxing)
  .rodata.nsh_parse_command.str1.1
-                0x0000000008117cb7       0x2f /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117cbf       0x2f /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x36 (size before relaxing)
  .rodata.g_arg_separator
-                0x0000000008117ce6        0x3 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117cee        0x3 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_exitstatus
-                0x0000000008117ce9        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117cf1        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_failure
-                0x0000000008117ceb        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117cf3        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_fmtarginvalid
-                0x0000000008117ced       0x1b /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117ced                g_fmtarginvalid
+                0x0000000008117cf5       0x1b /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117cf5                g_fmtarginvalid
  .rodata.g_fmtargrange
-                0x0000000008117d08       0x1d /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117d08                g_fmtargrange
+                0x0000000008117d10       0x1d /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117d10                g_fmtargrange
  .rodata.g_fmtargrequired
-                0x0000000008117d25       0x27 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117d25                g_fmtargrequired
+                0x0000000008117d2d       0x27 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117d2d                g_fmtargrequired
  .rodata.g_fmtcmdfailed
-                0x0000000008117d4c       0x18 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117d4c                g_fmtcmdfailed
+                0x0000000008117d54       0x18 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117d54                g_fmtcmdfailed
  .rodata.g_fmtcmdnotfound
-                0x0000000008117d64       0x1c /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117d64                g_fmtcmdnotfound
+                0x0000000008117d6c       0x1c /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117d6c                g_fmtcmdnotfound
  .rodata.g_fmtcmdoutofmemory
-                0x0000000008117d80       0x18 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117d80                g_fmtcmdoutofmemory
+                0x0000000008117d88       0x18 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117d88                g_fmtcmdoutofmemory
  .rodata.g_fmtcontext
-                0x0000000008117d98       0x24 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117d98                g_fmtcontext
+                0x0000000008117da0       0x24 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117da0                g_fmtcontext
  .rodata.g_fmtdeepnesting
-                0x0000000008117dbc       0x1b /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117dbc                g_fmtdeepnesting
+                0x0000000008117dc4       0x1b /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117dc4                g_fmtdeepnesting
  .rodata.g_fmtinternalerror
-                0x0000000008117dd7       0x19 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117dd7                g_fmtinternalerror
+                0x0000000008117ddf       0x19 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117ddf                g_fmtinternalerror
  .rodata.g_fmtnomatching
-                0x0000000008117df0       0x19 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117df0                g_fmtnomatching
+                0x0000000008117df8       0x19 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117df8                g_fmtnomatching
  .rodata.g_fmtnosuch
-                0x0000000008117e09       0x19 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117e09                g_fmtnosuch
+                0x0000000008117e11       0x19 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117e11                g_fmtnosuch
  .rodata.g_fmtsignalrecvd
-                0x0000000008117e22       0x20 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117e22                g_fmtsignalrecvd
+                0x0000000008117e2a       0x20 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117e2a                g_fmtsignalrecvd
  .rodata.g_fmtsyntax
-                0x0000000008117e42       0x17 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117e42                g_fmtsyntax
+                0x0000000008117e4a       0x17 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117e4a                g_fmtsyntax
  .rodata.g_fmttoomanyargs
-                0x0000000008117e59       0x1d /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117e59                g_fmttoomanyargs
+                0x0000000008117e61       0x1d /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117e61                g_fmttoomanyargs
  .rodata.g_line_separator
-                0x0000000008117e76        0x5 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117e7e        0x5 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_nshgreeting
-                0x0000000008117e7b       0x12 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117e7b                g_nshgreeting
+                0x0000000008117e83       0x12 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117e83                g_nshgreeting
  .rodata.g_nshprompt
-                0x0000000008117e8d        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
-                0x0000000008117e8d                g_nshprompt
+                0x0000000008117e95        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117e95                g_nshprompt
  .rodata.g_nullstring
-                0x0000000008117e98        0x1 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117ea0        0x1 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_redirect1
-                0x0000000008117e99        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117ea1        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_redirect2
-                0x0000000008117e9b        0x3 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117ea3        0x3 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_success
-                0x0000000008117e9e        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117ea6        0x2 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_token_separator
-                0x0000000008117ea0        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117ea8        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_parse.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.help_showcmd.str1.1
-                0x0000000008117ea4        0xf /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117eac        0xf /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.help_cmd.str1.1
-                0x0000000008117eb3        0xa /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117ebb        0xa /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_help.str1.1
-                0x0000000008117ebd       0xec /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117ec5       0xec /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0xf6 (size before relaxing)
  .rodata.str1.1
-                0x0000000008117fa9      0x3a1 /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008117fb1      0x3a1 /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
                                         0x3f0 (size before relaxing)
- *fill*         0x000000000811834a        0x2 
+ *fill*         0x0000000008118352        0x2 
  .rodata.g_cmdmap
-                0x000000000811834c      0x2f0 /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118354      0x2f0 /home/nuttx/nuttx/staging/libapps.a(nsh_command.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.unlink_recursive.str1.1
-                0x000000000811863c        0x9 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118644        0x9 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.ls_handler.str1.1
-                0x000000000811863c       0x13 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118644       0x13 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x26 (size before relaxing)
  .rodata.ls_recursive.str1.1
-                0x000000000811864f        0x5 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118657        0x5 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_basename.str1.1
-                0x0000000008118654        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811865c        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_dmesg.str1.1
-                0x0000000008118654        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811865c        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_cp.str1.1
-                0x0000000008118654       0x10 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811865c       0x10 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_ls.str1.1
-                0x0000000008118654        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811865c        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_mkdir.str1.1
-                0x0000000008118658        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118660        0x4 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0x9 (size before relaxing)
  .rodata.cmd_mkrd.str1.1
-                0x0000000008118658       0x1e /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118660       0x1e /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_mv.str1.1
-                0x0000000008118676        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811867e        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_rm.str1.1
-                0x000000000811867d        0x3 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118685        0x3 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0xa (size before relaxing)
  .rodata.cmd_rmdir.str1.1
-                0x0000000008118680        0x6 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118688        0x6 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_cmp.str1.1
-                0x0000000008118680       0x18 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118688       0x18 /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_truncate.str1.1
-                0x0000000008118698        0xd /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081186a0        0xd /home/nuttx/nuttx/staging/libapps.a(nsh_fscmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x16 (size before relaxing)
  .rodata.dd_read.str1.1
-                0x00000000081186a5        0x5 /home/nuttx/nuttx/staging/libapps.a(nsh_ddcmd.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081186ad        0x5 /home/nuttx/nuttx/staging/libapps.a(nsh_ddcmd.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_dd.str1.1
-                0x00000000081186a5       0x52 /home/nuttx/nuttx/staging/libapps.a(nsh_ddcmd.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081186ad       0x52 /home/nuttx/nuttx/staging/libapps.a(nsh_ddcmd.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x66 (size before relaxing)
- .rodata.g_dd   0x00000000081186f7        0x3 /home/nuttx/nuttx/staging/libapps.a(nsh_ddcmd.c.home.nuttx.nuttx-apps.nshlib.o)
+ .rodata.g_dd   0x00000000081186ff        0x3 /home/nuttx/nuttx/staging/libapps.a(nsh_ddcmd.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.ps_callback.str1.1
-                0x00000000081186fa       0x5f /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118702       0x5f /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x67 (size before relaxing)
  .rodata.cmd_exec.str1.1
-                0x0000000008118759        0xc /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118761        0xc /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_ps.str1.1
-                0x0000000008118765       0x45 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811876d       0x45 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x4b (size before relaxing)
  .rodata.cmd_kill.str1.1
-                0x00000000081187aa        0x5 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081187b2        0x5 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0xa (size before relaxing)
  .rodata.cmd_uptime.str1.1
-                0x00000000081187af      0x133 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081187b7      0x133 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                         0x13a (size before relaxing)
  .rodata.g_flags
-                0x00000000081188e2        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081188ea        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_groupid
-                0x00000000081188e9        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081188f1        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_priority
-                0x00000000081188f0        0xa /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081188f8        0xa /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_scheduler
-                0x00000000081188fa        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118902        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_sigmask
-                0x0000000008118905        0x9 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811890d        0x9 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_stacksize
-                0x000000000811890e        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118916        0xb /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_state
-                0x0000000008118919        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118921        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.g_type
-                0x0000000008118920        0x6 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118928        0x6 /home/nuttx/nuttx/staging/libapps.a(nsh_proccmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_free.str1.1
-                0x0000000008118926        0xe /home/nuttx/nuttx/staging/libapps.a(nsh_mmcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811892e        0xe /home/nuttx/nuttx/staging/libapps.a(nsh_mmcmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_time.str1.1
-                0x0000000008118934       0x1e /home/nuttx/nuttx/staging/libapps.a(nsh_timcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811893c       0x1e /home/nuttx/nuttx/staging/libapps.a(nsh_timcmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_uname.str1.1
-                0x0000000008118952       0x13 /home/nuttx/nuttx/staging/libapps.a(nsh_syscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811895a       0x13 /home/nuttx/nuttx/staging/libapps.a(nsh_syscmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x20 (size before relaxing)
  .rodata.g_unknown
-                0x0000000008118965        0x8 /home/nuttx/nuttx/staging/libapps.a(nsh_syscmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811896d        0x8 /home/nuttx/nuttx/staging/libapps.a(nsh_syscmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.nsh_dumpbuffer.str1.1
-                0x000000000811896d       0x11 /home/nuttx/nuttx/staging/libapps.a(nsh_dbgcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118975       0x11 /home/nuttx/nuttx/staging/libapps.a(nsh_dbgcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x1d (size before relaxing)
  .rodata.cmd_xd.str1.1
-                0x000000000811897e        0x9 /home/nuttx/nuttx/staging/libapps.a(nsh_dbgcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118986        0x9 /home/nuttx/nuttx/staging/libapps.a(nsh_dbgcmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_hexdump.str1.1
-                0x0000000008118987        0xc /home/nuttx/nuttx/staging/libapps.a(nsh_dbgcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811898f        0xc /home/nuttx/nuttx/staging/libapps.a(nsh_dbgcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x32 (size before relaxing)
  .rodata.nsh_session.str1.1
-                0x0000000008118993       0x40 /home/nuttx/nuttx/staging/libapps.a(nsh_session.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x000000000811899b       0x40 /home/nuttx/nuttx/staging/libapps.a(nsh_session.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x43 (size before relaxing)
  .rodata.nsh_builtin.str1.1
-                0x00000000081189d3        0xc /home/nuttx/nuttx/staging/libapps.a(nsh_builtin.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081189db        0xc /home/nuttx/nuttx/staging/libapps.a(nsh_builtin.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_df.str1.1
-                0x00000000081189d3       0x1f /home/nuttx/nuttx/staging/libapps.a(nsh_mntcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081189db       0x1f /home/nuttx/nuttx/staging/libapps.a(nsh_mntcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x22 (size before relaxing)
  .rodata.cmd_mount.str1.1
-                0x00000000081189f2       0x15 /home/nuttx/nuttx/staging/libapps.a(nsh_mntcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x00000000081189fa       0x15 /home/nuttx/nuttx/staging/libapps.a(nsh_mntcmds.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x1b (size before relaxing)
  .rodata.cmd_umount.str1.1
-                0x0000000008118a07        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_mntcmds.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118a0f        0x7 /home/nuttx/nuttx/staging/libapps.a(nsh_mntcmds.c.home.nuttx.nuttx-apps.nshlib.o)
  .rodata.cmd_printf.str1.1
-                0x0000000008118a07        0xd /home/nuttx/nuttx/staging/libapps.a(nsh_printf.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118a0f        0xd /home/nuttx/nuttx/staging/libapps.a(nsh_printf.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x1a (size before relaxing)
  .rodata.expression.str1.1
-                0x0000000008118a14       0x36 /home/nuttx/nuttx/staging/libapps.a(nsh_test.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118a1c       0x36 /home/nuttx/nuttx/staging/libapps.a(nsh_test.c.home.nuttx.nuttx-apps.nshlib.o)
                                          0x4b (size before relaxing)
  .rodata.cmd_lbracket.str1.1
-                0x0000000008118a4a       0x36 /home/nuttx/nuttx/staging/libapps.a(nsh_test.c.home.nuttx.nuttx-apps.nshlib.o)
+                0x0000000008118a52       0x36 /home/nuttx/nuttx/staging/libapps.a(nsh_test.c.home.nuttx.nuttx-apps.nshlib.o)
                                           0x2 (size before relaxing)
  .rodata.g_erasetoeol
-                0x0000000008118a4a        0x3 /home/nuttx/nuttx/staging/libapps.a(readline_common.c.home.nuttx.nuttx-apps.system.readline.o)
+                0x0000000008118a52        0x3 /home/nuttx/nuttx/staging/libapps.a(readline_common.c.home.nuttx.nuttx-apps.system.readline.o)
  .rodata.inode_root_reserve.str1.1
-                0x0000000008118a4d        0x1 /home/nuttx/nuttx/staging/libfs.a(fs_inodereserve.o)
+                0x0000000008118a55        0x1 /home/nuttx/nuttx/staging/libfs.a(fs_inodereserve.o)
  .rodata.inode_search.str1.1
-                0x0000000008118a4d        0xc /home/nuttx/nuttx/staging/libfs.a(fs_inodesearch.o)
+                0x0000000008118a55        0xc /home/nuttx/nuttx/staging/libfs.a(fs_inodesearch.o)
  .rodata.rename.str1.1
-                0x0000000008118a4d        0x6 /home/nuttx/nuttx/staging/libfs.a(fs_rename.o)
- *fill*         0x0000000008118a4d        0x3 
+                0x0000000008118a55        0x6 /home/nuttx/nuttx/staging/libfs.a(fs_rename.o)
+ *fill*         0x0000000008118a55        0x3 
  .rodata.g_dir_fileops
-                0x0000000008118a50       0x20 /home/nuttx/nuttx/staging/libfs.a(fs_dir.o)
+                0x0000000008118a58       0x20 /home/nuttx/nuttx/staging/libfs.a(fs_dir.o)
  .rodata.str1.1
-                0x0000000008118a70        0xd /home/nuttx/nuttx/staging/libfs.a(fs_mount.o)
+                0x0000000008118a78        0xd /home/nuttx/nuttx/staging/libfs.a(fs_mount.o)
  .rodata.g_bdfsmap
-                0x0000000008118a70       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_mount.o)
+                0x0000000008118a78       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_mount.o)
  .rodata.g_nonbdfsmap
-                0x0000000008118a80       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_mount.o)
+                0x0000000008118a88       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_mount.o)
  .rodata.romfs_operations
-                0x0000000008118a90       0x60 /home/nuttx/nuttx/staging/libfs.a(fs_romfs.o)
-                0x0000000008118a90                romfs_operations
+                0x0000000008118a98       0x60 /home/nuttx/nuttx/staging/libfs.a(fs_romfs.o)
+                0x0000000008118a98                romfs_operations
  .rodata.romfs_cachenode.str1.1
-                0x0000000008118af0        0x5 /home/nuttx/nuttx/staging/libfs.a(fs_romfsutil.o)
+                0x0000000008118af8        0x5 /home/nuttx/nuttx/staging/libfs.a(fs_romfsutil.o)
  .rodata.romfs_fsconfigure.str1.1
-                0x0000000008118af0        0x9 /home/nuttx/nuttx/staging/libfs.a(fs_romfsutil.o)
+                0x0000000008118af8        0x9 /home/nuttx/nuttx/staging/libfs.a(fs_romfsutil.o)
                                           0xa (size before relaxing)
  .rodata.procfs_readdir.str1.1
-                0x0000000008118af9        0x9 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
+                0x0000000008118b01        0x9 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
                                           0x5 (size before relaxing)
  .rodata.procfs_opendir.str1.1
-                0x0000000008118af9        0x1 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
+                0x0000000008118b01        0x1 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
  .rodata.str1.1
-                0x0000000008118af9       0x36 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
+                0x0000000008118b01       0x36 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
                                          0x61 (size before relaxing)
- *fill*         0x0000000008118b2f        0x1 
+ *fill*         0x0000000008118b37        0x1 
  .rodata.g_base_entries
-                0x0000000008118b30       0x90 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
+                0x0000000008118b38       0x90 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
  .rodata.procfs_operations
-                0x0000000008118bc0       0x60 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
-                0x0000000008118bc0                procfs_operations
+                0x0000000008118bc8       0x60 /home/nuttx/nuttx/staging/libfs.a(fs_procfs.o)
+                0x0000000008118bc8                procfs_operations
  .rodata.proc_stat.str1.1
-                0x0000000008118c20        0x7 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118c28        0x7 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.proc_groupenv_callback.str1.1
-                0x0000000008118c20       0x36 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118c28       0x36 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
                                           0x8 (size before relaxing)
  .rodata.proc_read.str1.1
-                0x0000000008118c20      0x114 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118c28      0x114 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
                                         0x128 (size before relaxing)
  .rodata.str1.1
-                0x0000000008118d34       0xd0 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118d3c       0xd0 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
                                          0xf6 (size before relaxing)
  .rodata.g_cmdline
-                0x0000000008118e04        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e0c        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_group
-                0x0000000008118e10        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e18        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_groupenv
-                0x0000000008118e1c        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e24        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_groupfd
-                0x0000000008118e28        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e30        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_groupinfo
-                0x0000000008118e34        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e3c        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_groupstatus
-                0x0000000008118e40        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e48        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_level0info
-                0x0000000008118e4c       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e54       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_level0node
-                0x0000000008118e5c        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e64        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_nodeinfo
-                0x0000000008118e68       0x1c /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e70       0x1c /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_policy
-                0x0000000008118e84       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e8c       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_stack
-                0x0000000008118e94        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118e9c        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_statenames
-                0x0000000008118ea0       0x24 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118ea8       0x24 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_status
-                0x0000000008118ec4        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118ecc        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.g_ttypenames
-                0x0000000008118ed0       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118ed8       0x10 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
  .rodata.proc_operations
-                0x0000000008118ee0       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
-                0x0000000008118ee0                proc_operations
+                0x0000000008118ee8       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsproc.o)
+                0x0000000008118ee8                proc_operations
  .rodata.uptime_read.str1.1
-                0x0000000008118f08        0x8 /home/nuttx/nuttx/staging/libfs.a(fs_procfsuptime.o)
+                0x0000000008118f10        0x8 /home/nuttx/nuttx/staging/libfs.a(fs_procfsuptime.o)
  .rodata.uptime_operations
-                0x0000000008118f10       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsuptime.o)
-                0x0000000008118f10                uptime_operations
+                0x0000000008118f18       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsuptime.o)
+                0x0000000008118f18                uptime_operations
  .rodata.memdump_read.str1.1
-                0x0000000008118f38       0x4c /home/nuttx/nuttx/staging/libfs.a(fs_procfsmeminfo.o)
+                0x0000000008118f40       0x4c /home/nuttx/nuttx/staging/libfs.a(fs_procfsmeminfo.o)
  .rodata.meminfo_read.str1.1
-                0x0000000008118f84       0x59 /home/nuttx/nuttx/staging/libfs.a(fs_procfsmeminfo.o)
+                0x0000000008118f8c       0x59 /home/nuttx/nuttx/staging/libfs.a(fs_procfsmeminfo.o)
                                          0x64 (size before relaxing)
- *fill*         0x0000000008118fdd        0x3 
+ *fill*         0x0000000008118fe5        0x3 
  .rodata.memdump_operations
-                0x0000000008118fe0       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsmeminfo.o)
-                0x0000000008118fe0                memdump_operations
+                0x0000000008118fe8       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsmeminfo.o)
+                0x0000000008118fe8                memdump_operations
  .rodata.meminfo_operations
-                0x0000000008119008       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsmeminfo.o)
-                0x0000000008119008                meminfo_operations
+                0x0000000008119010       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsmeminfo.o)
+                0x0000000008119010                meminfo_operations
  .rodata.version_read.str1.1
-                0x0000000008119030       0x12 /home/nuttx/nuttx/staging/libfs.a(fs_procfsversion.o)
- *fill*         0x0000000008119042        0x2 
+                0x0000000008119038       0x12 /home/nuttx/nuttx/staging/libfs.a(fs_procfsversion.o)
+ *fill*         0x000000000811904a        0x2 
  .rodata.version_operations
-                0x0000000008119044       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsversion.o)
-                0x0000000008119044                version_operations
+                0x000000000811904c       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfsversion.o)
+                0x000000000811904c                version_operations
  .rodata.inode_getpath.str1.1
-                0x000000000811906c        0x2 /home/nuttx/nuttx/staging/libfs.a(fs_inodegetpath.o)
+                0x0000000008119074        0x2 /home/nuttx/nuttx/staging/libfs.a(fs_inodegetpath.o)
  .rodata.usage_entry.str1.1
-                0x000000000811906c       0x57 /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
+                0x0000000008119074       0x57 /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
  .rodata.blocks_entry.str1.1
-                0x00000000081190c3       0x64 /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
+                0x00000000081190cb       0x64 /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
  .rodata.mount_entry.str1.1
-                0x0000000008119127        0xe /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
+                0x000000000811912f        0xe /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
  .rodata.mount_open.str1.1
-                0x0000000008119135       0x1c /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
- *fill*         0x0000000008119135        0x3 
+                0x000000000811913d       0x1c /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
+ *fill*         0x000000000811913d        0x3 
  .rodata.CSWTCH.5
-                0x0000000008119138        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
+                0x0000000008119140        0xc /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
  .rodata.labels.6844
-                0x0000000008119144        0x5 /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
- *fill*         0x0000000008119149        0x3 
+                0x000000000811914c        0x5 /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
+ *fill*         0x0000000008119151        0x3 
  .rodata.mount_procfsoperations
-                0x000000000811914c       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
-                0x000000000811914c                mount_procfsoperations
+                0x0000000008119154       0x28 /home/nuttx/nuttx/staging/libfs.a(fs_procfs_mount.o)
+                0x0000000008119154                mount_procfsoperations
  .rodata.fs_gettype.str1.1
-                0x0000000008119174        0xd /home/nuttx/nuttx/staging/libfs.a(fs_gettype.o)
+                0x000000000811917c        0xd /home/nuttx/nuttx/staging/libfs.a(fs_gettype.o)
                                          0x1a (size before relaxing)
  .rodata.mountpoint_filter.str1.1
-                0x0000000008119181        0x4 /home/nuttx/nuttx/staging/libfs.a(fs_foreachmountpoint.o)
+                0x0000000008119189        0x4 /home/nuttx/nuttx/staging/libfs.a(fs_foreachmountpoint.o)
  .rodata.foreach_inodelevel.str1.1
-                0x0000000008119181        0x4 /home/nuttx/nuttx/staging/libfs.a(fs_foreachinode.o)
+                0x0000000008119189        0x4 /home/nuttx/nuttx/staging/libfs.a(fs_foreachinode.o)
  .rodata.task_spawn.str1.1
-                0x0000000008119181       0x13 /home/nuttx/nuttx/staging/libsched.a(task_spawn.o)
+                0x0000000008119189       0x13 /home/nuttx/nuttx/staging/libsched.a(task_spawn.o)
  .rodata.nx_vsyslog.str1.1
-                0x0000000008119194        0xe /home/nuttx/nuttx/staging/libdrivers.a(vsyslog.o)
+                0x000000000811919c        0xe /home/nuttx/nuttx/staging/libdrivers.a(vsyslog.o)
  .rodata.basename.str1.1
-                0x00000000081191a2        0x4 /home/nuttx/nuttx/staging/libc.a(lib_basename.o)
+                0x00000000081191aa        0x4 /home/nuttx/nuttx/staging/libc.a(lib_basename.o)
  .rodata.dirname.str1.1
-                0x00000000081191a2        0x4 /home/nuttx/nuttx/staging/libc.a(lib_dirname.o)
+                0x00000000081191aa        0x4 /home/nuttx/nuttx/staging/libc.a(lib_dirname.o)
  .rodata.uname.str1.1
-                0x00000000081191a2       0x2a /home/nuttx/nuttx/staging/libc.a(lib_utsname.o)
+                0x00000000081191aa       0x2a /home/nuttx/nuttx/staging/libc.a(lib_utsname.o)
                                          0x30 (size before relaxing)
  .rodata.fnmatch_one.str1.1
-                0x00000000081191cc        0x2 /home/nuttx/nuttx/staging/libc.a(lib_fnmatch.o)
+                0x00000000081191d4        0x2 /home/nuttx/nuttx/staging/libc.a(lib_fnmatch.o)
  .rodata.chdir.str1.1
-                0x00000000081191cc        0x7 /home/nuttx/nuttx/staging/libc.a(lib_chdir.o)
+                0x00000000081191d4        0x7 /home/nuttx/nuttx/staging/libc.a(lib_chdir.o)
                                           0xd (size before relaxing)
  .rodata.getcwd.str1.1
-                0x00000000081191d3        0x6 /home/nuttx/nuttx/staging/libc.a(lib_getcwd.o)
+                0x00000000081191db        0x6 /home/nuttx/nuttx/staging/libc.a(lib_getcwd.o)
  .rodata.memdump_handler.str1.1
-                0x00000000081191d3        0xa /home/nuttx/nuttx/staging/libmm.a(mm_memdump.o)
+                0x00000000081191db        0xa /home/nuttx/nuttx/staging/libmm.a(mm_memdump.o)
  .rodata.mm_memdump.str1.1
-                0x00000000081191dd       0x7d /home/nuttx/nuttx/staging/libmm.a(mm_memdump.o)
+                0x00000000081191e5       0x7d /home/nuttx/nuttx/staging/libmm.a(mm_memdump.o)
                                          0x82 (size before relaxing)
  .rodata.mempool_read.str1.1
-                0x000000000811925a       0x4e /home/nuttx/nuttx/staging/libmm.a(mempool_procfs.o)
+                0x0000000008119262       0x4e /home/nuttx/nuttx/staging/libmm.a(mempool_procfs.o)
                                          0x61 (size before relaxing)
  .rodata.mempool_operations
-                0x00000000081192a8       0x28 /home/nuttx/nuttx/staging/libmm.a(mempool_procfs.o)
-                0x00000000081192a8                mempool_operations
+                0x00000000081192b0       0x28 /home/nuttx/nuttx/staging/libmm.a(mempool_procfs.o)
+                0x00000000081192b0                mempool_operations
  .rodata.up_exit.str1.1
-                0x00000000081192d0       0x12 /home/nuttx/nuttx/staging/libarch.a(arm_exit.o)
+                0x00000000081192d8       0x12 /home/nuttx/nuttx/staging/libarch.a(arm_exit.o)
  .rodata.str1.1
-                0x00000000081192e2       0x4d /home/nuttx/nuttx/staging/libapps.a(builtin_list.c.home.nuttx.nuttx-apps.builtin.o)
+                0x00000000081192ea       0x4d /home/nuttx/nuttx/staging/libapps.a(builtin_list.c.home.nuttx.nuttx-apps.builtin.o)
                                          0x50 (size before relaxing)
- *fill*         0x000000000811932f        0x1 
+ *fill*         0x0000000008119337        0x1 
  .rodata.g_builtin_count
-                0x0000000008119330        0x4 /home/nuttx/nuttx/staging/libapps.a(builtin_list.c.home.nuttx.nuttx-apps.builtin.o)
-                0x0000000008119330                g_builtin_count
+                0x0000000008119338        0x4 /home/nuttx/nuttx/staging/libapps.a(builtin_list.c.home.nuttx.nuttx-apps.builtin.o)
+                0x0000000008119338                g_builtin_count
  .rodata.g_builtins
-                0x0000000008119334       0xc0 /home/nuttx/nuttx/staging/libapps.a(builtin_list.c.home.nuttx.nuttx-apps.builtin.o)
-                0x0000000008119334                g_builtins
+                0x000000000811933c       0xc0 /home/nuttx/nuttx/staging/libapps.a(builtin_list.c.home.nuttx.nuttx-apps.builtin.o)
+                0x000000000811933c                g_builtins
  .rodata.show_usage.constprop.0.str1.1
-                0x00000000081193f4       0x89 /home/nuttx/nuttx/staging/libapps.a(setlogmask.c.home.nuttx.nuttx-apps.system.setlogmask.o)
+                0x00000000081193fc       0x89 /home/nuttx/nuttx/staging/libapps.a(setlogmask.c.home.nuttx.nuttx-apps.system.setlogmask.o)
  .rodata.echo_serial_main.str1.1
-                0x000000000811947d       0x7d /home/nuttx/nuttx/staging/libapps.a(echo_serial_main.c.home.nuttx.nuttx-apps.echo_serial.o)
+                0x0000000008119485       0x7d /home/nuttx/nuttx/staging/libapps.a(echo_serial_main.c.home.nuttx.nuttx-apps.echo_serial.o)
  .rodata.ard_main.str1.1
-                0x00000000081194fa       0x1c /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.arduinoTMC.o)
+                0x0000000008119502       0x1c /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.arduinoTMC.o)
  .rodata.custom_init.str1.1
-                0x0000000008119516        0x4 /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.tmc2209.o)
+                0x000000000811951e        0x4 /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.tmc2209.o)
  .rodata.mcb_serial_flush.str1.1
-                0x000000000811951a       0x18 /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.tmc2209.o)
+                0x0000000008119522       0x18 /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.tmc2209.o)
  .rodata.TMC2209_main.str1.1
-                0x0000000008119532       0x32 /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.tmc2209.o)
+                0x000000000811953a       0x32 /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.tmc2209.o)
  .rodata.starter_main.str1.1
-                0x0000000008119532       0x13 /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.starter.o)
+                0x000000000811953a       0x13 /home/nuttx/nuttx/staging/libapps.a(starter.c.home.nuttx.nuttx-apps.starter.o)
                                          0x1c (size before relaxing)
  .rodata.serialrx_main.str1.1
-                0x0000000008119545       0x90 /home/nuttx/nuttx/staging/libapps.a(serialrx_main.c.home.nuttx.nuttx-apps.examples.serialrx.o)
+                0x000000000811954d       0x90 /home/nuttx/nuttx/staging/libapps.a(serialrx_main.c.home.nuttx.nuttx-apps.examples.serialrx.o)
                                          0x9b (size before relaxing)
  .rodata.show_usage.str1.1
-                0x00000000081195d5      0x2ae /home/nuttx/nuttx/staging/libapps.a(gpio_main.c.home.nuttx.nuttx-apps.examples.gpio.o)
+                0x00000000081195dd      0x2ae /home/nuttx/nuttx/staging/libapps.a(gpio_main.c.home.nuttx.nuttx-apps.examples.gpio.o)
                                         0x2bc (size before relaxing)
  .rodata.gpio_main.str1.1
-                0x0000000008119883      0x33f /home/nuttx/nuttx/staging/libapps.a(gpio_main.c.home.nuttx.nuttx-apps.examples.gpio.o)
+                0x000000000811988b      0x33f /home/nuttx/nuttx/staging/libapps.a(gpio_main.c.home.nuttx.nuttx-apps.examples.gpio.o)
                                         0x34c (size before relaxing)
  .rodata.createPin.str1.1
-                0x0000000008119bc2       0x2f /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008119bca       0x2f /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.setPWM.str1.1
-                0x0000000008119bf1       0x92 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008119bf9       0xa0 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.keybpwm_qrc_msg_cb.str1.1
-                0x0000000008119c83      0x115 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008119c99      0x115 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.keybpwm_main.str1.1
-                0x0000000008119d98       0xeb /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
-                                        0x11b (size before relaxing)
+                0x0000000008119dae       0xe0 /home/nuttx/nuttx/staging/libapps.a(keybpwm_main.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                                        0x110 (size before relaxing)
  .rodata.sandbox_main.str1.1
-                0x0000000008119e83       0x11 /home/nuttx/nuttx/staging/libapps.a(sandbox_main.c.home.nuttx.nuttx-apps.examples.sandbox.o)
+                0x0000000008119e8e       0x1c /home/nuttx/nuttx/staging/libapps.a(sandbox_main.c.home.nuttx.nuttx-apps.examples.sandbox.o)
                                          0x37 (size before relaxing)
  .rodata.stop_pipe_timeout.str1.1
-                0x0000000008119e94       0xf1 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008119eaa       0xf1 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.read_thread.str1.1
-                0x0000000008119f85       0x24 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008119f9b       0x24 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.read_response_listener.str1.1
-                0x0000000008119fa9       0x3e /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008119fbf       0x3e /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_lock_stop_timeout.str1.1
-                0x0000000008119fe7       0x4c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x0000000008119ffd       0x4c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.TF_WriteImpl.str1.1
-                0x000000000811a033       0x15 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a049       0x15 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_pipe_init.str1.1
-                0x000000000811a048       0x49 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a05e       0x49 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_frame_send.str1.1
-                0x000000000811a091       0x85 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a0a7       0x85 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.start_pipe_timeout.str1.1
-                0x000000000811a116       0x7c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a12c       0x7c /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_control_write.str1.1
-                0x000000000811a192       0xe5 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a1a8       0xe5 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_pipe_list_init.str1.1
-                0x000000000811a277        0x8 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a28d        0x8 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_bus_lock.str1.1
-                0x000000000811a27f       0x31 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a295       0x31 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_bus_unlock.str1.1
-                0x000000000811a2b0       0x35 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a2c6       0x35 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_control_pipe_callback.str1.1
-                0x000000000811a2e5      0x308 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a2fb      0x308 /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_init.str1.1
-                0x000000000811a5ed      0x11f /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a603      0x11f /home/nuttx/nuttx/staging/libapps.a(qrc.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.thread_run.str1.1
-                0x000000000811a70c       0x71 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a722       0x71 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_thread_pool_init.str1.1
-                0x000000000811a77d      0x1f6 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a793      0x1f6 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_threadpool_add_work.str1.1
-                0x000000000811a973       0x42 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a989       0x42 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_threads_join.str1.1
-                0x000000000811a9b5       0x18 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a9cb       0x18 /home/nuttx/nuttx/staging/libapps.a(qrc_threadpool.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.TF_HandleReceivedMessage.str1.1
-                0x000000000811a9cd       0x21 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811a9e3       0x21 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.TF_InitStatic.str1.1
-                0x000000000811a9ee       0x29 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811aa04       0x29 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.TF_Init.str1.1
-                0x000000000811aa17       0x26 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811aa2d       0x26 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.TF_AddIdListener.str1.1
-                0x000000000811aa3d       0x1f /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811aa53       0x1f /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.TF_SendFrame.str1.1
-                0x000000000811aa5c       0x1f /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811aa72       0x1f /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.TF_AddGenericListener.str1.1
-                0x000000000811aa7b       0x24 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811aa91       0x24 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.TF_AcceptChar.str1.1
-                0x000000000811aa9f       0x67 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811aab5       0x67 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.crc16_table
-                0x000000000811ab06      0x200 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811ab1c      0x200 /home/nuttx/nuttx/staging/libapps.a(TinyFrame.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_get_pipe.str1.1
-                0x000000000811ad06       0x92 /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811ad1c       0x92 /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.qrc_register_message_cb.str1.1
-                0x000000000811ad98       0x38 /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
+                0x000000000811adae       0x38 /home/nuttx/nuttx/staging/libapps.a(qrc_msg_management.c.home.nuttx.nuttx-apps.examples.keybpwm.o)
  .rodata.board_app_initialize.str1.1
-                0x000000000811add0       0x1b /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_appinit.o)
+                0x000000000811ade6       0x1b /home/nuttx/nuttx/arch/arm/src/board/libboard.a(stm32_appinit.o)
  .rodata.nx_pthread_create.str1.1
-                0x000000000811adeb        0x6 /home/nuttx/nuttx/staging/libsched.a(pthread_create.o)
- *fill*         0x000000000811adf1        0x3 
+                0x000000000811ae01        0x6 /home/nuttx/nuttx/staging/libsched.a(pthread_create.o)
+ *fill*         0x000000000811ae07        0x1 
  .rodata.g_default_pthread_attr
-                0x000000000811adf4        0xc /home/nuttx/nuttx/staging/libsched.a(pthread_create.o)
-                0x000000000811adf4                g_default_pthread_attr
+                0x000000000811ae08        0xc /home/nuttx/nuttx/staging/libsched.a(pthread_create.o)
+                0x000000000811ae08                g_default_pthread_attr
  .rodata.ramdisk_register.str1.1
-                0x000000000811ae00        0xb /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
- *fill*         0x000000000811ae0b        0x1 
+                0x000000000811ae14        0xb /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+ *fill*         0x000000000811ae1f        0x1 
  .rodata.g_bops
-                0x000000000811ae0c       0x1c /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
+                0x000000000811ae20       0x1c /home/nuttx/nuttx/staging/libdrivers.a(ramdisk.o)
  *(.gnu.linkonce.t.*)
  *(.glue_7)
- .glue_7        0x000000000811ae28        0x0 linker stubs
+ .glue_7        0x000000000811ae3c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000000000811ae28        0x0 linker stubs
+ .glue_7t       0x000000000811ae3c        0x0 linker stubs
  *(.got)
  *(.gcc_except_table)
  *(.gnu.linkonce.r.*)
-                0x000000000811ae28                _etext = ABSOLUTE (.)
+                0x000000000811ae3c                _etext = ABSOLUTE (.)
 
-.vfp11_veneer   0x000000000811ae28        0x0
- .vfp11_veneer  0x000000000811ae28        0x0 linker stubs
+.vfp11_veneer   0x000000000811ae3c        0x0
+ .vfp11_veneer  0x000000000811ae3c        0x0 linker stubs
 
-.v4_bx          0x000000000811ae28        0x0
- .v4_bx         0x000000000811ae28        0x0 linker stubs
+.v4_bx          0x000000000811ae3c        0x0
+ .v4_bx         0x000000000811ae3c        0x0 linker stubs
 
-.iplt           0x000000000811ae28        0x0
- .iplt          0x000000000811ae28        0x0 /home/nuttx/nuttx/staging/libarch.a(stm32_start.o)
+.iplt           0x000000000811ae3c        0x0
+ .iplt          0x000000000811ae3c        0x0 /home/nuttx/nuttx/staging/libarch.a(stm32_start.o)
 
-.init_section   0x000000000811ae28        0x0
-                0x000000000811ae28                _sinit = ABSOLUTE (.)
+.init_section   0x000000000811ae3c        0x0
+                0x000000000811ae3c                _sinit = ABSOLUTE (.)
  *(.init_array .init_array.*)
-                0x000000000811ae28                _einit = ABSOLUTE (.)
+                0x000000000811ae3c                _einit = ABSOLUTE (.)
 
 .ARM.extab
  *(.ARM.extab*)
-                0x000000000811ae28                __exidx_start = ABSOLUTE (.)
+                0x000000000811ae3c                __exidx_start = ABSOLUTE (.)
 
-.ARM.exidx      0x000000000811ae28        0x8
+.ARM.exidx      0x000000000811ae3c        0x8
  *(.ARM.exidx*)
- .ARM.exidx     0x000000000811ae28        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
-                0x000000000811ae30                __exidx_end = ABSOLUTE (.)
+ .ARM.exidx     0x000000000811ae3c        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/libgcc.a(_udivmoddi4.o)
+                0x000000000811ae44                __exidx_end = ABSOLUTE (.)
 
-.rel.dyn        0x000000000811ae30        0x0
- .rel.iplt      0x000000000811ae30        0x0 /home/nuttx/nuttx/staging/libarch.a(stm32_start.o)
+.rel.dyn        0x000000000811ae44        0x0
+ .rel.iplt      0x000000000811ae44        0x0 /home/nuttx/nuttx/staging/libarch.a(stm32_start.o)
 
-.tdata          0x000000000811ae30        0x0
-                0x000000000811ae30                _stdata = ABSOLUTE (.)
+.tdata          0x000000000811ae44        0x0
+                0x000000000811ae44                _stdata = ABSOLUTE (.)
  *(.tdata .tdata.* .gnu.linkonce.td.*)
-                0x000000000811ae30                _etdata = ABSOLUTE (.)
+                0x000000000811ae44                _etdata = ABSOLUTE (.)
 
-.tbss           0x000000000811ae30        0x0
-                0x000000000811ae30                _stbss = ABSOLUTE (.)
+.tbss           0x000000000811ae44        0x0
+                0x000000000811ae44                _stbss = ABSOLUTE (.)
  *(.tbss .tbss.* .gnu.linkonce.tb.* .tcommon)
-                0x000000000811ae30                _etbss = ABSOLUTE (.)
-                0x000000000811ae30                _eronly = ABSOLUTE (.)
+                0x000000000811ae44                _etbss = ABSOLUTE (.)
+                0x000000000811ae44                _eronly = ABSOLUTE (.)
 
 .ram_vectors
  *(.ram_vectors)
 
-.data           0x0000000020000000      0xb70 load address 0x000000000811ae30
+.data           0x0000000020000000      0xb70 load address 0x000000000811ae44
                 0x0000000020000000                _sdata = ABSOLUTE (.)
  *(.data .data.*)
  .data.g_uart5priv
@@ -5987,10 +5987,10 @@ Linker script and memory map
                 0x0000000020000b70                . = ALIGN (0x4)
                 0x0000000020000b70                _edata = ABSOLUTE (.)
 
-.igot.plt       0x0000000020000b70        0x0 load address 0x000000000811b9a0
+.igot.plt       0x0000000020000b70        0x0 load address 0x000000000811b9b4
  .igot.plt      0x0000000020000b70        0x0 /home/nuttx/nuttx/staging/libarch.a(stm32_start.o)
 
-.bss            0x0000000020000b70     0x22a0 load address 0x000000000811b9a0
+.bss            0x0000000020000b70     0x22a0 load address 0x000000000811b9b4
                 0x0000000020000b70                _sbss = ABSOLUTE (.)
  *(.bss .bss.*)
  .bss.g_uart5rxbuffer
