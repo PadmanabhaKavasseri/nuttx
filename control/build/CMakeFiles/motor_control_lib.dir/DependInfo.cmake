@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/nuttx/control/src/motor_control.cpp" "CMakeFiles/motor_control.cpython-310-aarch64-linux-gnu.so.dir/src/motor_control.cpp.o" "gcc" "CMakeFiles/motor_control.cpython-310-aarch64-linux-gnu.so.dir/src/motor_control.cpp.o.d"
-  "/home/nuttx/control/src/qrc_utils.cpp" "CMakeFiles/motor_control.cpython-310-aarch64-linux-gnu.so.dir/src/qrc_utils.cpp.o" "gcc" "CMakeFiles/motor_control.cpython-310-aarch64-linux-gnu.so.dir/src/qrc_utils.cpp.o.d"
+  "/home/nuttx/control/src/motor_control.cpp" "CMakeFiles/motor_control_lib.dir/src/motor_control.cpp.o" "gcc" "CMakeFiles/motor_control_lib.dir/src/motor_control.cpp.o.d"
+  "/home/nuttx/control/src/qrc_utils.cpp" "CMakeFiles/motor_control_lib.dir/src/qrc_utils.cpp.o" "gcc" "CMakeFiles/motor_control_lib.dir/src/qrc_utils.cpp.o.d"
   )
 
 # Targets to which this target links.

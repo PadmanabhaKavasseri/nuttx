@@ -4,12 +4,12 @@ cmake_minimum_required(VERSION 3.10)
 project(motor_control)
 
 # Set C and C++ compilers
-# Check if the C and C++ compilers are already set 
-if (NOT CMAKE_C_COMPILER) 
-	set(CMAKE_C_COMPILER /usr/bin/gcc) 
-endif() 
-if (NOT CMAKE_CXX_COMPILER) 
-	set(CMAKE_CXX_COMPILER /usr/bin/g++)
+# Check if the C and C++ compilers are already set
+if (NOT CMAKE_C_COMPILER)
+    set(CMAKE_C_COMPILER /usr/bin/gcc)
+endif()
+if (NOT CMAKE_CXX_COMPILER)
+    set(CMAKE_CXX_COMPILER /usr/bin/g++)
 endif()
 
 # Compiler flags
@@ -40,27 +40,28 @@ set(CPP_SOURCES src/motor_control.cpp src/qrc_utils.cpp)
 set(SOURCES ${CPP_SOURCES})
 
 # Output names
-set(TARGET_NAME "motor_control")
+set(EXECUTABLE_TARGET_NAME "motor_control_exe")
+set(LIBRARY_TARGET_NAME "motor_control_lib")
 execute_process(COMMAND python3-config --extension-suffix OUTPUT_VARIABLE TARGET_EXT OUTPUT_STRIP_TRAILING_WHITESPACE)
-set(TARGET "${TARGET_NAME}${TARGET_EXT}")
+set(LIBRARY_NAME "${LIBRARY_TARGET_NAME}${TARGET_EXT}")
 
 # Library dependencies
 set(LDLIBS -lpthread ${Python3_LIBRARIES})
 
 # Add executable
-add_executable(${TARGET_NAME} ${SOURCES})
+add_executable(${EXECUTABLE_TARGET_NAME} ${CPP_SOURCES})
 
 # Target for shared library
-add_library(${TARGET} SHARED ${SOURCES})
+add_library(${LIBRARY_TARGET_NAME} SHARED ${SOURCES})
 
-# Set properties
-set_target_properties(${TARGET} PROPERTIES PREFIX "")
-target_link_libraries(${TARGET_NAME} ${LDLIBS} libqrc)
-target_link_libraries(${TARGET} ${LDLIBS} libqrc)
+# Set properties to avoid double extension
+set_target_properties(${LIBRARY_TARGET_NAME} PROPERTIES PREFIX "" SUFFIX "${TARGET_EXT}")
 
-# Target for optimization
-target_compile_options(${TARGET} PRIVATE -O3 -shared -std=c++11 -fPIC)
+# Link libraries
+target_link_libraries(${EXECUTABLE_TARGET_NAME} ${LDLIBS} libqrc)
+target_link_libraries(${LIBRARY_TARGET_NAME} ${LDLIBS} libqrc)
+target_compile_options(${LIBRARY_TARGET_NAME} PRIVATE -O3 -shared -std=c++11 -fPIC)
 
 # Link pybind11
-target_link_libraries(${TARGET} pybind11::module)
+target_link_libraries(${LIBRARY_TARGET_NAME} pybind11::module)
 

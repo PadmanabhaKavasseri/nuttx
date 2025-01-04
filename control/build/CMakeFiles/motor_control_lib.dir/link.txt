@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -Wall -DQRC_RB5 -shared -Wl,-soname,motor_control_lib.cpython-310-aarch64-linux-gnu.so -o motor_control_lib.cpython-310-aarch64-linux-gnu.so CMakeFiles/motor_control_lib.dir/src/motor_control.cpp.o CMakeFiles/motor_control_lib.dir/src/qrc_utils.cpp.o  -lpthread /usr/lib/aarch64-linux-gnu/libpython3.10.so inc/libqrc/liblibqrc.a 

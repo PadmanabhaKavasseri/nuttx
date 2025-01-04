@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wall -DQRC_RB5 CMakeFiles/motor_control_exe.dir/src/motor_control.cpp.o CMakeFiles/motor_control_exe.dir/src/qrc_utils.cpp.o -o motor_control_exe  -lpthread /usr/lib/aarch64-linux-gnu/libpython3.10.so inc/libqrc/liblibqrc.a 

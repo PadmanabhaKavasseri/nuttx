@@ -1,4 +1,4 @@
-CMakeFiles/motor_control.cpython-310-aarch64-linux-gnu.so.dir/src/motor_control.cpp.o: \
+CMakeFiles/motor_control_lib.dir/src/motor_control.cpp.o: \
  /home/nuttx/control/src/motor_control.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/11/iostream \
  /usr/include/aarch64-linux-gnu/c++/11/bits/c++config.h \
