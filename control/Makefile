@@ -18,7 +18,7 @@ INCLUDE_FILES = \
 	-I./inc/libqrc/protocol/tinyframe \
 	-I./inc/ \
 	-I./extern/pybind11/include \
-	-I/usr/include/python3.8/ \
+	-I/usr/include/python3.10/ \
 
 CFLAGS += $(INCLUDE_FILES)
 CFLAGS += -DQRC_RB5
@@ -44,7 +44,7 @@ CPP_OBJS = $(CPP_SRCS:.cpp=.o)
 
 OBJS = $(C_OBJS) $(CPP_OBJS)
 
-LDLIBS = -lpthread -lpython3.8
+LDLIBS = -lpthread -lpython3.10
 
 all: $(TARGET) $(EXECUTABLE)
 

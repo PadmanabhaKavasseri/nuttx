@@ -1,0 +1,15 @@
+/home/nuttx/control/build/CMakeFiles/motor_control.dir
+/home/nuttx/control/build/CMakeFiles/motor_control.cpython-310-aarch64-linux-gnu.so.dir
+/home/nuttx/control/build/CMakeFiles/edit_cache.dir
+/home/nuttx/control/build/CMakeFiles/rebuild_cache.dir
+/home/nuttx/control/build/CMakeFiles/list_install_components.dir
+/home/nuttx/control/build/CMakeFiles/install.dir
+/home/nuttx/control/build/CMakeFiles/install/local.dir
+/home/nuttx/control/build/CMakeFiles/install/strip.dir
+/home/nuttx/control/build/inc/libqrc/CMakeFiles/libqrc.dir
+/home/nuttx/control/build/inc/libqrc/CMakeFiles/edit_cache.dir
+/home/nuttx/control/build/inc/libqrc/CMakeFiles/rebuild_cache.dir
+/home/nuttx/control/build/inc/libqrc/CMakeFiles/list_install_components.dir
+/home/nuttx/control/build/inc/libqrc/CMakeFiles/install.dir
+/home/nuttx/control/build/inc/libqrc/CMakeFiles/install/local.dir
+/home/nuttx/control/build/inc/libqrc/CMakeFiles/install/strip.dir
