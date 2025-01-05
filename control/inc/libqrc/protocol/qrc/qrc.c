@@ -50,7 +50,7 @@ static struct qrc_s g_qrc;
 #define QRC_IOC_MAGIC 'q'
 #define QRC_FIONREAD _IO(QRC_IOC_MAGIC, 5)
 #define QRC_RESET_MCB _IO(QRC_IOC_MAGIC, 2)
-#define QRC_FD ("/dev/qrc")
+#define QRC_FD ("/dev/ttyHS1")
 #define QRC_BOOT_APP  '2'
 #endif
 
