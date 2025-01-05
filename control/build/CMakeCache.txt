@@ -224,11 +224,11 @@ motor_control_BINARY_DIR:STATIC=/home/nuttx/control/build
 //Value Computed by CMake
 motor_control_IS_TOP_LEVEL:STATIC=ON
 
+//Dependencies for the target
+motor_control_LIB_DEPENDS:STATIC=general;-lpthread;general;/usr/lib/aarch64-linux-gnu/libpython3.10.so;general;libqrc;
+
 //Value Computed by CMake
 motor_control_SOURCE_DIR:STATIC=/home/nuttx/control
-
-//Dependencies for the target
-motor_control_lib_LIB_DEPENDS:STATIC=general;-lpthread;general;/usr/lib/aarch64-linux-gnu/libpython3.10.so;general;libqrc;
 
 
 ########################

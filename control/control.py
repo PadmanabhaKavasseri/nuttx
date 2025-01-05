@@ -1,7 +1,10 @@
+import sys, os
+sys.path.append(os.path.abspath('./build/.'))
+
 import motor_control
 import streamlit as st
 from streamlit_extras.stateful_button import button
-import os, sys, termios, fcntl
+import termios, fcntl
 
 @st.cache_resource
 def initQRC():

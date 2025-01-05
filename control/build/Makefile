@@ -175,17 +175,17 @@ motor_control_exe/fast:
 .PHONY : motor_control_exe/fast
 
 #=============================================================================
-# Target rules for targets named motor_control_lib
+# Target rules for targets named motor_control
 
 # Build rule for target.
-motor_control_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motor_control_lib
-.PHONY : motor_control_lib
+motor_control: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motor_control
+.PHONY : motor_control
 
 # fast build rule for target.
-motor_control_lib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_lib.dir/build.make CMakeFiles/motor_control_lib.dir/build
-.PHONY : motor_control_lib/fast
+motor_control/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control.dir/build.make CMakeFiles/motor_control.dir/build
+.PHONY : motor_control/fast
 
 #=============================================================================
 # Target rules for targets named libqrc
@@ -206,7 +206,7 @@ src/motor_control.o: src/motor_control.cpp.o
 # target to build an object file
 src/motor_control.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_exe.dir/build.make CMakeFiles/motor_control_exe.dir/src/motor_control.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_lib.dir/build.make CMakeFiles/motor_control_lib.dir/src/motor_control.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control.dir/build.make CMakeFiles/motor_control.dir/src/motor_control.cpp.o
 .PHONY : src/motor_control.cpp.o
 
 src/motor_control.i: src/motor_control.cpp.i
@@ -215,7 +215,7 @@ src/motor_control.i: src/motor_control.cpp.i
 # target to preprocess a source file
 src/motor_control.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_exe.dir/build.make CMakeFiles/motor_control_exe.dir/src/motor_control.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_lib.dir/build.make CMakeFiles/motor_control_lib.dir/src/motor_control.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control.dir/build.make CMakeFiles/motor_control.dir/src/motor_control.cpp.i
 .PHONY : src/motor_control.cpp.i
 
 src/motor_control.s: src/motor_control.cpp.s
@@ -224,7 +224,7 @@ src/motor_control.s: src/motor_control.cpp.s
 # target to generate assembly for a file
 src/motor_control.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_exe.dir/build.make CMakeFiles/motor_control_exe.dir/src/motor_control.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_lib.dir/build.make CMakeFiles/motor_control_lib.dir/src/motor_control.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control.dir/build.make CMakeFiles/motor_control.dir/src/motor_control.cpp.s
 .PHONY : src/motor_control.cpp.s
 
 src/qrc_utils.o: src/qrc_utils.cpp.o
@@ -233,7 +233,7 @@ src/qrc_utils.o: src/qrc_utils.cpp.o
 # target to build an object file
 src/qrc_utils.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_exe.dir/build.make CMakeFiles/motor_control_exe.dir/src/qrc_utils.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_lib.dir/build.make CMakeFiles/motor_control_lib.dir/src/qrc_utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control.dir/build.make CMakeFiles/motor_control.dir/src/qrc_utils.cpp.o
 .PHONY : src/qrc_utils.cpp.o
 
 src/qrc_utils.i: src/qrc_utils.cpp.i
@@ -242,7 +242,7 @@ src/qrc_utils.i: src/qrc_utils.cpp.i
 # target to preprocess a source file
 src/qrc_utils.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_exe.dir/build.make CMakeFiles/motor_control_exe.dir/src/qrc_utils.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_lib.dir/build.make CMakeFiles/motor_control_lib.dir/src/qrc_utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control.dir/build.make CMakeFiles/motor_control.dir/src/qrc_utils.cpp.i
 .PHONY : src/qrc_utils.cpp.i
 
 src/qrc_utils.s: src/qrc_utils.cpp.s
@@ -251,7 +251,7 @@ src/qrc_utils.s: src/qrc_utils.cpp.s
 # target to generate assembly for a file
 src/qrc_utils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_exe.dir/build.make CMakeFiles/motor_control_exe.dir/src/qrc_utils.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_lib.dir/build.make CMakeFiles/motor_control_lib.dir/src/qrc_utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control.dir/build.make CMakeFiles/motor_control.dir/src/qrc_utils.cpp.s
 .PHONY : src/qrc_utils.cpp.s
 
 # Help Target
@@ -267,8 +267,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... libqrc"
+	@echo "... motor_control"
 	@echo "... motor_control_exe"
-	@echo "... motor_control_lib"
 	@echo "... src/motor_control.o"
 	@echo "... src/motor_control.i"
 	@echo "... src/motor_control.s"

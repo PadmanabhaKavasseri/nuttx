@@ -135,6 +135,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/motor_control_exe.dir/DependInfo.cmake"
-  "CMakeFiles/motor_control_lib.dir/DependInfo.cmake"
+  "CMakeFiles/motor_control.dir/DependInfo.cmake"
   "inc/libqrc/CMakeFiles/libqrc.dir/DependInfo.cmake"
   )

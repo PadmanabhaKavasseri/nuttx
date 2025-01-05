@@ -41,7 +41,7 @@ set(SOURCES ${CPP_SOURCES})
 
 # Output names
 set(EXECUTABLE_TARGET_NAME "motor_control_exe")
-set(LIBRARY_TARGET_NAME "motor_control_lib")
+set(LIBRARY_TARGET_NAME "motor_control")
 execute_process(COMMAND python3-config --extension-suffix OUTPUT_VARIABLE TARGET_EXT OUTPUT_STRIP_TRAILING_WHITESPACE)
 set(LIBRARY_NAME "${LIBRARY_TARGET_NAME}${TARGET_EXT}")
 
