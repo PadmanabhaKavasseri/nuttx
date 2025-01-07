@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,libqrc_udriver.so.1.0 -o libqrc_udriver.so.1.0 CMakeFiles/qrc_udriver.dir/src/qti_qrc_udriver.c.o CMakeFiles/qrc_udriver.dir/src/qti_qrc_uart.c.o  -lgpiod 

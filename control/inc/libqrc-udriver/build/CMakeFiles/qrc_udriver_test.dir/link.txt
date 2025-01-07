@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/qrc_udriver_test.dir/test/qti_qrc_test.c.o -o qrc_udriver_test  -Wl,-rpath,/home/nuttx/control/inc/libqrc-udriver/build: libqrc_udriver.so.1.0 -lgpiod 

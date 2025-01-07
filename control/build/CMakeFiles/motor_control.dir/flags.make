@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dmotor_control_EXPORTS
 
-CXX_INCLUDES = -I/home/nuttx/control/./inc -I/home/nuttx/control/inc/libqrc/include/app_msg -I/home/nuttx/control/inc/libqrc/include/module -I/home/nuttx/control/inc/libqrc/protocol/qrc -I/home/nuttx/control/inc/libqrc/protocol/qrc/tinyframe -I/home/nuttx/control/inc/libqrc/protocol/tinyframe -I/home/nuttx/control/inc/libqrc/include -isystem /usr/include/python3.10 -isystem /usr/local/lib/python3.10/dist-packages/pybind11/include
+CXX_INCLUDES = -I/home/nuttx/control/inc -I/home/nuttx/control/inc/libqrc/include/module -I/home/nuttx/control/inc/libqrc-udriver/include -isystem /usr/include/python3.10 -isystem /usr/local/lib/python3.10/dist-packages/pybind11/include
 
 CXX_FLAGS = -g -Wall -DQRC_RB5 -fPIC -O3 -shared -std=c++11 -fPIC
 

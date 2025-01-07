@@ -162,25 +162,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-inc/libqrc/CMakeFiles/libqrc.dir/rule:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inc/libqrc/CMakeFiles/libqrc.dir/rule
-.PHONY : inc/libqrc/CMakeFiles/libqrc.dir/rule
+inc/libqrc/CMakeFiles/qrc.dir/rule:
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inc/libqrc/CMakeFiles/qrc.dir/rule
+.PHONY : inc/libqrc/CMakeFiles/qrc.dir/rule
 
 # Convenience name for target.
-libqrc: inc/libqrc/CMakeFiles/libqrc.dir/rule
-.PHONY : libqrc
+qrc: inc/libqrc/CMakeFiles/qrc.dir/rule
+.PHONY : qrc
 
 # fast build rule for target.
-libqrc/fast:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/build
-.PHONY : libqrc/fast
+qrc/fast:
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/build
+.PHONY : qrc/fast
 
 protocol/qrc/qrc.o: protocol/qrc/qrc.c.o
 .PHONY : protocol/qrc/qrc.o
 
 # target to build an object file
 protocol/qrc/qrc.c.o:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc/qrc.c.o
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/qrc/qrc.c.o
 .PHONY : protocol/qrc/qrc.c.o
 
 protocol/qrc/qrc.i: protocol/qrc/qrc.c.i
@@ -188,7 +188,7 @@ protocol/qrc/qrc.i: protocol/qrc/qrc.c.i
 
 # target to preprocess a source file
 protocol/qrc/qrc.c.i:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc/qrc.c.i
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/qrc/qrc.c.i
 .PHONY : protocol/qrc/qrc.c.i
 
 protocol/qrc/qrc.s: protocol/qrc/qrc.c.s
@@ -196,7 +196,7 @@ protocol/qrc/qrc.s: protocol/qrc/qrc.c.s
 
 # target to generate assembly for a file
 protocol/qrc/qrc.c.s:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc/qrc.c.s
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/qrc/qrc.c.s
 .PHONY : protocol/qrc/qrc.c.s
 
 protocol/qrc/qrc_threadpool.o: protocol/qrc/qrc_threadpool.c.o
@@ -204,7 +204,7 @@ protocol/qrc/qrc_threadpool.o: protocol/qrc/qrc_threadpool.c.o
 
 # target to build an object file
 protocol/qrc/qrc_threadpool.c.o:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc/qrc_threadpool.c.o
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/qrc/qrc_threadpool.c.o
 .PHONY : protocol/qrc/qrc_threadpool.c.o
 
 protocol/qrc/qrc_threadpool.i: protocol/qrc/qrc_threadpool.c.i
@@ -212,7 +212,7 @@ protocol/qrc/qrc_threadpool.i: protocol/qrc/qrc_threadpool.c.i
 
 # target to preprocess a source file
 protocol/qrc/qrc_threadpool.c.i:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc/qrc_threadpool.c.i
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/qrc/qrc_threadpool.c.i
 .PHONY : protocol/qrc/qrc_threadpool.c.i
 
 protocol/qrc/qrc_threadpool.s: protocol/qrc/qrc_threadpool.c.s
@@ -220,39 +220,15 @@ protocol/qrc/qrc_threadpool.s: protocol/qrc/qrc_threadpool.c.s
 
 # target to generate assembly for a file
 protocol/qrc/qrc_threadpool.c.s:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc/qrc_threadpool.c.s
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/qrc/qrc_threadpool.c.s
 .PHONY : protocol/qrc/qrc_threadpool.c.s
-
-protocol/qrc/tinyframe/tf_config.o: protocol/qrc/tinyframe/tf_config.c.o
-.PHONY : protocol/qrc/tinyframe/tf_config.o
-
-# target to build an object file
-protocol/qrc/tinyframe/tf_config.c.o:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc/tinyframe/tf_config.c.o
-.PHONY : protocol/qrc/tinyframe/tf_config.c.o
-
-protocol/qrc/tinyframe/tf_config.i: protocol/qrc/tinyframe/tf_config.c.i
-.PHONY : protocol/qrc/tinyframe/tf_config.i
-
-# target to preprocess a source file
-protocol/qrc/tinyframe/tf_config.c.i:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc/tinyframe/tf_config.c.i
-.PHONY : protocol/qrc/tinyframe/tf_config.c.i
-
-protocol/qrc/tinyframe/tf_config.s: protocol/qrc/tinyframe/tf_config.c.s
-.PHONY : protocol/qrc/tinyframe/tf_config.s
-
-# target to generate assembly for a file
-protocol/qrc/tinyframe/tf_config.c.s:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc/tinyframe/tf_config.c.s
-.PHONY : protocol/qrc/tinyframe/tf_config.c.s
 
 protocol/qrc_msg_management.o: protocol/qrc_msg_management.c.o
 .PHONY : protocol/qrc_msg_management.o
 
 # target to build an object file
 protocol/qrc_msg_management.c.o:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc_msg_management.c.o
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/qrc_msg_management.c.o
 .PHONY : protocol/qrc_msg_management.c.o
 
 protocol/qrc_msg_management.i: protocol/qrc_msg_management.c.i
@@ -260,7 +236,7 @@ protocol/qrc_msg_management.i: protocol/qrc_msg_management.c.i
 
 # target to preprocess a source file
 protocol/qrc_msg_management.c.i:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc_msg_management.c.i
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/qrc_msg_management.c.i
 .PHONY : protocol/qrc_msg_management.c.i
 
 protocol/qrc_msg_management.s: protocol/qrc_msg_management.c.s
@@ -268,7 +244,7 @@ protocol/qrc_msg_management.s: protocol/qrc_msg_management.c.s
 
 # target to generate assembly for a file
 protocol/qrc_msg_management.c.s:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/qrc_msg_management.c.s
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/qrc_msg_management.c.s
 .PHONY : protocol/qrc_msg_management.c.s
 
 protocol/tinyframe/TinyFrame.o: protocol/tinyframe/TinyFrame.c.o
@@ -276,7 +252,7 @@ protocol/tinyframe/TinyFrame.o: protocol/tinyframe/TinyFrame.c.o
 
 # target to build an object file
 protocol/tinyframe/TinyFrame.c.o:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/tinyframe/TinyFrame.c.o
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/tinyframe/TinyFrame.c.o
 .PHONY : protocol/tinyframe/TinyFrame.c.o
 
 protocol/tinyframe/TinyFrame.i: protocol/tinyframe/TinyFrame.c.i
@@ -284,7 +260,7 @@ protocol/tinyframe/TinyFrame.i: protocol/tinyframe/TinyFrame.c.i
 
 # target to preprocess a source file
 protocol/tinyframe/TinyFrame.c.i:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/tinyframe/TinyFrame.c.i
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/tinyframe/TinyFrame.c.i
 .PHONY : protocol/tinyframe/TinyFrame.c.i
 
 protocol/tinyframe/TinyFrame.s: protocol/tinyframe/TinyFrame.c.s
@@ -292,7 +268,7 @@ protocol/tinyframe/TinyFrame.s: protocol/tinyframe/TinyFrame.c.s
 
 # target to generate assembly for a file
 protocol/tinyframe/TinyFrame.c.s:
-	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/protocol/tinyframe/TinyFrame.c.s
+	cd /home/nuttx/control/build && $(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/protocol/tinyframe/TinyFrame.c.s
 .PHONY : protocol/tinyframe/TinyFrame.c.s
 
 # Help Target
@@ -307,16 +283,13 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... libqrc"
+	@echo "... qrc"
 	@echo "... protocol/qrc/qrc.o"
 	@echo "... protocol/qrc/qrc.i"
 	@echo "... protocol/qrc/qrc.s"
 	@echo "... protocol/qrc/qrc_threadpool.o"
 	@echo "... protocol/qrc/qrc_threadpool.i"
 	@echo "... protocol/qrc/qrc_threadpool.s"
-	@echo "... protocol/qrc/tinyframe/tf_config.o"
-	@echo "... protocol/qrc/tinyframe/tf_config.i"
-	@echo "... protocol/qrc/tinyframe/tf_config.s"
 	@echo "... protocol/qrc_msg_management.o"
 	@echo "... protocol/qrc_msg_management.i"
 	@echo "... protocol/qrc_msg_management.s"

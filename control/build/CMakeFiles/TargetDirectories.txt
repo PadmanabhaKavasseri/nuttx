@@ -6,7 +6,7 @@
 /home/nuttx/control/build/CMakeFiles/install.dir
 /home/nuttx/control/build/CMakeFiles/install/local.dir
 /home/nuttx/control/build/CMakeFiles/install/strip.dir
-/home/nuttx/control/build/inc/libqrc/CMakeFiles/libqrc.dir
+/home/nuttx/control/build/inc/libqrc/CMakeFiles/qrc.dir
 /home/nuttx/control/build/inc/libqrc/CMakeFiles/edit_cache.dir
 /home/nuttx/control/build/inc/libqrc/CMakeFiles/rebuild_cache.dir
 /home/nuttx/control/build/inc/libqrc/CMakeFiles/list_install_components.dir

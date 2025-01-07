@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblibqrc.a CMakeFiles/libqrc.dir/protocol/qrc/qrc.c.o CMakeFiles/libqrc.dir/protocol/qrc/qrc_threadpool.c.o CMakeFiles/libqrc.dir/protocol/qrc/tinyframe/tf_config.c.o CMakeFiles/libqrc.dir/protocol/qrc_msg_management.c.o CMakeFiles/libqrc.dir/protocol/tinyframe/TinyFrame.c.o
-/usr/bin/ranlib liblibqrc.a

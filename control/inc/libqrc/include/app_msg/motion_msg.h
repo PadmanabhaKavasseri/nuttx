@@ -37,7 +37,8 @@ enum control_msg_type_e
   SET_SPEED = 0,
   SWITCH_MODE,
   SET_EMERGENCY,
-  SET_POSITION
+  SET_POSITION,
+  MOTOR_DRIVER_STATUS
 };
 
 enum motor_err_e
@@ -53,38 +54,39 @@ enum motor_err_e
 
 struct speed_cmd_s
 {
-	float vx;
-	float vz;
+  float vx;
+  float vz;
 };
 
 struct position_cmd_s
 {
-  int pose_type;
+  int   pose_type;
   float pose;
 };
 
 union motion_control_data_u
 {
-  struct speed_cmd_s speed_cmd;
+  struct speed_cmd_s    speed_cmd;
   struct position_cmd_s position_cmd;
-  int emergency;
-  int mode;
+  int                   emergency;
+  int                   mode;
+  int                   motor_driver_status;
 } __attribute__((aligned(4)));
 
 struct motion_control_msg_s
 {
-  int msg_type;
+  int                         msg_type;
   union motion_control_data_u data;
 } __attribute__((aligned(4)));
 
 /* motion odom structure */
 struct motion_odom_s
 {
-  int type;
+  int       type;
   long long sec;
   long long ns;
-	float x;
-	float z;
+  float     x;
+  float     z;
 } __attribute__((aligned(4)));
 
 #endif

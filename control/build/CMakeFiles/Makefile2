@@ -82,7 +82,7 @@ clean: inc/libqrc/clean
 # Directory level rules for directory inc/libqrc
 
 # Recursive "all" directory target.
-inc/libqrc/all: inc/libqrc/CMakeFiles/libqrc.dir/all
+inc/libqrc/all: inc/libqrc/CMakeFiles/qrc.dir/all
 .PHONY : inc/libqrc/all
 
 # Recursive "preinstall" directory target.
@@ -90,22 +90,22 @@ inc/libqrc/preinstall:
 .PHONY : inc/libqrc/preinstall
 
 # Recursive "clean" directory target.
-inc/libqrc/clean: inc/libqrc/CMakeFiles/libqrc.dir/clean
+inc/libqrc/clean: inc/libqrc/CMakeFiles/qrc.dir/clean
 .PHONY : inc/libqrc/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/motor_control_exe.dir
 
 # All Build rule for target.
-CMakeFiles/motor_control_exe.dir/all: inc/libqrc/CMakeFiles/libqrc.dir/all
+CMakeFiles/motor_control_exe.dir/all: inc/libqrc/CMakeFiles/qrc.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_exe.dir/build.make CMakeFiles/motor_control_exe.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control_exe.dir/build.make CMakeFiles/motor_control_exe.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nuttx/control/build/CMakeFiles --progress-num=10,11,12 "Built target motor_control_exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nuttx/control/build/CMakeFiles --progress-num=4,5,6 "Built target motor_control_exe"
 .PHONY : CMakeFiles/motor_control_exe.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/motor_control_exe.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuttx/control/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuttx/control/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/motor_control_exe.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuttx/control/build/CMakeFiles 0
 .PHONY : CMakeFiles/motor_control_exe.dir/rule
@@ -123,15 +123,15 @@ CMakeFiles/motor_control_exe.dir/clean:
 # Target rules for target CMakeFiles/motor_control.dir
 
 # All Build rule for target.
-CMakeFiles/motor_control.dir/all: inc/libqrc/CMakeFiles/libqrc.dir/all
+CMakeFiles/motor_control.dir/all: inc/libqrc/CMakeFiles/qrc.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control.dir/build.make CMakeFiles/motor_control.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_control.dir/build.make CMakeFiles/motor_control.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nuttx/control/build/CMakeFiles --progress-num=7,8,9 "Built target motor_control"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nuttx/control/build/CMakeFiles --progress-num=1,2,3 "Built target motor_control"
 .PHONY : CMakeFiles/motor_control.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/motor_control.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuttx/control/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuttx/control/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/motor_control.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuttx/control/build/CMakeFiles 0
 .PHONY : CMakeFiles/motor_control.dir/rule
@@ -146,30 +146,30 @@ CMakeFiles/motor_control.dir/clean:
 .PHONY : CMakeFiles/motor_control.dir/clean
 
 #=============================================================================
-# Target rules for target inc/libqrc/CMakeFiles/libqrc.dir
+# Target rules for target inc/libqrc/CMakeFiles/qrc.dir
 
 # All Build rule for target.
-inc/libqrc/CMakeFiles/libqrc.dir/all:
-	$(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/depend
-	$(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nuttx/control/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target libqrc"
-.PHONY : inc/libqrc/CMakeFiles/libqrc.dir/all
+inc/libqrc/CMakeFiles/qrc.dir/all:
+	$(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/depend
+	$(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nuttx/control/build/CMakeFiles --progress-num=7,8,9,10,11 "Built target qrc"
+.PHONY : inc/libqrc/CMakeFiles/qrc.dir/all
 
 # Build rule for subdir invocation for target.
-inc/libqrc/CMakeFiles/libqrc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuttx/control/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inc/libqrc/CMakeFiles/libqrc.dir/all
+inc/libqrc/CMakeFiles/qrc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuttx/control/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 inc/libqrc/CMakeFiles/qrc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nuttx/control/build/CMakeFiles 0
-.PHONY : inc/libqrc/CMakeFiles/libqrc.dir/rule
+.PHONY : inc/libqrc/CMakeFiles/qrc.dir/rule
 
 # Convenience name for target.
-libqrc: inc/libqrc/CMakeFiles/libqrc.dir/rule
-.PHONY : libqrc
+qrc: inc/libqrc/CMakeFiles/qrc.dir/rule
+.PHONY : qrc
 
 # clean rule for target.
-inc/libqrc/CMakeFiles/libqrc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/clean
-.PHONY : inc/libqrc/CMakeFiles/libqrc.dir/clean
+inc/libqrc/CMakeFiles/qrc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/clean
+.PHONY : inc/libqrc/CMakeFiles/qrc.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

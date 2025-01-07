@@ -1,0 +1,8 @@
+/home/nuttx/control/inc/libqrc-udriver/build/CMakeFiles/qrc_udriver.dir
+/home/nuttx/control/inc/libqrc-udriver/build/CMakeFiles/qrc_udriver_test.dir
+/home/nuttx/control/inc/libqrc-udriver/build/CMakeFiles/edit_cache.dir
+/home/nuttx/control/inc/libqrc-udriver/build/CMakeFiles/rebuild_cache.dir
+/home/nuttx/control/inc/libqrc-udriver/build/CMakeFiles/list_install_components.dir
+/home/nuttx/control/inc/libqrc-udriver/build/CMakeFiles/install.dir
+/home/nuttx/control/inc/libqrc-udriver/build/CMakeFiles/install/local.dir
+/home/nuttx/control/inc/libqrc-udriver/build/CMakeFiles/install/strip.dir

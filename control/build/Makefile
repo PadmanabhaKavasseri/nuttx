@@ -188,17 +188,17 @@ motor_control/fast:
 .PHONY : motor_control/fast
 
 #=============================================================================
-# Target rules for targets named libqrc
+# Target rules for targets named qrc
 
 # Build rule for target.
-libqrc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libqrc
-.PHONY : libqrc
+qrc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 qrc
+.PHONY : qrc
 
 # fast build rule for target.
-libqrc/fast:
-	$(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/libqrc.dir/build.make inc/libqrc/CMakeFiles/libqrc.dir/build
-.PHONY : libqrc/fast
+qrc/fast:
+	$(MAKE) $(MAKESILENT) -f inc/libqrc/CMakeFiles/qrc.dir/build.make inc/libqrc/CMakeFiles/qrc.dir/build
+.PHONY : qrc/fast
 
 src/motor_control.o: src/motor_control.cpp.o
 .PHONY : src/motor_control.o
@@ -266,9 +266,9 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... libqrc"
 	@echo "... motor_control"
 	@echo "... motor_control_exe"
+	@echo "... qrc"
 	@echo "... src/motor_control.o"
 	@echo "... src/motor_control.i"
 	@echo "... src/motor_control.s"

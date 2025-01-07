@@ -210,25 +210,28 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-libqrc_BINARY_DIR:STATIC=/home/nuttx/control/build/inc/libqrc
-
-//Value Computed by CMake
-libqrc_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-libqrc_SOURCE_DIR:STATIC=/home/nuttx/control/inc/libqrc
-
-//Value Computed by CMake
 motor_control_BINARY_DIR:STATIC=/home/nuttx/control/build
 
 //Value Computed by CMake
 motor_control_IS_TOP_LEVEL:STATIC=ON
 
 //Dependencies for the target
-motor_control_LIB_DEPENDS:STATIC=general;-lpthread;general;/usr/lib/aarch64-linux-gnu/libpython3.10.so;general;libqrc;
+motor_control_LIB_DEPENDS:STATIC=general;-lpthread;general;/usr/lib/aarch64-linux-gnu/libpython3.10.so;general;qrc;
 
 //Value Computed by CMake
 motor_control_SOURCE_DIR:STATIC=/home/nuttx/control
+
+//Value Computed by CMake
+qrc_BINARY_DIR:STATIC=/home/nuttx/control/build/inc/libqrc
+
+//Value Computed by CMake
+qrc_IS_TOP_LEVEL:STATIC=OFF
+
+//Dependencies for the target
+qrc_LIB_DEPENDS:STATIC=general;qrc_udriver;
+
+//Value Computed by CMake
+qrc_SOURCE_DIR:STATIC=/home/nuttx/control/inc/libqrc
 
 
 ########################

@@ -109,7 +109,7 @@ motor_control.cpython-310-aarch64-linux-gnu.so: CMakeFiles/motor_control.dir/src
 motor_control.cpython-310-aarch64-linux-gnu.so: CMakeFiles/motor_control.dir/src/qrc_utils.cpp.o
 motor_control.cpython-310-aarch64-linux-gnu.so: CMakeFiles/motor_control.dir/build.make
 motor_control.cpython-310-aarch64-linux-gnu.so: /usr/lib/aarch64-linux-gnu/libpython3.10.so
-motor_control.cpython-310-aarch64-linux-gnu.so: inc/libqrc/liblibqrc.a
+motor_control.cpython-310-aarch64-linux-gnu.so: inc/libqrc/libqrc.so
 motor_control.cpython-310-aarch64-linux-gnu.so: CMakeFiles/motor_control.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nuttx/control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library motor_control.cpython-310-aarch64-linux-gnu.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motor_control.dir/link.txt --verbose=$(VERBOSE)

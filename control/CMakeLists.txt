@@ -26,13 +26,18 @@ set(pybind11_DIR "/usr/local/lib/python3.10/dist-packages/pybind11/share/cmake/p
 # Find pybind11
 find_package(pybind11 REQUIRED)
 
+
+
+link_directories(${CMAKE_SOURCE_DIR}/inc/libqrc/build/)
 # Add subdirectory for libqrc
 add_subdirectory(inc/libqrc)
 
 # Include directories for other includes
 include_directories(
     ${pybind11_INCLUDE_DIRS}
-    ./inc/
+    ${CMAKE_SOURCE_DIR}/inc/
+    ${CMAKE_SOURCE_DIR}/inc/libqrc/include/module/
+    ${CMAKE_SOURCE_DIR}/inc/libqrc-udriver/include/
 )
 
 # Source files for main project
@@ -58,8 +63,8 @@ add_library(${LIBRARY_TARGET_NAME} SHARED ${SOURCES})
 set_target_properties(${LIBRARY_TARGET_NAME} PROPERTIES PREFIX "" SUFFIX "${TARGET_EXT}")
 
 # Link libraries
-target_link_libraries(${EXECUTABLE_TARGET_NAME} ${LDLIBS} libqrc)
-target_link_libraries(${LIBRARY_TARGET_NAME} ${LDLIBS} libqrc)
+target_link_libraries(${EXECUTABLE_TARGET_NAME} ${LDLIBS} qrc)
+target_link_libraries(${LIBRARY_TARGET_NAME} ${LDLIBS} qrc)
 target_compile_options(${LIBRARY_TARGET_NAME} PRIVATE -O3 -shared -std=c++11 -fPIC)
 
 # Link pybind11

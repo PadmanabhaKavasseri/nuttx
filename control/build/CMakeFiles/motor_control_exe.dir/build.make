@@ -109,7 +109,7 @@ motor_control_exe: CMakeFiles/motor_control_exe.dir/src/motor_control.cpp.o
 motor_control_exe: CMakeFiles/motor_control_exe.dir/src/qrc_utils.cpp.o
 motor_control_exe: CMakeFiles/motor_control_exe.dir/build.make
 motor_control_exe: /usr/lib/aarch64-linux-gnu/libpython3.10.so
-motor_control_exe: inc/libqrc/liblibqrc.a
+motor_control_exe: inc/libqrc/libqrc.so
 motor_control_exe: CMakeFiles/motor_control_exe.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nuttx/control/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable motor_control_exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motor_control_exe.dir/link.txt --verbose=$(VERBOSE)

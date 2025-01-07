@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/nuttx/control/build/inc/libqrc",
+  "command": "/usr/bin/cc -DQRC_RB5 -Dqrc_EXPORTS -I/usr/include/python3.10 -I/home/nuttx/control/inc/libqrc/include/app_msg -I/home/nuttx/control/inc/libqrc/include/module -I/home/nuttx/control/inc/libqrc/protocol/qrc -I/home/nuttx/control/inc/libqrc/protocol/qrc/tinyframe -I/home/nuttx/control/inc/libqrc/protocol/tinyframe -I/home/nuttx/control/../libqrc-udriver/include -g -Wall -DQRC_RB5 -fPIC -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/qrc.dir/protocol/qrc_msg_management.c.o -c /home/nuttx/control/inc/libqrc/protocol/qrc_msg_management.c",
+  "file": "/home/nuttx/control/inc/libqrc/protocol/qrc_msg_management.c"
+},
+{
+  "directory": "/home/nuttx/control/build/inc/libqrc",
+  "command": "/usr/bin/cc -DQRC_RB5 -Dqrc_EXPORTS -I/usr/include/python3.10 -I/home/nuttx/control/inc/libqrc/include/app_msg -I/home/nuttx/control/inc/libqrc/include/module -I/home/nuttx/control/inc/libqrc/protocol/qrc -I/home/nuttx/control/inc/libqrc/protocol/qrc/tinyframe -I/home/nuttx/control/inc/libqrc/protocol/tinyframe -I/home/nuttx/control/../libqrc-udriver/include -g -Wall -DQRC_RB5 -fPIC -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/qrc.dir/protocol/qrc/qrc.c.o -c /home/nuttx/control/inc/libqrc/protocol/qrc/qrc.c",
+  "file": "/home/nuttx/control/inc/libqrc/protocol/qrc/qrc.c"
+},
+{
+  "directory": "/home/nuttx/control/build/inc/libqrc",
+  "command": "/usr/bin/cc -DQRC_RB5 -Dqrc_EXPORTS -I/usr/include/python3.10 -I/home/nuttx/control/inc/libqrc/include/app_msg -I/home/nuttx/control/inc/libqrc/include/module -I/home/nuttx/control/inc/libqrc/protocol/qrc -I/home/nuttx/control/inc/libqrc/protocol/qrc/tinyframe -I/home/nuttx/control/inc/libqrc/protocol/tinyframe -I/home/nuttx/control/../libqrc-udriver/include -g -Wall -DQRC_RB5 -fPIC -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/qrc.dir/protocol/qrc/qrc_threadpool.c.o -c /home/nuttx/control/inc/libqrc/protocol/qrc/qrc_threadpool.c",
+  "file": "/home/nuttx/control/inc/libqrc/protocol/qrc/qrc_threadpool.c"
+},
+{
+  "directory": "/home/nuttx/control/build/inc/libqrc",
+  "command": "/usr/bin/cc -DQRC_RB5 -Dqrc_EXPORTS -I/usr/include/python3.10 -I/home/nuttx/control/inc/libqrc/include/app_msg -I/home/nuttx/control/inc/libqrc/include/module -I/home/nuttx/control/inc/libqrc/protocol/qrc -I/home/nuttx/control/inc/libqrc/protocol/qrc/tinyframe -I/home/nuttx/control/inc/libqrc/protocol/tinyframe -I/home/nuttx/control/../libqrc-udriver/include -g -Wall -DQRC_RB5 -fPIC -Wall -Wextra -Wpedantic -std=gnu99 -o CMakeFiles/qrc.dir/protocol/tinyframe/TinyFrame.c.o -c /home/nuttx/control/inc/libqrc/protocol/tinyframe/TinyFrame.c",
+  "file": "/home/nuttx/control/inc/libqrc/protocol/tinyframe/TinyFrame.c"
+}
+]
