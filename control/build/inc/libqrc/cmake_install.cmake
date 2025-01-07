@@ -61,7 +61,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libqrc.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libqrc.so"
-         OLD_RPATH "/home/nuttx/control/inc/libqrc/build:/home/nuttx/control/../libqrc-udriver/build:"
+         OLD_RPATH "/home/nuttx/control/inc/libqrc/build:/home/nuttx/control/inc/libqrc-udriver/build:/home/nuttx/control/../libqrc-udriver/build:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libqrc.so")

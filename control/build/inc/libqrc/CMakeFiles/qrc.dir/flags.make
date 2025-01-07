@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DQRC_RB5 -Dqrc_EXPORTS
 
-C_INCLUDES = -I/usr/include/python3.10 -I/home/nuttx/control/inc/libqrc/include/app_msg -I/home/nuttx/control/inc/libqrc/include/module -I/home/nuttx/control/inc/libqrc/protocol/qrc -I/home/nuttx/control/inc/libqrc/protocol/qrc/tinyframe -I/home/nuttx/control/inc/libqrc/protocol/tinyframe -I/home/nuttx/control/../libqrc-udriver/include
+C_INCLUDES = -I/usr/include/python3.10 -I/usr/local/lib/python3.10/dist-packages/pybind11/include -I/home/nuttx/control/inc -I/home/nuttx/control/inc/libqrc/include/module -I/home/nuttx/control/inc/libqrc-udriver/include -I/home/nuttx/control/inc/libqrc/include/app_msg -I/home/nuttx/control/inc/libqrc/protocol/qrc -I/home/nuttx/control/inc/libqrc/protocol/qrc/tinyframe -I/home/nuttx/control/inc/libqrc/protocol/tinyframe -I/home/nuttx/control/../libqrc-udriver/include
 
 C_FLAGS = -g -Wall -DQRC_RB5 -fPIC -Wall -Wextra -Wpedantic -std=gnu99
 

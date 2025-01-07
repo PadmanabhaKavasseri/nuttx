@@ -28,10 +28,6 @@ find_package(pybind11 REQUIRED)
 
 
 
-link_directories(${CMAKE_SOURCE_DIR}/inc/libqrc/build/)
-# Add subdirectory for libqrc
-add_subdirectory(inc/libqrc)
-
 # Include directories for other includes
 include_directories(
     ${pybind11_INCLUDE_DIRS}
@@ -39,6 +35,10 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/inc/libqrc/include/module/
     ${CMAKE_SOURCE_DIR}/inc/libqrc-udriver/include/
 )
+
+link_directories(${CMAKE_SOURCE_DIR}/inc/libqrc/build/)
+link_directories(${CMAKE_SOURCE_DIR}/inc/libqrc-udriver/build/)
+add_subdirectory(inc/libqrc)
 
 # Source files for main project
 set(CPP_SOURCES src/motor_control.cpp src/qrc_utils.cpp)
