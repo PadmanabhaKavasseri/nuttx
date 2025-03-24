@@ -10,7 +10,7 @@ bin/mm_initialize.o: mm_heap/mm_initialize.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/mm/mm.h \
  /home/nuttx/nuttx/mm/mm_heap/mm.h \
@@ -37,7 +37,7 @@ bin/mm_lock.o: mm_heap/mm_lock.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -93,7 +93,7 @@ bin/mm_addfreechunk.o: mm_heap/mm_addfreechunk.c \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/fs/procfs.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/lib/math32.h \
  /home/nuttx/nuttx/include/inttypes.h /home/nuttx/nuttx/include/stddef.h \
@@ -120,7 +120,7 @@ bin/mm_size2ndx.o: mm_heap/mm_size2ndx.c \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/fs/procfs.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/lib/math32.h \
  /home/nuttx/nuttx/include/inttypes.h \
@@ -136,7 +136,7 @@ bin/mm_malloc_size.o: mm_heap/mm_malloc_size.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/mm/mm.h \
@@ -173,7 +173,7 @@ bin/mm_shrinkchunk.o: mm_heap/mm_shrinkchunk.c \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/fs/procfs.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/lib/math32.h \
  /home/nuttx/nuttx/include/inttypes.h /home/nuttx/nuttx/include/stddef.h \
@@ -198,7 +198,7 @@ bin/mm_brkaddr.o: mm_heap/mm_brkaddr.c \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/fs/procfs.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/lib/math32.h \
  /home/nuttx/nuttx/include/inttypes.h /home/nuttx/nuttx/include/stddef.h \
@@ -234,7 +234,7 @@ bin/mm_extend.o: mm_heap/mm_extend.c \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/fs/procfs.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/lib/math32.h \
  /home/nuttx/nuttx/include/inttypes.h /home/nuttx/nuttx/include/stddef.h \
@@ -249,7 +249,7 @@ bin/mm_free.o: mm_heap/mm_free.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
@@ -299,7 +299,7 @@ bin/mm_mallinfo.o: mm_heap/mm_mallinfo.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/mm/mm.h \
  /home/nuttx/nuttx/mm/mm_heap/mm.h \
@@ -326,7 +326,7 @@ bin/mm_malloc.o: mm_heap/mm_malloc.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/string.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/malloc.h \
@@ -376,7 +376,7 @@ bin/mm_foreach.o: mm_heap/mm_foreach.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/mm/mm.h \
@@ -413,7 +413,7 @@ bin/mm_memalign.o: mm_heap/mm_memalign.c \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/fs/procfs.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/lib/math32.h \
  /home/nuttx/nuttx/include/inttypes.h /home/nuttx/nuttx/include/stddef.h \
@@ -431,7 +431,7 @@ bin/mm_realloc.o: mm_heap/mm_realloc.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -487,7 +487,7 @@ bin/mm_heapmember.o: mm_heap/mm_heapmember.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/mm/mm.h \
@@ -514,7 +514,7 @@ bin/mm_memdump.o: mm_heap/mm_memdump.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -593,7 +593,7 @@ bin/umm_globals.o: umm_heap/umm_globals.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_initialize.o: umm_heap/umm_initialize.c \
@@ -637,7 +637,7 @@ bin/umm_initialize.o: umm_heap/umm_initialize.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_addregion.o: umm_heap/umm_addregion.c \
@@ -681,7 +681,7 @@ bin/umm_addregion.o: umm_heap/umm_addregion.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_malloc_size.o: umm_heap/umm_malloc_size.c \
@@ -736,7 +736,7 @@ bin/umm_brkaddr.o: umm_heap/umm_brkaddr.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_calloc.o: umm_heap/umm_calloc.c \
@@ -780,7 +780,7 @@ bin/umm_calloc.o: umm_heap/umm_calloc.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_extend.o: umm_heap/umm_extend.c \
@@ -824,7 +824,7 @@ bin/umm_extend.o: umm_heap/umm_extend.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_free.o: umm_heap/umm_free.c \
@@ -868,7 +868,7 @@ bin/umm_free.o: umm_heap/umm_free.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_mallinfo.o: umm_heap/umm_mallinfo.c \
@@ -912,7 +912,7 @@ bin/umm_mallinfo.o: umm_heap/umm_mallinfo.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_malloc.o: umm_heap/umm_malloc.c \
@@ -957,7 +957,7 @@ bin/umm_malloc.o: umm_heap/umm_malloc.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_memalign.o: umm_heap/umm_memalign.c \
@@ -1002,7 +1002,7 @@ bin/umm_memalign.o: umm_heap/umm_memalign.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_realloc.o: umm_heap/umm_realloc.c \
@@ -1047,7 +1047,7 @@ bin/umm_realloc.o: umm_heap/umm_realloc.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_zalloc.o: umm_heap/umm_zalloc.c \
@@ -1091,7 +1091,7 @@ bin/umm_zalloc.o: umm_heap/umm_zalloc.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_heapmember.o: umm_heap/umm_heapmember.c \
@@ -1135,7 +1135,7 @@ bin/umm_heapmember.o: umm_heap/umm_heapmember.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/umm_memdump.o: umm_heap/umm_memdump.c \
@@ -1179,7 +1179,7 @@ bin/umm_memdump.o: umm_heap/umm_memdump.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 bin/circbuf.o: circbuf/circbuf.c /home/nuttx/nuttx/include/nuttx/config.h \
@@ -1223,7 +1223,7 @@ bin/circbuf.o: circbuf/circbuf.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/mm/circbuf.h
@@ -1268,7 +1268,7 @@ bin/mempool.o: mempool/mempool.c /home/nuttx/nuttx/include/stdbool.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/mm/mempool.h \
@@ -1317,7 +1317,7 @@ bin/mempool_multiple.o: mempool/mempool_multiple.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/mm/mempool.h \
@@ -1365,7 +1365,7 @@ bin/mempool_procfs.o: mempool/mempool_procfs.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/mm/mempool.h \

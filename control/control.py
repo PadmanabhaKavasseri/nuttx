@@ -2,14 +2,23 @@ import sys, os
 sys.path.append(os.path.abspath('./build/.'))
 
 import motor_control
+
+
+#mc = motor_control.MotorControl()
+
+
 import streamlit as st
 from streamlit_extras.stateful_button import button
 import termios, fcntl
+
+# Disable usage statistics collection
+#st.set_option('browser.gatherUsageStats', False)
 
 @st.cache_resource
 def initQRC():
     return motor_control.MotorControl()
 
+mc = initQRC()
 
 # minDuty = 0.000
 # maxDuty = 100.000
@@ -148,7 +157,7 @@ class motor:
 
 
 
-mc = initQRC()
+#mc = initQRC()
 
 motor0 = motor(0,"LA")
 motor1 = motor(1,"BLDC")
@@ -177,8 +186,5 @@ motor3 = motor(3,"STEP")
 
 
 # how is LA different from BLDC the UI
-
-
-
 
 

@@ -142,7 +142,7 @@ static void setPWM(int pin_idx, int duty, int freq){
 }
 
 static void setGPIO(int gpio_num, bool value){
-	// printf("Setting GPIO# %d, value: %d\n",gpio_num,value);
+	//printf("Setting GPIO# %d, value: %d\n",gpio_num,value);
 	//gpio_num is 1-5
 	enum gpio_pintype_e pintype;
 	pintype = 3;
@@ -436,7 +436,7 @@ int main(int argc, FAR char *argv[])
     }
 
 	syslog(LOG_INFO, "main: keybpwm startup completed\n");
-
+	setGPIO(2,0);
 	printf("This command was able to run\n");
 	printf("Starting Homing\n");
 	homeStepper(); 

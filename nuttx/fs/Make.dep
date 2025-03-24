@@ -41,7 +41,7 @@ fs_initialize.o: fs_initialize.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h aio/aio.h \
  /home/nuttx/nuttx/include/aio.h /home/nuttx/nuttx/include/nuttx/signal.h \
  /home/nuttx/nuttx/include/nuttx/wqueue.h
@@ -59,7 +59,7 @@ fs_files.o: inode/fs_files.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/fcntl.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/unistd.h \
@@ -101,7 +101,7 @@ fs_foreachinode.o: inode/fs_foreachinode.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -148,7 +148,7 @@ fs_inode.o: inode/fs_inode.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -192,7 +192,7 @@ fs_inodeaddref.o: inode/fs_inodeaddref.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -269,7 +269,7 @@ fs_inodebasename.o: inode/fs_inodebasename.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 fs_inodefind.o: inode/fs_inodefind.c \
  /home/nuttx/nuttx/include/nuttx/config.h \
@@ -282,7 +282,7 @@ fs_inodefind.o: inode/fs_inodefind.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -359,7 +359,7 @@ fs_inodefree.o: inode/fs_inodefree.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/fs/inode/inode.h
@@ -374,7 +374,7 @@ fs_inodegetpath.o: inode/fs_inodegetpath.c \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -418,7 +418,7 @@ fs_inoderelease.o: inode/fs_inoderelease.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -497,7 +497,7 @@ fs_inoderemove.o: inode/fs_inoderemove.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/fs/inode/inode.h
@@ -543,7 +543,7 @@ fs_inodereserve.o: inode/fs_inodereserve.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/fs/inode/inode.h
@@ -556,7 +556,7 @@ fs_inodesearch.o: inode/fs_inodesearch.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -604,7 +604,7 @@ fs_chstat.o: vfs/fs_chstat.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/unistd.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -650,7 +650,7 @@ fs_close.o: vfs/fs_close.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -694,7 +694,7 @@ fs_dup.o: vfs/fs_dup.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -766,10 +766,10 @@ fs_dup2.o: vfs/fs_dup2.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 fs_fcntl.o: vfs/fs_fcntl.c /home/nuttx/nuttx/include/nuttx/config.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/fcntl.h /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/compiler.h \
  /home/nuttx/nuttx/include/stdint.h \
@@ -833,7 +833,7 @@ fs_epoll.o: vfs/fs_epoll.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
@@ -882,7 +882,7 @@ fs_fchstat.o: vfs/fs_fchstat.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/unistd.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -929,7 +929,7 @@ fs_fstat.o: vfs/fs_fstat.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -1005,7 +1005,7 @@ fs_fstatfs.o: vfs/fs_fstatfs.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 fs_ioctl.o: vfs/fs_ioctl.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/sys/ioctl.h \
@@ -1051,7 +1051,7 @@ fs_ioctl.o: vfs/fs_ioctl.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 fs_lseek.o: vfs/fs_lseek.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/sys/types.h \
@@ -1095,7 +1095,7 @@ fs_lseek.o: vfs/fs_lseek.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 fs_mkdir.o: vfs/fs_mkdir.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/sys/types.h \
@@ -1109,7 +1109,7 @@ fs_mkdir.o: vfs/fs_mkdir.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/unistd.h \
@@ -1156,7 +1156,7 @@ fs_open.o: vfs/fs_open.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/cancelpt.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
@@ -1205,7 +1205,7 @@ fs_poll.o: vfs/fs_poll.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -1253,7 +1253,7 @@ fs_pread.o: vfs/fs_pread.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/cancelpt.h \
  /home/nuttx/nuttx/include/stdbool.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -1272,7 +1272,7 @@ fs_pwrite.o: vfs/fs_pwrite.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/cancelpt.h \
  /home/nuttx/nuttx/include/stdbool.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/assert.h \
@@ -1323,7 +1323,7 @@ fs_read.o: vfs/fs_read.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 fs_rename.o: vfs/fs_rename.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/sys/stat.h \
@@ -1335,7 +1335,7 @@ fs_rename.o: vfs/fs_rename.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -1382,7 +1382,7 @@ fs_rmdir.o: vfs/fs_rmdir.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/unistd.h /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -1432,7 +1432,7 @@ fs_select.o: vfs/fs_select.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
  /home/nuttx/nuttx/include/malloc.h /home/nuttx/nuttx/include/stdlib.h \
@@ -1507,7 +1507,7 @@ fs_sendfile.o: vfs/fs_sendfile.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 fs_stat.o: vfs/fs_stat.c /home/nuttx/nuttx/include/nuttx/config.h \
@@ -1552,7 +1552,7 @@ fs_stat.o: vfs/fs_stat.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/mtd/mtd.h \
  /home/nuttx/nuttx/include/nuttx/fs/ioctl.h \
@@ -1599,7 +1599,7 @@ fs_statfs.o: vfs/fs_statfs.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 fs_unlink.o: vfs/fs_unlink.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stdbool.h \
@@ -1612,7 +1612,7 @@ fs_unlink.o: vfs/fs_unlink.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/unistd.h /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -1688,7 +1688,7 @@ fs_write.o: vfs/fs_write.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 fs_dir.o: vfs/fs_dir.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/string.h \
@@ -1732,7 +1732,7 @@ fs_dir.o: vfs/fs_dir.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/fs/ioctl.h \
@@ -1770,7 +1770,7 @@ fs_fsync.o: vfs/fs_fsync.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -1797,7 +1797,7 @@ fs_truncate.o: vfs/fs_truncate.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/fcntl.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
@@ -1875,7 +1875,7 @@ fs_symlink.o: vfs/fs_symlink.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/fs/inode/inode.h
@@ -1891,7 +1891,7 @@ fs_readlink.o: vfs/fs_readlink.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/unistd.h \
@@ -1932,7 +1932,7 @@ fs_fdopen.o: vfs/fs_fdopen.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -1981,7 +1981,7 @@ fs_registerdriver.o: driver/fs_registerdriver.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2025,7 +2025,7 @@ fs_unregisterdriver.o: driver/fs_unregisterdriver.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2072,7 +2072,7 @@ fs_registerblockdriver.o: driver/fs_registerblockdriver.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2116,7 +2116,7 @@ fs_unregisterblockdriver.o: driver/fs_unregisterblockdriver.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2167,7 +2167,7 @@ fs_findblockdriver.o: driver/fs_findblockdriver.c \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
@@ -2213,7 +2213,7 @@ fs_openblockdriver.o: driver/fs_openblockdriver.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h /home/nuttx/nuttx/include/time.h \
@@ -2260,7 +2260,7 @@ fs_closeblockdriver.o: driver/fs_closeblockdriver.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h /home/nuttx/nuttx/include/time.h \
@@ -2312,7 +2312,7 @@ fs_blockpartition.o: driver/fs_blockpartition.c \
  /home/nuttx/nuttx/include/sys/stat.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/unistd.h \
@@ -2359,7 +2359,7 @@ fs_findmtddriver.o: driver/fs_findmtddriver.c \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
@@ -2405,7 +2405,7 @@ fs_closemtddriver.o: driver/fs_closemtddriver.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2454,7 +2454,7 @@ fs_mmap.o: mmap/fs_mmap.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/serial/tioctl.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/fcntl.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
  /home/nuttx/nuttx/include/malloc.h /home/nuttx/nuttx/include/stdlib.h \
@@ -2502,7 +2502,7 @@ fs_munmap.o: mmap/fs_munmap.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/sys/mman.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
  /home/nuttx/nuttx/include/malloc.h /home/nuttx/nuttx/include/stdlib.h \
@@ -2557,7 +2557,7 @@ mq_open.o: mqueue/mq_open.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdbool.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdio.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
@@ -2614,7 +2614,7 @@ mq_close.o: mqueue/mq_close.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/mqueue.h \
  /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
  /home/nuttx/nuttx/include/malloc.h /home/nuttx/nuttx/include/stdlib.h \
@@ -2663,7 +2663,7 @@ mq_unlink.o: mqueue/mq_unlink.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/stdio.h /home/nuttx/nuttx/include/sys/types.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2720,7 +2720,7 @@ fs_mount.o: mount/fs_mount.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
@@ -2770,7 +2770,7 @@ fs_umount2.o: mount/fs_umount2.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/sys/types.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/unistd.h \
@@ -2815,7 +2815,7 @@ fs_foreachmountpoint.o: mount/fs_foreachmountpoint.c \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2864,7 +2864,7 @@ fs_procfs_mount.o: mount/fs_procfs_mount.c \
  /home/nuttx/nuttx/include/sys/statfs.h \
  /home/nuttx/nuttx/include/sys/stat.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdbool.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdio.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
@@ -2928,7 +2928,7 @@ fs_partition.o: partition/fs_partition.c \
  /home/nuttx/nuttx/include/arch/limits.h partition/partition.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/sys/types.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2955,7 +2955,7 @@ fs_romfs.o: romfs/fs_romfs.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/fcntl.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
  /home/nuttx/nuttx/include/malloc.h \
@@ -3004,7 +3004,7 @@ fs_romfsutil.o: romfs/fs_romfsutil.c \
  /home/nuttx/nuttx/include/stdlib.h /home/nuttx/nuttx/include/string.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
  /home/nuttx/nuttx/include/malloc.h \
@@ -3053,7 +3053,7 @@ fs_procfs.o: procfs/fs_procfs.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/sys/statfs.h \
  /home/nuttx/nuttx/include/sys/stat.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -3103,7 +3103,7 @@ fs_procfsutil.o: procfs/fs_procfsutil.c \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -3144,7 +3144,7 @@ fs_procfsproc.o: procfs/fs_procfsproc.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/sys/stat.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -3198,7 +3198,7 @@ fs_procfsuptime.o: procfs/fs_procfsuptime.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/sys/stat.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -3248,7 +3248,7 @@ fs_procfscpuload.o: procfs/fs_procfscpuload.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/sys/stat.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -3298,7 +3298,7 @@ fs_procfsmeminfo.o: procfs/fs_procfsmeminfo.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/sys/stat.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -3349,7 +3349,7 @@ fs_procfsiobinfo.o: procfs/fs_procfsiobinfo.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/sys/stat.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -3402,7 +3402,7 @@ fs_procfsversion.o: procfs/fs_procfsversion.c \
  /home/nuttx/nuttx/include/sys/utsname.h \
  /home/nuttx/nuttx/include/unistd.h /home/nuttx/nuttx/include/stdbool.h \
  /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -3452,7 +3452,7 @@ fs_procfstcbinfo.o: procfs/fs_procfstcbinfo.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/sys/stat.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \

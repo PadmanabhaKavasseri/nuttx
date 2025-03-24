@@ -8,7 +8,7 @@ make
 printf "\n Make Complete! \n"
 
 printf "\n Pushing Nuttx.bin \n"
-cp nuttx.bin /data/misc/mcb
+cp nuttx.bin /opt/qcom/qirf-sdk/data/misc/mcb/.
 
 printf "\n Flashing Nuttx.bin to MCB\n"
 mcbflash --flash

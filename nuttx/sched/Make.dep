@@ -8,7 +8,7 @@ clock_initialize.o: clock/clock_initialize.c \
  /home/nuttx/nuttx/include/arch/limits.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -52,7 +52,7 @@ clock_settime.o: clock/clock_settime.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -94,7 +94,7 @@ clock_gettime.o: clock/clock_gettime.c \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -136,7 +136,7 @@ clock_getres.o: clock/clock_getres.c \
  /home/nuttx/nuttx/include/arch/limits.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/sched/clock/clock.h \
  /home/nuttx/nuttx/include/nuttx/clock.h
@@ -151,7 +151,7 @@ clock_abstime2ticks.o: clock/clock_abstime2ticks.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/sched/clock/clock.h \
  /home/nuttx/nuttx/include/nuttx/clock.h
@@ -192,7 +192,7 @@ clock_systime_ticks.o: clock/clock_systime_ticks.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/clock/clock.h
@@ -232,7 +232,7 @@ clock_systime_timespec.o: clock/clock_systime_timespec.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/clock/clock.h
@@ -283,7 +283,7 @@ env_getenvironptr.o: environ/env_getenvironptr.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -331,7 +331,7 @@ env_dup.o: environ/env_dup.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -378,7 +378,7 @@ env_release.o: environ/env_release.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/environ/environ.h
@@ -416,7 +416,7 @@ env_findvar.o: environ/env_findvar.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -464,7 +464,7 @@ env_removevar.o: environ/env_removevar.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/environ/environ.h
@@ -506,7 +506,7 @@ env_clearenv.o: environ/env_clearenv.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -553,7 +553,7 @@ env_getenv.o: environ/env_getenv.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -604,7 +604,7 @@ env_putenv.o: environ/env_putenv.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 env_setenv.o: environ/env_setenv.c \
@@ -616,7 +616,7 @@ env_setenv.o: environ/env_setenv.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -696,7 +696,7 @@ env_unsetenv.o: environ/env_unsetenv.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -737,7 +737,7 @@ env_foreach.o: environ/env_foreach.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -757,7 +757,7 @@ group_create.o: group/group_create.c \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -809,7 +809,7 @@ group_join.o: group/group_join.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -859,7 +859,7 @@ group_leave.o: group/group_leave.c \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -920,7 +920,7 @@ group_find.o: group/group_find.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -968,7 +968,7 @@ group_setupstreams.o: group/group_setupstreams.c \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/fcntl.h \
  /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/unistd.h \
@@ -1009,7 +1009,7 @@ group_setupidlefiles.o: group/group_setupidlefiles.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -1060,7 +1060,7 @@ group_setuptaskfiles.o: group/group_setuptaskfiles.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/unistd.h \
@@ -1126,7 +1126,7 @@ group_foreachchild.o: group/group_foreachchild.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -1155,7 +1155,7 @@ group_killchildren.o: group/group_killchildren.c \
  /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/semaphore.h \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
@@ -1202,7 +1202,7 @@ group_signal.o: group/group_signal.c \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/signal.h \
  /home/nuttx/nuttx/include/nuttx/wqueue.h \
@@ -1249,7 +1249,7 @@ nx_start.o: init/nx_start.c /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -1328,7 +1328,7 @@ nx_bringup.o: init/nx_bringup.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/stdlib.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -1412,7 +1412,7 @@ irq_initialize.o: irq/irq_initialize.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/irq/irq.h \
@@ -1453,7 +1453,7 @@ irq_attach.o: irq/irq_attach.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/spinlock.h
@@ -1466,7 +1466,7 @@ irq_dispatch.o: irq/irq_dispatch.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
@@ -1519,7 +1519,7 @@ irq_unexpectedisr.o: irq/irq_unexpectedisr.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
@@ -1590,7 +1590,7 @@ assert.o: misc/assert.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/board.h \
@@ -1646,7 +1646,7 @@ panic.o: misc/panic.c /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/notifier.h \
@@ -1663,7 +1663,7 @@ mq_send.o: mqueue/mq_send.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/mqueue.h /home/nuttx/nuttx/include/signal.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -1716,7 +1716,7 @@ mq_timedsend.o: mqueue/mq_timedsend.c \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -1777,7 +1777,7 @@ mq_sndinternal.o: mqueue/mq_sndinternal.c \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/stdbool.h \
  /home/nuttx/nuttx/include/strings.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -1832,7 +1832,7 @@ mq_receive.o: mqueue/mq_receive.c \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/mqueue.h \
  /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -1884,7 +1884,7 @@ mq_timedreceive.o: mqueue/mq_timedreceive.c \
  /home/nuttx/nuttx/include/mqueue.h /home/nuttx/nuttx/include/signal.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -1945,7 +1945,7 @@ mq_rcvinternal.o: mqueue/mq_rcvinternal.c \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/sched.h \
  /home/nuttx/nuttx/include/strings.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -2028,7 +2028,7 @@ mq_initialize.o: mqueue/mq_initialize.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/mqueue/mqueue.h \
@@ -2076,7 +2076,7 @@ mq_msgfree.o: mqueue/mq_msgfree.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -2134,7 +2134,7 @@ mq_msgqalloc.o: mqueue/mq_msgqalloc.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/mqueue.h \
@@ -2155,7 +2155,7 @@ mq_msgqfree.o: mqueue/mq_msgqfree.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -2211,7 +2211,7 @@ mq_recover.o: mqueue/mq_recover.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2258,7 +2258,7 @@ mq_setattr.o: mqueue/mq_setattr.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/mqueue.h /home/nuttx/nuttx/include/signal.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/unistd.h \
@@ -2310,7 +2310,7 @@ mq_waitirq.o: mqueue/mq_waitirq.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/mqueue.h \
@@ -2359,7 +2359,7 @@ mq_notify.o: mqueue/mq_notify.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -2392,7 +2392,7 @@ mq_getattr.o: mqueue/mq_getattr.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/unistd.h \
@@ -2426,7 +2426,7 @@ msgctl.o: mqueue/msgctl.c /home/nuttx/nuttx/sched/mqueue/msg.h \
  /home/nuttx/nuttx/include/arch/chip/chip.h \
  /home/nuttx/nuttx/include/nuttx/mqueue.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
@@ -2462,7 +2462,7 @@ msgget.o: mqueue/msgget.c /home/nuttx/nuttx/sched/mqueue/msg.h \
  /home/nuttx/nuttx/include/arch/chip/chip.h \
  /home/nuttx/nuttx/include/nuttx/mqueue.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
@@ -2522,7 +2522,7 @@ msginternal.o: mqueue/msginternal.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/mqueue/msg.h \
@@ -2572,7 +2572,7 @@ msgrcv.o: mqueue/msgrcv.c /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -2627,7 +2627,7 @@ msgsnd.o: mqueue/msgsnd.c /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -2654,7 +2654,7 @@ pthread_create.o: pthread/pthread_create.c \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -2715,7 +2715,7 @@ pthread_exit.o: pthread/pthread_exit.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -2767,7 +2767,7 @@ pthread_join.o: pthread/pthread_join.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/cancelpt.h \
  /home/nuttx/nuttx/sched/sched/sched.h /home/nuttx/nuttx/include/sched.h \
@@ -2818,7 +2818,7 @@ pthread_detach.o: pthread/pthread_detach.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/sched/sched/sched.h /home/nuttx/nuttx/include/sched.h \
  /home/nuttx/nuttx/include/strings.h /home/nuttx/nuttx/include/string.h \
@@ -2870,7 +2870,7 @@ pthread_getschedparam.o: pthread/pthread_getschedparam.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
@@ -2912,7 +2912,7 @@ pthread_setschedparam.o: pthread/pthread_setschedparam.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
@@ -2953,7 +2953,7 @@ pthread_mutexinit.o: pthread/pthread_mutexinit.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
@@ -2997,7 +2997,7 @@ pthread_mutexdestroy.o: pthread/pthread_mutexdestroy.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
@@ -3038,7 +3038,7 @@ pthread_mutextimedlock.o: pthread/pthread_mutextimedlock.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
@@ -3079,7 +3079,7 @@ pthread_mutextrylock.o: pthread/pthread_mutextrylock.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/sched/pthread/pthread.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -3120,7 +3120,7 @@ pthread_mutexunlock.o: pthread/pthread_mutexunlock.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/sched/pthread/pthread.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -3161,7 +3161,7 @@ pthread_condwait.o: pthread/pthread_condwait.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/cancelpt.h \
  /home/nuttx/nuttx/sched/pthread/pthread.h \
@@ -3202,7 +3202,7 @@ pthread_condsignal.o: pthread/pthread_condsignal.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/sched/pthread/pthread.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -3246,7 +3246,7 @@ pthread_condbroadcast.o: pthread/pthread_condbroadcast.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/sched/pthread/pthread.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
@@ -3286,7 +3286,7 @@ pthread_condclockwait.o: pthread/pthread_condclockwait.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -3340,7 +3340,7 @@ pthread_kill.o: pthread/pthread_kill.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
@@ -3392,7 +3392,7 @@ pthread_sigmask.o: pthread/pthread_sigmask.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/signal.h \
  /home/nuttx/nuttx/include/nuttx/wqueue.h \
@@ -3437,7 +3437,7 @@ pthread_cancel.o: pthread/pthread_cancel.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -3481,7 +3481,7 @@ pthread_initialize.o: pthread/pthread_initialize.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -3502,7 +3502,7 @@ pthread_completejoin.o: pthread/pthread_completejoin.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/sched/sched/sched.h /home/nuttx/nuttx/include/sched.h \
  /home/nuttx/nuttx/include/strings.h /home/nuttx/nuttx/include/string.h \
@@ -3579,7 +3579,7 @@ pthread_findjoininfo.o: pthread/pthread_findjoininfo.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/pthread/pthread.h
@@ -3596,7 +3596,7 @@ pthread_release.o: pthread/pthread_release.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
  /home/nuttx/nuttx/include/malloc.h /home/nuttx/nuttx/include/stdlib.h \
@@ -3663,7 +3663,7 @@ pthread_setschedprio.o: pthread/pthread_setschedprio.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -3709,7 +3709,7 @@ pthread_mutex.o: pthread/pthread_mutex.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -3741,7 +3741,7 @@ pthread_mutexconsistent.o: pthread/pthread_mutexconsistent.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
@@ -3797,7 +3797,7 @@ pthread_mutexinconsistent.o: pthread/pthread_mutexinconsistent.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -3841,7 +3841,7 @@ sched_getfiles.o: sched/sched_getfiles.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -3888,7 +3888,7 @@ sched_addreadytorun.o: sched/sched_addreadytorun.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/spinlock.h \
@@ -3910,7 +3910,7 @@ sched_removereadytorun.o: sched/sched_removereadytorun.c \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/sched_note.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
@@ -3984,7 +3984,7 @@ sched_addprioritized.o: sched/sched_addprioritized.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -4030,7 +4030,7 @@ sched_mergeprioritized.o: sched/sched_mergeprioritized.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -4076,7 +4076,7 @@ sched_mergepending.o: sched/sched_mergepending.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/spinlock.h \
@@ -4123,7 +4123,7 @@ sched_addblocked.o: sched/sched_addblocked.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -4169,7 +4169,7 @@ sched_removeblocked.o: sched/sched_removeblocked.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -4215,7 +4215,7 @@ sched_gettcb.o: sched/sched_gettcb.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -4261,7 +4261,7 @@ sched_verifytcb.o: sched/sched_verifytcb.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -4306,7 +4306,7 @@ sched_releasetcb.o: sched/sched_releasetcb.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -4357,7 +4357,7 @@ sched_getstreams.o: sched/sched_getstreams.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -4397,7 +4397,7 @@ sched_setparam.o: sched/sched_setparam.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -4448,7 +4448,7 @@ sched_setpriority.o: sched/sched_setpriority.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/irq/irq.h \
@@ -4490,7 +4490,7 @@ sched_getparam.o: sched/sched_getparam.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -4538,7 +4538,7 @@ sched_setscheduler.o: sched/sched_setscheduler.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -4586,7 +4586,7 @@ sched_getscheduler.o: sched/sched_getscheduler.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -4638,7 +4638,7 @@ sched_yield.o: sched/sched_yield.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -4684,7 +4684,7 @@ sched_rrgetinterval.o: sched/sched_rrgetinterval.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -4731,7 +4731,7 @@ sched_foreach.o: sched/sched_foreach.c /home/nuttx/nuttx/include/sched.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -4775,7 +4775,7 @@ sched_lock.o: sched/sched_lock.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/sched_note.h \
@@ -4821,7 +4821,7 @@ sched_unlock.o: sched/sched_unlock.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/sched_note.h \
@@ -4870,7 +4870,7 @@ sched_lockcount.o: sched/sched_lockcount.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -4912,7 +4912,7 @@ sched_idletask.o: sched/sched_idletask.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -4963,7 +4963,7 @@ sched_self.o: sched/sched_self.c /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -5004,7 +5004,7 @@ sched_get_stackinfo.o: sched/sched_get_stackinfo.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -5060,7 +5060,7 @@ sched_sysinfo.o: sched/sched_sysinfo.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 sched_reprioritizertr.o: sched/sched_reprioritizertr.c \
@@ -5095,7 +5095,7 @@ sched_reprioritizertr.o: sched/sched_reprioritizertr.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -5147,7 +5147,7 @@ sched_processtimer.o: sched/sched_processtimer.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -5190,7 +5190,7 @@ sem_destroy.o: semaphore/sem_destroy.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -5234,7 +5234,7 @@ sem_wait.o: semaphore/sem_wait.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/cancelpt.h \
@@ -5283,7 +5283,7 @@ sem_trywait.o: semaphore/sem_trywait.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -5305,7 +5305,7 @@ sem_tickwait.o: semaphore/sem_tickwait.c \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -5368,7 +5368,7 @@ sem_clockwait.o: semaphore/sem_clockwait.c \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -5439,7 +5439,7 @@ sem_timeout.o: semaphore/sem_timeout.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -5482,7 +5482,7 @@ sem_post.o: semaphore/sem_post.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -5529,7 +5529,7 @@ sem_recover.o: semaphore/sem_recover.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/semaphore/semaphore.h
@@ -5566,7 +5566,7 @@ sem_reset.o: semaphore/sem_reset.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -5608,7 +5608,7 @@ sem_waitirq.o: semaphore/sem_waitirq.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -5660,7 +5660,7 @@ sig_initialize.o: signal/sig_initialize.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/signal/signal.h
@@ -5703,7 +5703,7 @@ sig_action.o: signal/sig_action.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -5727,7 +5727,7 @@ sig_procmask.o: signal/sig_procmask.c \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -5804,7 +5804,7 @@ sig_pending.o: signal/sig_pending.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -5824,7 +5824,7 @@ sig_suspend.o: signal/sig_suspend.c \
  /home/nuttx/nuttx/include/arch/limits.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
@@ -5876,7 +5876,7 @@ sig_kill.o: signal/sig_kill.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
@@ -5921,7 +5921,7 @@ sig_queue.o: signal/sig_queue.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/arch/limits.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
@@ -5991,7 +5991,7 @@ sig_timedwait.o: signal/sig_timedwait.c \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/signal.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/nuttx/irq.h \
@@ -6073,7 +6073,7 @@ sig_findaction.o: signal/sig_findaction.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 sig_allocpendingsigaction.o: signal/sig_allocpendingsigaction.c \
@@ -6113,7 +6113,7 @@ sig_allocpendingsigaction.o: signal/sig_allocpendingsigaction.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/signal/signal.h \
@@ -6162,7 +6162,7 @@ sig_releasependingsigaction.o: signal/sig_releasependingsigaction.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 sig_unmaskpendingsignal.o: signal/sig_unmaskpendingsignal.c \
@@ -6206,7 +6206,7 @@ sig_unmaskpendingsignal.o: signal/sig_unmaskpendingsignal.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -6227,7 +6227,7 @@ sig_removependingsignal.o: signal/sig_removependingsignal.c \
  /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
@@ -6275,7 +6275,7 @@ sig_releasependingsignal.o: signal/sig_releasependingsignal.c \
  /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/strings.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
@@ -6356,7 +6356,7 @@ sig_lowest.o: signal/sig_lowest.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h
 sig_notification.o: signal/sig_notification.c \
@@ -6372,7 +6372,7 @@ sig_notification.o: signal/sig_notification.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/signal.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/signal.h \
  /home/nuttx/nuttx/include/nuttx/wqueue.h \
@@ -6449,7 +6449,7 @@ sig_cleanup.o: signal/sig_cleanup.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/signal/signal.h \
@@ -6473,7 +6473,7 @@ sig_dispatch.o: signal/sig_dispatch.c \
  /home/nuttx/nuttx/include/strings.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -6532,7 +6532,7 @@ sig_deliver.o: signal/sig_deliver.c \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/strings.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -6688,7 +6688,7 @@ sig_ppoll.o: signal/sig_ppoll.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -6738,7 +6738,7 @@ sig_pselect.o: signal/sig_pselect.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -6761,7 +6761,7 @@ task_create.o: task/task_create.c \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -6835,7 +6835,7 @@ task_init.o: task/task_init.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -6862,7 +6862,7 @@ task_setup.o: task/task_setup.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -6916,7 +6916,7 @@ task_activate.o: task/task_activate.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -6965,7 +6965,7 @@ task_start.o: task/task_start.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -7037,7 +7037,7 @@ task_delete.o: task/task_delete.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -7088,7 +7088,7 @@ task_exit.o: task/task_exit.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -7110,7 +7110,7 @@ task_exithook.o: task/task_exithook.c \
  /home/nuttx/nuttx/include/unistd.h /home/nuttx/nuttx/include/signal.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
@@ -7187,7 +7187,7 @@ task_getgroup.o: task/task_getgroup.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -7235,7 +7235,7 @@ task_getpid.o: task/task_getpid.c /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -7246,7 +7246,7 @@ task_getpid.o: task/task_getpid.c /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/sched/task/task.h
 task_prctl.o: task/task_prctl.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/sys/prctl.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/string.h \
  /home/nuttx/nuttx/include/nuttx/compiler.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/sys/types.h \
@@ -7333,7 +7333,7 @@ task_recover.o: task/task_recover.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/semaphore/semaphore.h \
@@ -7391,7 +7391,7 @@ task_restart.o: task/task_restart.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -7418,7 +7418,7 @@ task_spawnparms.o: task/task_spawnparms.c \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/signal.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/unistd.h \
@@ -7487,7 +7487,7 @@ task_setcancelstate.o: task/task_setcancelstate.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -7534,7 +7534,7 @@ task_cancelpt.o: task/task_cancelpt.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -7584,7 +7584,7 @@ task_terminate.o: task/task_terminate.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -7639,7 +7639,7 @@ task_gettid.o: task/task_gettid.c /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -7658,7 +7658,7 @@ exit.o: task/exit.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/unistd.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h /home/nuttx/nuttx/include/time.h \
@@ -7737,7 +7737,7 @@ task_tls_alloc.o: task/task_tls_alloc.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/atexit.h \
@@ -7757,7 +7757,7 @@ task_spawn.o: task/task_spawn.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/spawn.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
  /home/nuttx/nuttx/include/pthread.h /home/nuttx/nuttx/include/unistd.h \
@@ -7859,7 +7859,7 @@ timer_create.o: timer/timer_create.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/timer/timer.h \
@@ -7938,7 +7938,7 @@ timer_getitimer.o: timer/timer_getitimer.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -8004,7 +8004,7 @@ timer_setitimer.o: timer/timer_setitimer.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -8079,7 +8079,7 @@ timer_release.o: timer/timer_release.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/timer/timer.h \
@@ -8126,7 +8126,7 @@ task_initinfo.o: tls/task_initinfo.c /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h tls/tls.h \
  /home/nuttx/nuttx/include/nuttx/tls.h \
@@ -8173,7 +8173,7 @@ task_uninitinfo.o: tls/task_uninitinfo.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h tls/tls.h \
  /home/nuttx/nuttx/include/nuttx/tls.h \
@@ -8209,7 +8209,7 @@ tls_initinfo.o: tls/tls_initinfo.c /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -8251,7 +8251,7 @@ tls_dupinfo.o: tls/tls_dupinfo.c /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -8311,7 +8311,7 @@ wd_start.o: wdog/wd_start.c /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -8358,7 +8358,7 @@ wd_cancel.o: wdog/wd_cancel.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/sched/sched.h \
@@ -8423,7 +8423,7 @@ wd_recover.o: wdog/wd_recover.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/sched/wdog/wdog.h

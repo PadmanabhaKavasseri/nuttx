@@ -37,7 +37,7 @@ binfmt_globals.o: binfmt_globals.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/streams.h \
@@ -81,7 +81,7 @@ binfmt_initialize.o: binfmt_initialize.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/streams.h \
@@ -106,7 +106,7 @@ binfmt_register.o: binfmt_register.c \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/stdbool.h \
  /home/nuttx/nuttx/include/strings.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/binfmt/binfmt.h \
  /home/nuttx/nuttx/include/spawn.h /home/nuttx/nuttx/include/signal.h \
@@ -153,7 +153,7 @@ binfmt_unregister.o: binfmt_unregister.c \
  /home/nuttx/nuttx/include/sched.h /home/nuttx/nuttx/include/stdbool.h \
  /home/nuttx/nuttx/include/strings.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/binfmt/binfmt.h \
  /home/nuttx/nuttx/include/spawn.h /home/nuttx/nuttx/include/signal.h \
@@ -200,7 +200,7 @@ binfmt_loadmodule.o: binfmt_loadmodule.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/envpath.h \
  /home/nuttx/nuttx/include/nuttx/sched.h \
@@ -254,7 +254,7 @@ binfmt_unloadmodule.o: binfmt_unloadmodule.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
  /home/nuttx/nuttx/include/malloc.h \
@@ -306,7 +306,7 @@ binfmt_execmodule.o: binfmt_execmodule.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -354,7 +354,7 @@ binfmt_exec.o: binfmt_exec.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -406,7 +406,7 @@ binfmt_copyargv.o: binfmt_copyargv.c \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
@@ -460,7 +460,7 @@ binfmt_dumpmodule.o: binfmt_dumpmodule.c \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/binfmt/binfmt.h \
  /home/nuttx/nuttx/include/spawn.h /home/nuttx/nuttx/include/signal.h \
@@ -533,7 +533,7 @@ binfmt_coredump.o: binfmt_coredump.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/streams.h \
@@ -549,7 +549,7 @@ builtin.o: builtin.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/nuttx/binfmt/binfmt.h \

@@ -46,7 +46,7 @@ drivers_initialize.o: drivers_initialize.c \
  /home/nuttx/nuttx/include/nuttx/wqueue.h \
  /home/nuttx/nuttx/include/nuttx/sensors/sensor.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/sensors/ioctl.h \
  /home/nuttx/nuttx/include/nuttx/serial/pty.h \
@@ -84,7 +84,7 @@ adc.o: analog/adc.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/fcntl.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h /home/nuttx/nuttx/include/time.h \
  /home/nuttx/nuttx/include/dirent.h \
@@ -138,7 +138,7 @@ can.o: can/can.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -193,7 +193,7 @@ dev_null.o: misc/dev_null.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/unistd.h \
@@ -215,7 +215,7 @@ dev_zero.o: misc/dev_zero.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/semaphore.h \
  /home/nuttx/nuttx/include/nuttx/clock.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/unistd.h \
@@ -233,7 +233,7 @@ ramdisk.o: misc/ramdisk.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/serial/tioctl.h \
  /home/nuttx/nuttx/include/inttypes.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -281,7 +281,7 @@ mkrd.o: misc/mkrd.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/string.h /home/nuttx/nuttx/include/stddef.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/kmalloc.h \
  /home/nuttx/nuttx/include/malloc.h /home/nuttx/nuttx/include/stdlib.h \
@@ -326,7 +326,7 @@ sensor.o: sensors/sensor.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -380,7 +380,7 @@ icm42688.o: sensors/icm42688.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/sys/types.h /home/nuttx/nuttx/include/string.h \
  /home/nuttx/nuttx/include/stddef.h \
@@ -437,7 +437,7 @@ serial.o: serial/serial.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/queue.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -482,7 +482,7 @@ serial_io.o: serial/serial_io.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/signal.h \
  /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/time.h \
@@ -509,7 +509,7 @@ spi_transfer.o: spi/spi_transfer.c \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/signal.h \
  /home/nuttx/nuttx/include/signal.h /home/nuttx/nuttx/include/time.h \
@@ -530,7 +530,7 @@ spi_driver.o: spi/spi_driver.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -579,7 +579,7 @@ vsyslog.o: syslog/vsyslog.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -629,7 +629,7 @@ syslog_channel.o: syslog/syslog_channel.c \
  /home/nuttx/nuttx/include/nuttx/syslog/syslog.h \
  /home/nuttx/nuttx/include/nuttx/streams.h \
  /home/nuttx/nuttx/include/lzf.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -695,7 +695,7 @@ syslog_putc.o: syslog/syslog_putc.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/syslog/syslog.h \
@@ -741,7 +741,7 @@ syslog_write.o: syslog/syslog_write.c \
  /home/nuttx/nuttx/include/nuttx/mm/shm.h \
  /home/nuttx/nuttx/include/nuttx/mm/gran.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/net/net.h \
  /home/nuttx/nuttx/include/nuttx/syslog/syslog.h \
@@ -761,7 +761,7 @@ syslog_force.o: syslog/syslog_force.c \
  /home/nuttx/nuttx/include/nuttx/syslog/syslog.h \
  /home/nuttx/nuttx/include/nuttx/streams.h \
  /home/nuttx/nuttx/include/lzf.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -803,7 +803,7 @@ syslog_flush.o: syslog/syslog_flush.c \
  /home/nuttx/nuttx/include/nuttx/streams.h \
  /home/nuttx/nuttx/include/lzf.h /home/nuttx/nuttx/include/sys/types.h \
  /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -840,7 +840,7 @@ syslog_initialize.o: syslog/syslog_initialize.c \
  /home/nuttx/nuttx/include/arch/inttypes.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -886,7 +886,7 @@ ramlog.o: syslog/ramlog.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/nuttx/fs/ioctl.h \
  /home/nuttx/nuttx/include/nuttx/serial/tioctl.h \
  /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -939,7 +939,7 @@ syslog_device.o: syslog/syslog_device.c \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -991,7 +991,7 @@ syslog_devchannel.o: syslog/syslog_devchannel.c \
  /home/nuttx/nuttx/include/nuttx/syslog/syslog.h \
  /home/nuttx/nuttx/include/nuttx/streams.h \
  /home/nuttx/nuttx/include/lzf.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -1033,7 +1033,7 @@ syslog_consolechannel.o: syslog/syslog_consolechannel.c \
  /home/nuttx/nuttx/include/nuttx/syslog/syslog.h \
  /home/nuttx/nuttx/include/nuttx/streams.h \
  /home/nuttx/nuttx/include/lzf.h /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
@@ -1073,7 +1073,7 @@ timer.o: timers/timer.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/stddef.h /home/nuttx/nuttx/include/fcntl.h \
  /home/nuttx/nuttx/include/assert.h /home/nuttx/nuttx/include/errno.h \
  /home/nuttx/nuttx/include/debug.h /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/irq.h \
  /home/nuttx/nuttx/include/arch/irq.h \
@@ -1126,7 +1126,7 @@ pwm.o: timers/pwm.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/fcntl.h /home/nuttx/nuttx/include/assert.h \
  /home/nuttx/nuttx/include/errno.h /home/nuttx/nuttx/include/debug.h \
  /home/nuttx/nuttx/include/syslog.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/sys/uio.h \
  /home/nuttx/nuttx/include/nuttx/arch.h \
  /home/nuttx/nuttx/include/arch/arch.h \
@@ -1173,7 +1173,7 @@ gpio.o: ioexpander/gpio.c /home/nuttx/nuttx/include/nuttx/config.h \
  /home/nuttx/nuttx/include/limits.h \
  /home/nuttx/nuttx/include/arch/limits.h \
  /home/nuttx/nuttx/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/9.2.1/include/stdarg.h \
+ /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
  /home/nuttx/nuttx/include/time.h /home/nuttx/nuttx/include/nuttx/fs/fs.h \
  /home/nuttx/nuttx/include/stdbool.h /home/nuttx/nuttx/include/dirent.h \
  /home/nuttx/nuttx/include/nuttx/mutex.h \
